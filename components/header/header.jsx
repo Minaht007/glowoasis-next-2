@@ -9,7 +9,7 @@ export const  Header =() => {
     return (
         <section>
             <div className="bg-[#D0C3BB] h-8 w-full"></div>
-            <div className="flex">
+            <div className="flex bg-[#fff]">
                 <div className="flex">
                     <div className="relative  hidden md:block lg:visible ml-[96px] lg:pt-[14px]">
                         <input type="serch" placeholder="пошук" className="pl-10 w-[219px] h-[37px] " />
