@@ -1,11 +1,10 @@
 
-
-import Catalog from "./caralog/page"
+import Hero from "./hero/page"
 
 export default function Home() {
   return (
     <main>
-      <Catalog />         
+      <Hero />         
       
     </main>
   )
