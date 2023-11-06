@@ -1,0 +1,20 @@
+@media screen and (min-width: 390px) and (max-width: 767px) {
+    .heroMob {
+        width: 100vw;
+        height: 521px;
+    }
+
+    .heroDT {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .heroMob {
+        display: none;
+    }
+    .heroDT {
+        width: 100vw;
+        height: 525px;
+    }
+}
