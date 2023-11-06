@@ -5,11 +5,14 @@ import regIcon from "../../public/icon/person.svg"
 import basket from "../../public/icon/backet.svg"
 import burger from "../../public/icon/burger.svg"
 
+import Link from 'next/link';
+import styles from "./header.module.scss"
+
 export const  Header =() => {
     return (
         <section>
             <div className="bg-[#D0C3BB] h-8 w-full"></div>
-            <div className="flex bg-[#fff]">
+             <div className="flex bg-[#fff]">
                 <div className="flex">
                     <div className="relative  hidden md:block lg:visible ml-[96px] lg:pt-[14px]">
                         <input type="serch" placeholder="пошук" className="pl-10 w-[219px] h-[37px] " />
@@ -61,6 +64,17 @@ export const  Header =() => {
                      </div>
                 </div>
             </div>
+         {/* Навігація */}
+                <div className={styles.headerNav}>
+                        <Link className="pr-4" href="">Всі товари</Link>
+                        <Link className="pr-4" href="">Бестселери</Link>
+                        <Link className="pr-4" href="">Категорії товаров</Link>
+                        <Link className="pr-4" href="">Типи шкіри</Link>
+                        <Link className="pr-4" href="">Набори</Link>
+                        <Link className="pr-4" href="">Чисті формули</Link>
+                        <Link href="">Історія бренду</Link>
+                </div>
+
         </section>
     )
 }

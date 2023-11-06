@@ -26,9 +26,11 @@ export default function SwiperHero() {
           dynamicBullets: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper pb-[16px]"
       >
+       
         {/* slider containers */}
+        {/* for mobile */}
         <SwiperSlide className={styles.heroMob} >
         {/* className="sm:visible md:hidden lg:!hidden w-screen h-[521px]" */}
         <Image 
@@ -37,8 +39,7 @@ export default function SwiperHero() {
             />
         </SwiperSlide>
 
-        <SwiperSlide className={styles.heroMob} >
-        {/* className="sm:visible md:hidden lg:!hidden w-screen h-[521px]" */}
+        <SwiperSlide className={styles.heroMob} >        
         <Image 
             src={HeroMob2}
             alt="HeroMob"
@@ -46,15 +47,13 @@ export default function SwiperHero() {
         </SwiperSlide>
 
         {/* For DeskTop */}
-        <SwiperSlide className={styles.heroDT} >
-        {/* className="sm:hidden lg:block w-screen h-[525px]" */}
+        <SwiperSlide className={styles.heroDT} >        
         <Image 
             src={HeroDT1}
             alt="HeroDT1"
             />
         </SwiperSlide>
-        <SwiperSlide className={styles.heroDT} >
-        {/* className="sm:hidden lg:block w-screen h-[525px]" */}
+        <SwiperSlide className={styles.heroDT} >        
         <Image 
             src={HeroDT2}
             alt="HeroDT2"
