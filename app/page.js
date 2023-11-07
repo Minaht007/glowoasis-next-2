@@ -1,10 +1,10 @@
 
-import Hero from "./hero/page"
+import MainPage from "./MainPage/page"
 
 export default function Home() {
   return (
     <main>
-      <Hero />         
+      <MainPage />         
       
     </main>
   )
