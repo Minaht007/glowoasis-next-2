@@ -58,7 +58,7 @@ export default function bestsellProd() {
         {data.map((item, index) => (
           <SwiperSlide key={index} className='flex flex-col align-center pb-6 pt-3' >
             <Image src={item.img} alt={`Slide ${item.name}`} width={250} height={400} className=' mx-auto'/>
-            <p>{item.text}</p>
+            <p className='pt-2 pb-2'>{item.text}</p>
             <button className='py-2 px-10 border border-1 border-gray-900 bg-addBgColor rounded-sm'>{item.price}</button>
           </SwiperSlide>
           
