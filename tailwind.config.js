@@ -16,6 +16,10 @@ module.exports = {
       md: { min: "768px", max: "1199px" },      
       lg: { min: "1200px", max: "1440px" },
     },
+    colors: {
+      mainBgColor: "#F1E8E3",
+      addBgColor: "#ffffff"
+    },
   },
   plugins: [],
 }
