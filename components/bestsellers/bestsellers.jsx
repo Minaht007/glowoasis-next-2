@@ -1,5 +1,7 @@
 
-import BestsellersSlide from "./besrsellerSwiperMob"
+import BestsellersSlideMob from "./besrsellerSwiperMob"
+import BestsellersSwiperDT from "./bestsellerSwiperDT"
+import styles from "./bestsellers.module.scss"
 
 const BestSellers = () => {
     return (
@@ -7,8 +9,14 @@ const BestSellers = () => {
             <div>
                 <p>РЕКОМЕНДОВАНІ ТОВАРИ</p>
             </div>
-            <div>
-            <BestsellersSlide />
+            {/* MobileSwiper */}
+            <div className={styles.bsMobSwiper}>
+            <BestsellersSlideMob />
+            </div>
+            
+            {/* Desktop Swiper */}
+            <div className={styles.bsDtSwiper}>
+                <BestsellersSwiperDT />
             </div>
 
         </div>
