@@ -31,7 +31,7 @@
     },
     {
         "name": "cloudclean2",
-        "img": "./public/img/bestsellers/clearCloud-3x-2.png",
+        "img": "../public/img/bestsellers/clearCloud-3x-2.png",
         "text": "Очищуюча пінка для обличчя cloudcleanse cloud-whipped foam cleanser",
         "price": "$34"
     }     
