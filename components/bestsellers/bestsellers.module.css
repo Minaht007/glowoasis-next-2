@@ -1,10 +1,47 @@
-@media screen and (min-width: 767px) {
-  .bsMobSwiper {
+@media screen and (min-width: 390px) and (max-widtn: 767px) {
+  .bsDtSwiper {
     display: none;
   }
 }
-@media screen and (min-width: 390px) and (max-widtn: 768px) {
-  .bsDtSwiper {
+@media screen and (min-width: 768px) {
+  .bsMobSwiper {
     display: none;
+  }
+  .bsDtSwiper {
+    display: flex;
+    width: 1300px;
+    margin: 0 auto;
+  }
+  .bsDtSwiperInner {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+  .bestsellerTextContainer {
+    width: 290px;
+    height: 85px;
+  }
+  .bestsellerText {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .bestsellerImg {
+    height: 440px;
+    width: 290px;
+  }
+  .bestsellerBtmContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  .bestsellerBtm {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px 77px;
   }
 }/*# sourceMappingURL=bestsellers.module.css.map */

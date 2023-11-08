@@ -3,13 +3,14 @@
 import { useState } from 'react';
 import bestsellersGoods from "../../public/json/bestseller.json"
 import Image from "next/image"
+import styles from "./bestsellers.module.scss"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
 
 // import './styles.css';
 
@@ -23,24 +24,36 @@ export default function bsSwiperDT() {
     <>
       <Swiper
         slidesPerView={4}
-        // spaceBetween={15}
+        spaceBetween={15}
         loop={true}
         // pagination={{
         //   clickable: true,
         // }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Navigation]}
         className="mySwiper"
       >
         {goods.map((item) => (
-            <SwiperSlide className='w-77 py-5'>
+            <SwiperSlide key={item.id} className={styles.bsDtSwiperInner}>
+                <div>
                 <Image
+                className={styles.bestsellerImg} required
                 src={item.img}
-                alt={item.name}
-                width={306}
-                height={434}
+                alt={item.name} 
+                width={290} 
+                height={434}              
                 />
+                </div>
+                    
+                <div className={styles.bestsellerTextContainer}>
+                <p >{item.text}</p>
+                </div>
+                <div className={styles.bestsellerBtmContainer}>                
+                <button className={styles.bestsellerBtm}>У кошик {item.price}</button>
+                </div>
             </SwiperSlide>
+         
+            
         ))}
 
 
