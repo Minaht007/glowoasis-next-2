@@ -23,17 +23,17 @@ export default function bsSwiperDT() {
     <>
       <Swiper
         slidesPerView={4}
-        spaceBetween={15}
+        // spaceBetween={15}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         {goods.map((item) => (
-            <SwiperSlide>
+            <SwiperSlide className='w-77 py-5'>
                 <Image
                 src={item.img}
                 alt={item.name}
