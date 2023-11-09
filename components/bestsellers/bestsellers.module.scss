@@ -1,9 +1,9 @@
 
-// @media screen and (min-width: 390px) and (max-widtn: 767px) {
-//     .bsDtSwiperInner {
-//         display: none;
-//     }
-// }
+@media screen and (min-width: 390px) and (max-width: 767px) {
+    .bsDtSwiperInner{
+        display: none;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .bsMobSwiper {
@@ -11,7 +11,7 @@
     } 
     .bsDtSwiper {
         display: flex;
-        width: 1350px;        
+        width: 100%;        
         margin: 0 auto;
        
     }
@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 290px;
+        width: 350px;
         height: fit-content;
         padding-bottom: 30px;        
     }
@@ -48,5 +48,8 @@
         align-items: center;
         border: 1px solid black;
         padding: 10px 77px;
+    }
+    .swiper-button-prev {
+        color: black;
     }
 }

@@ -9,7 +9,7 @@ const AdvantagesMain = () => {
 
     return (
         <>
-        <div className="bg-[#F1E8E3] pb-[60px]">
+        <div className="bg-[#F1E8E3] pb-[60px] layout">
             <p className="text-center pt-10">НАС ПУБЛІКУЮТЬ</p>  
         {/* Line */}
             <div className={styles.advantageLineContainer}>

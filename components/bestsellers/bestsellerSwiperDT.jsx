@@ -4,7 +4,7 @@ import { useState } from 'react';
 import bestsellersGoods from "../../public/json/bestseller.json"
 import Image from "next/image"
 import styles from "./bestsellers.module.scss"
-import style from "./bestsellerDT.module.scss"
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -32,10 +32,11 @@ export default function bsSwiperDT() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
+        style= {{"--swiper-pagination-bullet-inactive-color": "#999999",}}
         className="mySwiper"
       >
         {goods.map((item) => (
-            <SwiperSlide key={item.id} className={`${styles.bsDtSwiperInner} ${style.bsDtSwiperInner}`}>
+            <SwiperSlide key={item.id} className={`${styles.bsDtSwiperInner} layout`}>
                 <div>
                 <Image
                 className={styles.bestsellerImg} required

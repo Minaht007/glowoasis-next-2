@@ -1,1 +1,1 @@
-{"version":3,"sources":["swiper.module.scss","swiper.module.css"],"names":[],"mappings":"AAAA;EACI;IACI,YAAA;IACA,aAAA;ECCN;EDEE;IACI,aAAA;ECAN;AACF;ADGA;EACI;IACI,aAAA;ECDN;EDGE;IACI,YAAA;IACA,aAAA;ECDN;AACF","file":"swiper.module.css"}
+{"version":3,"sources":["swiper.module.scss","swiper.module.css"],"names":[],"mappings":"AAAA;EACI;IACI,YAAA;IACA,aAAA;ECCN;EDEE;IACI,aAAA;ECAN;AACF;ADGA;EACI;IACI,aAAA;ECDN;EDGE;IACI,YAAA;IACA,wBAAA;IAAA,mBAAA;ECDN;AACF","file":"swiper.module.css"}
