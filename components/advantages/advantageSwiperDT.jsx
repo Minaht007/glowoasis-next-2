@@ -32,6 +32,7 @@ export default function advSwiperDT() {
         // }}
         navigation={true}
         modules={[Pagination, Navigation]}
+        
         className="mySwiper"
       >
         <SwiperSlide>
