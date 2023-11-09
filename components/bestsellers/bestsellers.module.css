@@ -1,5 +1,5 @@
-@media screen and (min-width: 390px) and (max-widtn: 767px) {
-  .bsDtSwiper {
+@media screen and (min-width: 390px) and (max-width: 767px) {
+  .bsDtSwiperInner {
     display: none;
   }
 }
@@ -9,19 +9,20 @@
   }
   .bsDtSwiper {
     display: flex;
-    width: 1300px;
+    width: 100%;
     margin: 0 auto;
   }
   .bsDtSwiperInner {
     display: flex;
     flex-direction: column;
-    width: 290px;
+    align-items: center;
+    width: 350px;
     height: -moz-fit-content;
     height: fit-content;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   .bestsellerTextContainer {
-    width: 290px;
+    width: 250px;
     height: 85px;
   }
   .bestsellerText {
@@ -31,7 +32,7 @@
   }
   .bestsellerImg {
     height: 440px;
-    width: 290px;
+    width: 250px;
   }
   .bestsellerBtmContainer {
     display: flex;
@@ -43,5 +44,8 @@
     align-items: center;
     border: 1px solid black;
     padding: 10px 77px;
+  }
+  .swiper-button-prev {
+    color: black;
   }
 }/*# sourceMappingURL=bestsellers.module.css.map */

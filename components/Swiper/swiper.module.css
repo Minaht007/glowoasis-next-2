@@ -13,6 +13,7 @@
   }
   .heroDT {
     width: 100vw;
-    height: 525px;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }/*# sourceMappingURL=swiper.module.css.map */
