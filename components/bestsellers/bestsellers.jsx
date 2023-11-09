@@ -15,7 +15,7 @@ const BestSellers = () => {
             </div>
             
             {/* Desktop Swiper */}
-            <div className={styles.bsDtSwiper}>
+            <div className={styles.bsDtSwiper} required>
                 <BestsellersSwiperDT />
             </div>
 

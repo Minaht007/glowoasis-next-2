@@ -1,27 +1,23 @@
-@media screen and (min-width: 390px) and (max-widtn: 767px) {
-  .bsDtSwiper {
-    display: none;
-  }
-}
 @media screen and (min-width: 768px) {
   .bsMobSwiper {
     display: none;
   }
   .bsDtSwiper {
     display: flex;
-    width: 1300px;
+    width: 1350px;
     margin: 0 auto;
   }
   .bsDtSwiperInner {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 290px;
     height: -moz-fit-content;
     height: fit-content;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   .bestsellerTextContainer {
-    width: 290px;
+    width: 250px;
     height: 85px;
   }
   .bestsellerText {
@@ -31,7 +27,7 @@
   }
   .bestsellerImg {
     height: 440px;
-    width: 290px;
+    width: 250px;
   }
   .bestsellerBtmContainer {
     display: flex;
