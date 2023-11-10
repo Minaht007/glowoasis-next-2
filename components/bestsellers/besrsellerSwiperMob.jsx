@@ -42,6 +42,7 @@ export default function bestsellProd() {
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
+        loop={true}
         centeredSlides={true}
         slidesPerView={'auto'}
         coverflowEffect={{
@@ -51,7 +52,7 @@ export default function bestsellProd() {
           modifier: 1,
           slideShadows: true,
         }}
-        pagination={true}
+        // pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >

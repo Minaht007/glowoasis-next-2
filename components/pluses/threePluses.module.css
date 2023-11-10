@@ -1,10 +1,1 @@
-@media screen and (min-width: 390px) and (max-width: 767px) {
-  .plusContainer {
-    display: flex;
-    background-image: url(../../public//img//pluses//threePluses-1x.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 700px;
-  }
-}/*# sourceMappingURL=threePluses.module.css.map */
+/*# sourceMappingURL=threePluses.module.css.map */

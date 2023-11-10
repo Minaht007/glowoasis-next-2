@@ -21,7 +21,8 @@ module.exports = {
     },
     colors: {
       mainBgColor: "#F1E8E3",
-      addBgColor: "#ffffff"
+      addBgColor: "#ffffff",
+      textColor: "#45372E",
     },
   },
   plugins: [],
