@@ -23,6 +23,9 @@ module.exports = {
       mainBgColor: "#F1E8E3",
       addBgColor: "#ffffff",
       textColor: "#45372E",
+      textColorLight: "#fff",
+      bgBtnColor: "#45372E",
+      
     },
   },
   plugins: [],
