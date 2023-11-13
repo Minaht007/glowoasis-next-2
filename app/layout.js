@@ -1,9 +1,23 @@
-import { Inter } from 'next/font/google'
+import { Inter, Philosopher, Istok_Web } from 'next/font/google'
 import './globals.css'
 import {Header} from "../components/header/header"
 
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const philosopher = Philosopher ({
+  weight: ['700'],
+  style: ['normal'],
+  subsets: ['cyrillic'],
+  display: 'swap',
+})
+
+export const istokWeb = Istok_Web ({
+  weight: ['400', '700'],
+  style: ['normal'], 
+  subsets: ['cyrillic'], 
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Create Next App',
