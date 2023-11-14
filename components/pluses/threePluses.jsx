@@ -1,5 +1,4 @@
 import Image from "next/image"
-import style from "./threePluses.module.scss"
 import plusImg1 from "../../public/img/pluses/threePlusesPix-3x-1.png"
 import plusImg2 from "../../public/img/pluses/threePlusesPix-3x-2.png"
 import plusImg3 from "../../public/img/pluses/threePlusesPix-3x-3.png"
@@ -17,8 +16,7 @@ const PlusesMob = () => {
                 <Image 
                 src={BG}
                 alt="BG"                
-                layout="fill"                  
-                         
+                layout="fill"  
                 />
             </div>
             <div className="flex absolute gap-5 mx-auto lg:pt-8">
@@ -53,7 +51,7 @@ const PlusesMob = () => {
 
          {/* plusesText */}
 
-            <div className="absolute text-center color-textColor top-[290px] mx-[67px] lg:top-[450px]">
+            <div className="absolute text-center color-textColor top-[250px] mx-[67px] lg:top-[450px]">
             <p className="text-textColor">
             Наші засоби виготовляються із 100% веганських формул, а упаковка є екологічною, що не шкодитиме навколишньому середовищу.
             </p>
