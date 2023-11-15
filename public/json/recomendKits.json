@@ -1,0 +1,18 @@
+[
+    {
+        "name": "kit1",
+        "img": "/img/recKits/recKits-3x.png",
+        "title": "відлущуй ніжним дотиком",
+        "slogan": "Молочний тонер для збалансованого зволоження milkdew ph balancing moisture milk toner",
+        "button": "купити",
+        "id": 1
+    },
+    {
+        "name": "kit2",
+        "img": "/img/recKits/recKits-3x.png",
+        "title": "відлущуй ніжним дотиком",
+        "slogan": "Очищуюча пінка для обличчя cloudcleanse cloud-whipped foam cleanser",
+        "button": "купити",
+        "id": 2
+    }
+]

@@ -53,8 +53,7 @@ export default function bsSwiperDT() {
                 <div className={styles.bestsellerBtmContainer}>                
                 <button className={styles.bestsellerBtm}>У кошик {item.price}</button>
                 </div>
-            </SwiperSlide>
-         
+            </SwiperSlide>       
             
         ))}
 

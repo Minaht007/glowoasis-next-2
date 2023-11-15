@@ -4,14 +4,14 @@ import plusImg2 from "../../public/img/pluses/threePlusesPix-3x-2.png"
 import plusImg3 from "../../public/img/pluses/threePlusesPix-3x-3.png"
 import BG from "../../public/img/pluses/threePluses-3x.png"
 
-import { Philosopher } from "next/font/google"
+
 
 
 const PlusesMob = () => {
 
     return (
         <>
-        <div className="flex relative justify-center h-[600px]  lg:h-[920px]">
+        <div className="flex relative justify-center h-[600px]  lg:h-[840px]">
             <div className="w-screen" >
                 <Image 
                 src={BG}
@@ -59,7 +59,7 @@ const PlusesMob = () => {
 
          {/* Pluses button */}
 
-            <div className="absolute top-[430px] lg:top-[630px] ">
+            <div className="absolute top-[430px] lg:top-[530px] ">
             <button className="py-3 px-5 bg-bgBtnColor border border-2 border-gray-900 rounded-md text-textColorLight lg:px-10 lg:py-4">ЧИТАТИ БІЛЬШЕ</button>
         </div>
         

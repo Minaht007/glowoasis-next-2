@@ -22,6 +22,7 @@ export default function SwiperHero() {
   return (
     <>
       <Swiper
+      loop={true}
         pagination={{
           dynamicBullets: true,
         }}
