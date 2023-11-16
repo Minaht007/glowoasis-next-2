@@ -1,0 +1,7 @@
+.recKitsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}/*# sourceMappingURL=recomKitsSwiper.module.css.map */

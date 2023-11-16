@@ -11,7 +11,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-          'threePluses': "url(/public/img/pluses/threePluses-3x.png)",
+          
       },
       sm: { min: "390px", max: "767px" },      
       md: { min: "768px", max: "1199px" },      
@@ -24,9 +24,8 @@ module.exports = {
       addBgColor: "#ffffff",
       textColor: "#45372E",
       textColorLight: "#fff",
-      bgBtnColor: "#45372E",
-      
-    },
+      bgBtnColor: "#45372E",      
+    },   
   },
   plugins: [],
 }
