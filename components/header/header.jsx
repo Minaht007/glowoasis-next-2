@@ -15,7 +15,7 @@ export const  Header =() => {
              <div className="flex bg-[#fff] relative">
                 <div className="flex">
                     <div className="relative  hidden md:block lg:visible ml-[96px] lg:pt-[14px]">
-                        <input type="serch" placeholder="пошук" className="pl-10 w-[219px] h-[37px] border border-gray-900" />
+                        <input type="serch" placeholder="пошук" className="pl-10 w-[219px] h-[37px] border border-gray-900 text-start" />
                         <button className="absolute top-6 left-3">
                             <Image                            
                             src={searchGlass}
