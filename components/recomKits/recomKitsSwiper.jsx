@@ -7,6 +7,7 @@ import style from "./recomKitsSwiper.module.scss"
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import recKitJson from "../../public/json/recomendKits.json"
+import fontStile from "../fonts/fonts.module.scss"
 
 
 // Import Swiper styles
@@ -46,8 +47,8 @@ export default function RecGoodsSwiper() {
           width={327}
           height={434}
           />
-          <h2 className="pt-5 pb-3">{item.title}</h2>
-          <p className="text-center pb-3">{item.slogan}</p>
+          <h2 className={`pt-5 pb-3 ${fontStile.istokWebTitle}`}> {item.title}</h2>
+          <p className="text-center pb-3 w-[327px]">{item.slogan}</p>
           <button className="py-[16px] px-[124px] border border-1 border-gray-900 rounded-sm">{item.button}</button>            
         </SwiperSlide>
         ))}

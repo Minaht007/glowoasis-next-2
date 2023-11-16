@@ -1,15 +1,18 @@
 
-.comertionalBg {
-    background-image: url(../../public/img//comertional/comartionalBG-3x.png);
-    background-repeat: no-repeat;
-    opacity: 1;
-    width: 100vw;
-    height: 1050px;
-    z-index: -5;
-    position: relative;
-}
+
 
 @media screen and (min-width: 390px) and (max-width: 767px) {
+
+    .comertionalBg {
+        background-image: url(../../public/img//comertional/comartionalBG-3x.png);
+        background-repeat: no-repeat;
+        opacity: 1;
+        width: 100vw;
+        height: 1050px;
+        z-index: -5;
+        position: relative;
+    }
+
     .comertionalTitle {
         position: absolute;
         top: 70px;
