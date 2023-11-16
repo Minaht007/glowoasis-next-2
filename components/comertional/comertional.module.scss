@@ -1,21 +1,32 @@
 
-.comertionalBg {
-    background-image: url(../../public/img//comertional/comartionalBG-3x.png);
-    background-repeat: no-repeat;
-    opacity: 1;
-    width: 100vw;
-    height: 1050px;
-    z-index: -5;
-    position: relative;
-}
+
 
 @media screen and (min-width: 390px) and (max-width: 767px) {
+
+    .comertionalBg {
+        background-image: url(../../public/img//comertional/comartionalBG-3x.png);
+        background-repeat: no-repeat;
+        opacity: 1;
+        width: 100vw;
+        height: 1050px;
+        z-index: -5;
+        position: relative;
+    }
+
     .comertionalTitle {
         position: absolute;
         top: 70px;
         left: 40px;
         width: 290px;
         text-align: start;
+        color: #45372E;
+
+        font-family: Istok Web;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21.112px; /* 117.289% */
+        letter-spacing: 0.6px;
     }
 
     .comartionalImgComtainer {
@@ -51,4 +62,62 @@
         scale: 1.2;
     }
    
+}
+// _____________________________________________________________________________________________
+// FOR DESKTOP
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .comertionalBg {
+        background-image: url(../../public/img//comertional/comartionalBG-3x.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+        width: 100vw;
+        height: 840px;
+        z-index: -5;
+        position: relative;
+        margin-top: 61px;
+    }
+
+    .comertionalTitle {
+        position: absolute;
+        width: 400px;
+        top: 151px;
+        left: 83px;
+        
+        font-family: Philosopher;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 56px; 
+        letter-spacing: 5px;
+        color: #fff;
+        text-align: start;
+    }
+
+    .comartionalImgComtainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 530px;
+        gap: 30px;
+        position: absolute;
+        top: 69px;
+        right: 84px;
+    }
+    .linkContainer {
+        display: flex;
+        flex-wrap: wrap;   
+        width: 520px;  
+        gap: 30px;   
+        position: absolute;
+        top: 491px;
+        left: 82px;
+    }
+    .linkBorder {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 240px;
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+
 }
