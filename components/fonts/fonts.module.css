@@ -26,4 +26,24 @@
   line-height: 19.95px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+}
+
+.istokWebTitleFooter {
+  color: #45372E;
+  font-family: Istok Web;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16.8px;
+  text-align: start;
+}
+
+.istokWebTextFoter {
+  color: #45372E;
+  font-family: Istok Web;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: start;
 }/*# sourceMappingURL=fonts.module.css.map */
