@@ -7,11 +7,10 @@ function PhoneNumberInput() {
   return (
     <div>
       <PhoneInput
-        country={'ua'} // Код країни за замовчуванням
-        enableAreaCodes // Дозволяє обирати код регіону
+        country={'ua'} 
+        enableAreaCodes 
         placeholder="Enter phone number"
-        inputStyle={{ width: '100%' }} // Стилі для поля введення
-      />
+        inputStyle={{ width: '100%', textAlign: 'start', paddingLeft: '45px' } } />
     </div>
   );
 }

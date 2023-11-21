@@ -106,7 +106,14 @@ const Footer = () => {
             {/* phon number area */}
                 <div className="flex w-[350px] pb-30"> 
                     <PhoneInput />
-                <button className="" type="submit">підписатись</button>
+                <button className="border border-1 border-gray-900 rounded-sm px-3 bg-bgBtnColor text-addBgColor" type="submit">підписатись</button>
+                </div>
+                {/* Agree text with rules */}
+                <div className="text-start pt-4">
+                    <span>
+                    Надсилаючи цю форму та підписуючись на текстові повідомлення, ви погоджуєтеся на отримання оповіщень (наприклад, промо, нагадування про кошик) від glowoasis на наданий номер, включаючи повідомлення, надіслані за допомогою автонабору. Згода не є умовою покупки. Частота повідомлень змінюється. Скасуйте підписку в будь-який час, відповівши STOP або натиснувши кнопку посилання для скасування підписки (якщо є). Політика та умови конфіденційності.
+                    </span>
+
                 </div>
                 
 
