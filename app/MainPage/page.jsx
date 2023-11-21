@@ -4,6 +4,7 @@ import Bestsellers from "../../components/bestsellers/bestsellers"
 import Pluses from "../../components/pluses/threePluses"
 import RecomendKits from "../../components/recomKits/recomenKits"
 import Comertional from "../../components/comertional/comartional"
+import Rewies from "../../components/reviews/rewies"
 
 const MainPage = () => {
     return (
@@ -14,6 +15,7 @@ const MainPage = () => {
         <Pluses />
         <RecomendKits />
         <Comertional />
+        <Rewies />
         </>
         
     )

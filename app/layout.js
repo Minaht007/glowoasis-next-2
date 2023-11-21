@@ -1,6 +1,7 @@
 import { Inter, Philosopher, Istok_Web } from 'next/font/google'
 import './globals.css'
 import {Header} from "../components/header/header"
+import Footer from "../components/footer/Footer"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -30,8 +31,10 @@ export default function RootLayout({ children }) {
     <head></head>        
       <body className={inter.className}>
       <Header />
-        {children}      
+        {children}   
+        <footer><Footer /> </footer>
       </body>
+      
     </html>
   )
 }

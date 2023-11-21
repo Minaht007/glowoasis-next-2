@@ -15,7 +15,7 @@ module.exports = {
       },
       sm: { min: "390px", max: "767px" },      
       md: { min: "768px", max: "1199px" },      
-      lg: { min: "1200px", max: "1440px" },
+      lg: { min: "1200px"},
 
      
     },
@@ -24,7 +24,8 @@ module.exports = {
       addBgColor: "#ffffff",
       textColor: "#45372E",
       textColorLight: "#fff",
-      bgBtnColor: "#45372E",      
+      bgBtnColor: "#45372E", 
+      cardColor: "#D0C3BB"     
     },   
   },
   plugins: [],

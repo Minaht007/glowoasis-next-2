@@ -11,11 +11,11 @@ import styles from "./header.module.scss"
 export const  Header =() => {
     return (
         <section>
-            <div className="bg-[#D0C3BB] h-8 w-full"></div>
-             <div className="flex bg-[#fff]">
+            <div className="bg-[#D0C3BB] h-8 w-full "></div>
+             <div className="flex bg-[#fff] relative">
                 <div className="flex">
                     <div className="relative  hidden md:block lg:visible ml-[96px] lg:pt-[14px]">
-                        <input type="serch" placeholder="пошук" className="pl-10 w-[219px] h-[37px] border border-gray-900" />
+                        <input type="serch" placeholder="пошук" className="pl-10 w-[219px] h-[37px] border border-gray-900 text-start" />
                         <button className="absolute top-6 left-3">
                             <Image                            
                             src={searchGlass}
@@ -47,7 +47,7 @@ export const  Header =() => {
                         />
                     </div>
                      {/* контейнер з іконками */}
-                     <div className="flex ml-[148px] lg:ml-[500px]">
+                     <div className="flex ml-[148px] lg:ml-[500px] absolute top-[30%] right-28">
                         <Image
                         className="hidden md:block lg:visible lg:mr-3"
                         src={regIcon}
