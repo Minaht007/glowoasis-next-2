@@ -12,9 +12,7 @@ import Image from "next/image"
 import Test1 from "../../public/img/allGoods/kit-3-3x.png"
 import Test2 from "../../public/img/allGoods/eye-cream-3x.png"
 import Test3 from "../../public/img/allGoods/eye-cream-3x.png"
-import Test4 from "../../public/img/allGoods/eye-cream-3x.png"
-import Test5 from "../../public/img/allGoods/eye-cream-3x.png"
-import Test6 from "../../public/img/allGoods/eye-cream-3x.png"
+
 
 
 
@@ -66,7 +64,7 @@ const Reviews = () => {
         <SwiperSlide>
         <Image 
           src={Test3}
-          alt="Test1"
+          alt="Test3"
           width = {300}
           height = {500}
           />
