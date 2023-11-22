@@ -1,4 +1,4 @@
-
+// FOR MOBILE
 @media screen and (min-width: 390px) and (max-width: 767px) {
     .bsDtSwiperInner{
         display: none;
@@ -21,7 +21,52 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+// ________________________________________________________________________________________________________________________
+// FOR TABLET
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+    // виключаємо мобільний свайпер
+    .bsMobSwiper {
+        display: none;
+    }
+    // виключаємо десктоп свайпер
+    .bsDtSwiper {
+        display: none;
+    }
+    .bsDtSwiperInner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        
+    }
+    .bestsellerImg {
+        height: 434px;
+        width: 306px;               
+    }
+    // .bestsellerImg:first-child{
+    //     margin-left: 56px;
+    // }
+    // .bestsellerImg:last-child {
+    //     margin-right: 56px;
+    // }
+    .bestsellerTextContainer {        
+        width: 289px;
+        height: 85px;
+    }
+
+    .bestsellerBtm {
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        padding: 15px 92px;
+        background-color: #fff;
+    }
+}
+
+// ________________________________________________________________________________________________________________________
+// FOR DESKTOP
+@media screen and (min-width: 1400px) {
     .bsMobSwiper {
         display: none;
     } 
