@@ -35,15 +35,19 @@ export default function SwiperHero() {
         <SwiperSlide className={styles.heroMob} >
         {/* className="sm:visible md:hidden lg:!hidden w-screen h-[521px]" */}
         <Image 
-            src={HeroMob}
+            src={HeroMob2}
             alt="HeroMob"
+            layout="responsive"
+            className="min-h-[525px]"
             />
         </SwiperSlide>
 
         <SwiperSlide className={styles.heroMob} >        
         <Image 
-            src={HeroMob2}
+            src={HeroMob}
             alt="HeroMob"
+            layout="responsive"
+            className="min-h-[525px]"
             />
         </SwiperSlide>
 
