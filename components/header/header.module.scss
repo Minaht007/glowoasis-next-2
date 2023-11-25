@@ -1,14 +1,33 @@
 
-@media screen and (min-width: 390px) and (max-width: 767px) {
+@media screen and (min-width: 390px) and (max-width: 1199px) {
   .headerNav {
     display: none;
   }
+  .headerSearch {
+    display: none;
+  }
+  .headerLogo {   
+    position: absolute;
+    left: 30%;
+    top: 25%;
+     
+  }
+  .headerBurger {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
    .headerNav {
     display: flex;
     justify-content: center;
     background-color: #fff;
    }
+
+   .headerSearch {
+    position: relative;
+    margin-left: 96px;
+  }
 }

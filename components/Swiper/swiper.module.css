@@ -1,13 +1,22 @@
 @media screen and (min-width: 390px) and (max-width: 767px) {
   .heroMob {
     width: 100vw;
-    height: 521px;
+    aspect-ratio: 16/9;
   }
   .heroDT {
     display: none;
   }
 }
 @media screen and (min-width: 768px) {
+  .heroMob {
+    width: 100vw;
+    aspect-ratio: 16/9;
+  }
+  .heroDT {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
   .heroMob {
     display: none;
   }
