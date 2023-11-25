@@ -54,6 +54,19 @@
     scale: 1.2;
   }
 }
+@media screen and (min-width: 768px) {
+  .comartionalImgComtainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-basis: calc((50% - 20px) / 2);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 300px;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
   .comertionalBg {
     background-image: url(../../public/img//comertional/comartionalBG-3x.png);

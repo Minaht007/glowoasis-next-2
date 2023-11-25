@@ -34,7 +34,7 @@ const Reviews = () => {
         scrollbar={true}
         modules={[ Scrollbar, Navigation]}
         snapOnRelease={true}
-        navigation={true}
+        // navigation={true}
         className="mySwiper relative "
         style={{
           "--swiper-scrollbar-border-radius": "10px",

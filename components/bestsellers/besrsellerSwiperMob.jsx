@@ -52,23 +52,22 @@ export default function bestsellProd() {
           modifier: 1,
           slideShadows: true,
         }}
-        // pagination={true}
+        pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
         {data.map((item, index) => (
-          <SwiperSlide key={index} className='flex flex-col align-center pb-6 pt-3' >
-            <Image src={item.img} alt={`Slide ${item.name}`} width={250} height={400} className=' mx-auto'/>
-            <p className='pt-2 pb-2'>{item.text}</p>
-            <button className='py-2 px-10 border border-1 border-gray-900 bg-addBgColor rounded-sm'>{item.price}</button>
+          <SwiperSlide key={index} className='flex flex-col align-center justify-center text-center pb-6 pt-3' >
+            <Image src={item.img} alt={`Slide ${item.name}`} width={350} height={500} className=' mx-auto'/>
+            <div className='flex align-center justify-center'>
+            <p className='text-center pt-2 pb-2 w-[250px]'>{item.text}</p>
+            </div>
+            
+            <button className='py-2 px-20 border border-1 border-gray-900 bg-addBgColor rounded-md'>{item.price}</button>
           </SwiperSlide>
           
         ))}
-        {/* // <SwiperSlide>
-        //   <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        // </SwiperSlide>
-        */}
-        
+      
       </Swiper>
     </div>
   );

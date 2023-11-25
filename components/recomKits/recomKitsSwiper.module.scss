@@ -6,3 +6,20 @@
     justify-content: center;
     padding-bottom: 30px;
 }
+
+@media screen and (min-width: 390px) {
+    .showSwiperTab {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .showSwiperMom {
+        display: none;
+    }
+
+    .showSwiperTab{
+        display: flex;
+    }
+}
+
