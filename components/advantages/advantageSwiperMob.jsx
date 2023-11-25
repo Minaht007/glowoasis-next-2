@@ -27,14 +27,14 @@ export default function advSwiperMob() {
         slidesPerView={3}
         spaceBetween={30}
         loop={true}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        // navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className='pb-16'> 
             <Image 
             src={Bustle}
             alt="Bustle"

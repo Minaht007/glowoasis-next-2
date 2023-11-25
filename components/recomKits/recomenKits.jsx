@@ -1,5 +1,8 @@
 import Image from "next/image"
 import RecGoodsSwiperMob from "./recomKitsSwiper"
+import RecomGoodsSwiperTab from "./recomKitsSwiperTab"
+
+import style from "./recomKitsSwiper.module.scss"
 
 import Kit1 from "../../public/img/recKits/recKits-3x.png"
 import EarCream from "../../public/img/allGoods/eye-cream-3x.png"
@@ -13,9 +16,18 @@ const RecomendKits = () => {
             <h1 className="text-istokWeb  text-bold" >РЕКОМЕНДОВАНІ НАБОРИ</h1>
         </div>
 
-        <div className="visible lg:hidden" >
+        {/* FOR MOBILE */}
+
+        <div className={style.showSwiperMom} >
            <RecGoodsSwiperMob />
         </div>
+
+        {/* FOR TABLET */}
+        <div className={style.showSwiperTab}>
+             <RecomGoodsSwiperTab />
+        </div>
+        
+
 
         {/* Recomadation Goods fo Desktop */}
 

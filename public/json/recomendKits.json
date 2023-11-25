@@ -3,16 +3,32 @@
         "name": "kit1",
         "img": "/img/recKits/recKits-3x.png",
         "title": "відлущуй ніжним дотиком",
-        "slogan": "Молочний тонер для збалансованого зволоження milkdew ph balancing moisture milk toner",
+        "slogan": "Зробіть свої подорожі яскравішими з ексфоліантом тревел-розміру",
         "button": "купити",
         "id": 1
     },
     {
         "name": "kit2",
-        "img": "/img/recKits/recKits-3x.png",
+        "img": "/img/recKits/recCloud-3x.png",
         "title": "відлущуй ніжним дотиком",
         "slogan": "Очищуюча пінка для обличчя cloudcleanse cloud-whipped foam cleanser",
         "button": "купити",
         "id": 2
+    },
+    {
+        "name": "kit3",
+        "img": "/img/recKits/recKits-3x.png",
+        "title": "відлущуй ніжним дотиком",
+        "slogan": "Зробіть свої подорожі яскравішими з ексфоліантом тревел-розміру",
+        "button": "купити",
+        "id": 3
+    },
+    {
+        "name": "kit4",
+        "img": "/img/recKits/recCloud-3x.png",
+        "title": "відлущуй ніжним дотиком",
+        "slogan": "Очищуюча пінка для обличчя cloudcleanse cloud-whipped foam cleanser",
+        "button": "купити",
+        "id": 4
     }
 ]

@@ -4,6 +4,8 @@ import plusImg2 from "../../public/img/pluses/threePlusesPix-3x-2.png"
 import plusImg3 from "../../public/img/pluses/threePlusesPix-3x-3.png"
 import BG from "../../public/img/pluses/threePluses-3x.png"
 
+import fontStyle from "../fonts/fonts.module.scss"
+
 
 
 
@@ -45,13 +47,13 @@ const PlusesMob = () => {
             />
              </div>
             {/* plusesTitle */}
-         <div className="absolute text-center color-textColor top-[240px] top-[380px]">
-            <h1>чистий, безпечний і екологічний</h1>
+            <div className={`absolute text-center top-[220px] top-[380px] ${fontStyle.comertionalPhilosopher} text-textColor`}>
+                <h1>чистий, безпечний і екологічний</h1>
             </div>
 
          {/* plusesText */}
 
-            <div className="absolute text-center color-textColor top-[250px] mx-[67px] lg:top-[450px]">
+            <div className="absolute text-center color-textColor top-[280px] mx-[67px] lg:top-[450px]">
             <p className="text-textColor">
             Наші засоби виготовляються із 100% веганських формул, а упаковка є екологічною, що не шкодитиме навколишньому середовищу.
             </p>
