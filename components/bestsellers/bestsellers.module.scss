@@ -19,6 +19,9 @@
         height: 1px;
         color: #000;
     }
+    .bsTabSwiper {
+        display: none;
+    }
 }
 
 // ________________________________________________________________________________________________________________________
@@ -31,6 +34,11 @@
     // виключаємо десктоп свайпер
     .bsDtSwiper {
         display: none;
+    }
+    .bsTabSwiper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .bsDtSwiperInner {
         display: flex;
@@ -70,12 +78,16 @@
     .bsMobSwiper {
         display: none;
     } 
+    .bsTabSwiper {
+        display: none;
+    }
     .bsDtSwiper {
         display: flex;
         width: 100%;        
         margin: 0 auto;
        
     }
+ 
     .bsDtSwiperInner {
         display: flex;
         flex-direction: column;

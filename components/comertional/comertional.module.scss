@@ -21,12 +21,13 @@
         text-align: start;
         color: #45372E;
 
-        font-family: Istok Web;
-        font-size: 18px;
+        /* big title mobile */
+        font-family: Philosopher;
+        font-size: 32px;
         font-style: normal;
         font-weight: 700;
-        line-height: 21.112px; /* 117.289% */
-        letter-spacing: 0.6px;
+        line-height: 30px; /* 93.75% */
+        letter-spacing: 1.6px;
     }
 
     .comartionalImgComtainer {
@@ -68,17 +69,72 @@
 // FOR TABLET
 
 @media screen and (min-width: 768px) {
+
+    .comertionalBg {
+        background-image: url(../../public/img//comertional/comartionalBG-3x.png);
+        background-repeat: no-repeat;
+        opacity: 1;
+        width: 100vw;
+        height: 1250px;
+        z-index: -5;
+        position: relative;
+    }
+    .comertionalTitle {
+        position: absolute;
+        top: 70px;
+        left: 100px;
+        // right: 50%;
+        width: 540px;
+        text-align: start;
+        color: #45372E;        
+      
+        font-family: Philosopher;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50px; 
+        letter-spacing: 2.6px;
+    }
+
     .comartionalImgComtainer {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         flex-basis: calc((50% - 20px) / 2);
         margin-left: auto;   
-        margin-right: auto; 
-        padding-top: 300px;
+        margin-right: auto;         
         align-items: center;
         justify-content: center;
+        padding: 0;
+        width: 600px;
+        position: absolute;
+        top: 288px;
+        right: 107px;        
     }
+    .comartionalImgComtainer img {
+        flex-basis: calc((100% - 20px) / 2);        
+    }
+
+    .linkContainer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: calc((100% - 20px) / 2);  
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        gap: 20px;
+        position: absolute;
+        top: 1048px;
+        left: 20%;
+        
+    }
+    .linkBorder {
+        width: 240px;    
+        border: 1px solid #000;
+        border-radius: 2px;
+        background-color: #fff;
+        padding: 15px 0;
+}
 
 }
 
@@ -114,16 +170,20 @@
         color: #fff;
         text-align: start;
     }
-
     .comartionalImgComtainer {
         display: flex;
         flex-wrap: wrap;
-        width: 530px;
-        gap: 30px;
+        gap: 20px;      
+        padding: 0;
+        width: 600px;
         position: absolute;
-        top: 69px;
-        right: 84px;
+        top: 70px;
+        right: 94px;        
     }
+    .comartionalImgComtainer img {
+        flex-basis: calc((100% - 20px) / 2);        
+    }
+
     .linkContainer {
         display: flex;
         flex-wrap: wrap;   

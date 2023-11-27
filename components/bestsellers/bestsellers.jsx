@@ -27,7 +27,7 @@ const BestSellers = () => {
             </div>
 
             {/* Tablet Swiper */}
-            <div className="flex align-center justify-center my-auto">
+            <div className={`${styles.bsTabSwiper} flex align-center justify-center my-auto`}>
                 <BestsellerSwiperTab />
             </div>
 
