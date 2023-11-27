@@ -19,7 +19,7 @@ const Comartional = () => {
         <>
         <div className={`visible  ${style.comertionalBg}`}>
         <div>
-            <h3 className={style.comertionalTitle}>експертно розроблений догляд для кожного типу шкіри</h3>
+            <h3 className={`${style.comertionalTitle}`} style={{color: "black"}}>експертно розроблений догляд для кожного типу шкіри</h3>
         </div>
 
         <div className={style.comartionalImgComtainer}>
@@ -28,28 +28,28 @@ const Comartional = () => {
             alt="brand1"
             width={165}
             height={206}
-            className="w-[165px] h-[206px] lg:w-[243px] lg:h-[304px]"
+            className="w-[165px] h-[206px] md:w-[280px] md:h-[350px] lg:w-[264px] lg:h-[304px]"
             />
              <Image 
             src={Brand2}
             alt="brand2"
             width={165}
             height={206}  
-            className="w-[165px] h-[206px] lg:w-[243px] lg:h-[304px]"                
+            className="w-[165px] h-[206px] md:w-[280px] md:h-[350px] lg:w-[243px] lg:h-[304px]"                
             />
              <Image 
             src={Brand3}
             alt="Brand3"
             width={165}
             height={206}
-            className="w-[165px] h-[206px] lg:w-[243px] lg:h-[304px]"
+            className="w-[165px] h-[206px] md:w-[280px] md:h-[350px] lg:w-[243px] lg:h-[304px]"
             />
              <Image 
             src={Brand4}
             alt="Brand4"
             width={165}
             height={206}
-            className="w-[165px] h-[206px] lg:w-[243px] lg:h-[304px]"
+            className="w-[165px] h-[206px] md:w-[280px] md:h-[350px] lg:w-[243px] lg:h-[304px]"
             />
         </div>
 

@@ -18,4 +18,12 @@
   .showSwiperTab {
     display: flex;
   }
+}
+@media screen and (min-width: 1200px) {
+  .showSwiperTab {
+    display: none;
+  }
+  .showSwiperDT {
+    display: flex;
+  }
 }/*# sourceMappingURL=recomKitsSwiper.module.css.map */
