@@ -11,7 +11,7 @@ const Rewies =() => {
         <div className="visible lg:hidden">
             <RewiesSwiper />
         </div>
-        <div>
+        <div className="hidden lg:block">
             <RewiesSwiperDT />
         </div>
         </div>
