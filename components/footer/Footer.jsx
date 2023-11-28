@@ -9,13 +9,18 @@ import Line from "../../public/img/advantages/line.png"
 import PhoneInput from "../phoneInput/phoneInput"
 import phoneInputStyle from "../phoneInput/phoneInput.module.scss"
 
+import styles from "./footer.module.scss"
+
 
 
 
 const Footer = () => {
     return (
         <>
-        <div className="flex ">
+{/* СПІЛЬНИЙ ДІВ */}
+
+        <div className="md:flex w-screen justify-between md:pr-6">
+                 <div className={`flex ${styles.listContainer}`}>
             <ul className="w-[160px] pl-5  mr-14" >
                 <li className="text-start pb-3">
                     <Link className={` ${fontstyle.istokWebTitle}`} href="/">ВСІ ТОВАРИ</Link>
@@ -37,7 +42,7 @@ const Footer = () => {
                 </li>
             </ul>
 
-            <ul>
+            <ul className="pl-5 md:justify-end">
                 <li className="text-start">
                     <Link className={` ${fontstyle.istokWebTitle}`} href="/">мій профіль</Link>
                 </li>
@@ -61,9 +66,12 @@ const Footer = () => {
                 </li>
             </ul>
         </div>
-        <section className="text-start ml-5 mt-5">
-            <span className={`pl-5 ${fontstyle.istokWebTitleFooter}`}>Давайте станемо друзями</span>
-            <div className="flex pt-3 pl-5">
+
+
+
+        <section className="text-start ml-5 sm:mt-5 md:w-[340px]">
+            <span className={`pl-5 ${fontstyle.istokWebTitleFooter} md:pl-0 `}>Давайте станемо друзями</span>
+            <div className="flex pt-3 pl-5 md:pl-0">
                 <Image
                 src={FB}
                 alt="fb"
@@ -77,7 +85,9 @@ const Footer = () => {
                 />
             </div>
 
-            <div className="px-5 text-start pt-5">
+        
+
+            <div className="px-5 text-start pt-5 md:pl-0">
                 <p className={` ${fontstyle.istokWebTitleFooter}`}>Здорова шкіра чекає</p>
                 <span className={fontstyle.istokWebTextFoter}>
                     Отримайте ексклюзивний доступ до спеціальних пропозицій, нового продукту, презентації, інсайдерські поради щодо догляду за шкірою, розіграші та інше!
@@ -121,6 +131,8 @@ const Footer = () => {
             
 
         </section>
+        </div>
+       
         </>
     )
 
