@@ -26,7 +26,7 @@ const Reviews = () => {
      
      
       <Swiper
-        slidesPerView={1}
+        slidesPerView={4}
         spaceBetween={30}
         loop={true}
         pagination={{
