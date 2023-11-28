@@ -47,7 +47,7 @@ const PlusesMob = () => {
             />
              </div>
             {/* plusesTitle */}
-            <div className={`absolute text-center top-[220px] top-[380px] ${fontStyle.comertionalPhilosopher} text-textColor`}>
+            <div className={`absolute text-center top-[210px] md:top-[220px] lg:top-[380px] ${fontStyle.comertionalPhilosopher} text-textColor`}>
                 <h1>чистий, безпечний і екологічний</h1>
             </div>
 
