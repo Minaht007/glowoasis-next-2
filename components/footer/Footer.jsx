@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <>
       <div className="relative">
-        <ul className="w-[160px]  absolute sm:top-5 sm:left-5 md:w-[320px] lg:w-[210px] lg:pl-15">
+        <ul className="w-[160px]  absolute sm:top-5 left-5 md:w-[320px] lg:w-[210px] lg:left-[60px]">
           <li className="text-start pb-3">
             <Link className={` ${fontstyle.istokWebTitle}`} href="/">
               ВСІ ТОВАРИ
@@ -48,7 +48,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul className="absolute sm:top-5 right-2 md:w-[320px] md:top-[260px] md:left-5 lg:top-5 lg:left-[22%] lg:w-[280px] md:left-[30%]">
+        <ul className="absolute sm:top-5 right-2 md:w-[320px] md:top-[260px] md:left-5 lg:top-5 lg:left-[22%] lg:w-[280px] ">
           <li className="text-start">
             <Link className={` ${fontstyle.istokWebTitle}`} href="/">
               мій профіль
@@ -87,7 +87,7 @@ const Footer = () => {
         </ul>
 
         <span
-          className={`${fontstyle.istokWebTitleFooter} absolute top-[300px] sm:left-5 md:w-[350px] md:top-5 md:left-[56%] lg:left-[50%] `}
+          className={`${fontstyle.istokWebTitleFooter} absolute top-[300px] left-5 md:w-[350px] md:top-5 md:left-[56%] lg:left-[50%] `}
         >
           Давайте станемо друзями
         </span>
