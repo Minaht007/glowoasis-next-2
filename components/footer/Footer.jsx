@@ -108,7 +108,7 @@ const Footer = () => {
           <p className={` ${fontstyle.istokWebTitleFooter}`}>
             Здорова шкіра чекає
           </p>
-          <span className={fontstyle.istokWebTextFoter}>
+          <span className={`${fontstyle.istokWebTextFoter} md:text-justify`}>
             Отримайте ексклюзивний доступ до спеціальних пропозицій, нового
             продукту, презентації, інсайдерські поради щодо догляду за шкірою,
             розіграші та інше!
@@ -143,19 +143,30 @@ const Footer = () => {
         <p
           className={`absolute top-[590px] left-5 right-5 sm:w-[360px] sm:pr-5 text-start md:top-[310px] md:left-[56%] ${fontstyle.istokWebTitleFooter}`}
         >
-          Підпишіться на сповіщення та дізнавайтесь про всі новини на вашому смартфоні
+          Підпишіться на сповіщення та дізнавайтесь про всі новини на вашому
+          смартфоні
         </p>
         {/* phon number area */}
-        <div className="flex w-[350px] pb-30 absolute top-[640px] left-5 md:top-[360px] md:left-[56%] md:pr-5"> 
-        <PhoneInput />
-    <button className="border border-1 border-gray-900 rounded-sm px-3 bg-bgBtnColor text-addBgColor" type="submit">підписатись</button>
-         </div>
+        <div className="flex w-[350px] pb-30 absolute top-[640px] left-5 md:top-[360px] md:left-[56%] md:pr-5">
+          <PhoneInput />
+          <button
+            className="border border-1 border-gray-900 rounded-sm px-3 bg-bgBtnColor text-addBgColor"
+            type="submit"
+          >
+            підписатись
+          </button>
+        </div>
         {/* Agree text with rules */}
-        <div className="text-start pt-4 absolute top-[680px] left-5 right-5 md:top-[400px] md:left-[56%]">
-        <span>
-        Надсилаючи цю форму та підписуючись на текстові повідомлення, ви погоджуєтеся на отримання оповіщень (наприклад, промо, нагадування про кошик) від glowoasis на наданий номер, включаючи повідомлення, надіслані за допомогою автонабору. Згода не є умовою покупки. Частота повідомлень змінюється. Скасуйте підписку в будь-який час, відповівши STOP або натиснувши кнопку посилання для скасування підписки (якщо є). Політика та умови конфіденційності.
-        </span>
-
+        <div className="text-start pt-4 absolute top-[680px] left-5 right-5 md:w-[350px] md:text-justify md:top-[400px] md:left-[56%]">
+          <span>
+            Надсилаючи цю форму та підписуючись на текстові повідомлення, ви
+            погоджуєтеся на отримання оповіщень (наприклад, промо, нагадування
+            про кошик) від glowoasis на наданий номер, включаючи повідомлення,
+            надіслані за допомогою автонабору. Згода не є умовою покупки.
+            Частота повідомлень змінюється. Скасуйте підписку в будь-який час,
+            відповівши STOP або натиснувши кнопку посилання для скасування
+            підписки (якщо є). Політика та умови конфіденційності.
+          </span>
         </div>
       </div>
     </>
