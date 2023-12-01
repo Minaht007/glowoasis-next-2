@@ -9,7 +9,7 @@ import Line from "../../public/img/advantages/line.png";
 import PhoneInput from "../phoneInput/phoneInput";
 import phoneInputStyle from "../phoneInput/phoneInput.module.scss";
 
-import styles from "./footer.module.scss";
+
 
 const Footer = () => {
   return (
