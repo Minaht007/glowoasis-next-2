@@ -7,9 +7,6 @@ const Hero = () => {
         <>
         <SwiperHero />          
         </>
-   
-
-
     )
 }
 export default Hero

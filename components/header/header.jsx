@@ -77,17 +77,12 @@ export const  Header =() => {
                 <div className={styles.headerNav}>
                         <Link className={`pr-4 ${styles.navLink}`} href="">Всі товари</Link>
 
-                        <div className="navLink pr-4">
-                            <a href="#">Бестселери</a>
-                                <div className={styles.subNav}>
-                                     <span>List of links</span>
-                                </div>
-                        </div>
+                        
 
 
-                        {/* <Link className={`pr-4 ${styles.navLink}`} href="">Бестселери
+                        <Link className={`pr-4 ${styles.navLink}`} href="">Бестселери
                             <a  href=""><span className={styles.subNava}> List of links</span></a>
-                        </Link> */}
+                        </Link>
 
 
                         <Link className={`pr-4 ${styles.navLink}`} href="">Категорії товаров</Link>
