@@ -52,7 +52,7 @@ export default function SwiperHero() {
         </SwiperSlide>
 
         {/* For DeskTop */}
-        <SwiperSlide className={styles.heroDT}>
+        <SwiperSlide  className={styles.heroDT}>
           <Image src={HeroDT1} alt="HeroDT1" />
         </SwiperSlide>
         <SwiperSlide className={styles.heroDT}>

@@ -13,7 +13,7 @@ const PlusesMob = () => {
 
     return (
         <>
-        <div className="flex relative justify-center h-[600px]  lg:h-[840px]">
+        <div className="flex relative justify-center h-[600px]  lg:h-[840px] layout">
             <div className="w-screen" >
                 <Image 
                 src={BG}

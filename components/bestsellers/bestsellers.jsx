@@ -9,7 +9,7 @@ import Image from "next/image"
 
 const BestSellers = () => {
     return (
-        <div className="bg-mainBgColor text-center">
+        <div className="bg-mainBgColor text-center layout">
             <div>
                 <p>РЕКОМЕНДОВАНІ ТОВАРИ</p>
             </div>

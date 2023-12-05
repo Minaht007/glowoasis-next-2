@@ -17,7 +17,7 @@ export const  Header =() => {
     const [subMenu, setSubMenu] = useState()
 
     return (
-        <section>
+        <section className="layout" >
             <div className="bg-[#D0C3BB] h-8 w-full "></div>
              <div className="flex bg-[#fff] relative w-screen h-15">
                 <div className="flex">
@@ -75,16 +75,8 @@ export const  Header =() => {
          {/* Навігація */}
 
                 <div className={styles.headerNav}>
-                        <Link className={`pr-4 ${styles.navLink}`} href="">Всі товари</Link>
-
-                        
-
-
-                        <Link className={`pr-4 ${styles.navLink}`} href="">Бестселери
-                            <a  href=""><span className={styles.subNava}> List of links</span></a>
-                        </Link>
-
-
+                        <Link className={`pr-4 ${styles.navLink}`} href="">Всі товари</Link> 
+                        <Link className={`pr-4 ${styles.navLink}`} href="">Бестселери</Link>
                         <Link className={`pr-4 ${styles.navLink}`} href="">Категорії товаров</Link>
                         <Link className={`pr-4 ${styles.navLink}`} href="">Типи шкіри</Link>
                         <Link className={`pr-4 ${styles.navLink}`} href="">Набори</Link>

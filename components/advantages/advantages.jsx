@@ -20,11 +20,11 @@ const AdvantagesMain = () => {
         />
             </div> 
         {/* MobileSwiper */}
-            <div className="pb-10 visible  lg:hidden">
+            <div className="pb-10 visible  lg:hidden layout">
         <MobSwiper />
             </div>
         {/* Desk Top Swiper */}
-        <div className="pt-10 hidden sm:hidden lg:block">
+        <div className="pt-10 hidden sm:hidden lg:block layout">
         <DTSwiper />
         </div >
             

@@ -24,6 +24,8 @@
     display: flex;
     justify-content: center;
     background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
    }
 
    .headerSearch {
@@ -41,16 +43,5 @@
   .navLink:hover {
     color :aqua;
     scale: 1.2;
-  }
-  .subNav {
-    display: none;
-    position: absolute;
-    top: 100%;  
-    min-width: 160px;
-    z-index: 1;
-  }
-
-  .navLink:hover .subNav {
-    display: block;
-  }
+  }   
 }
