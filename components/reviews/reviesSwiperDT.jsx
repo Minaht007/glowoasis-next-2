@@ -20,7 +20,7 @@ const Reviews = () => {
   const [goods, setGoods] = useState(rewiesJson)
 
   return (
-    <div className="pt-5 mb-5">
+    <div className="pt-5 mb-5 layout">
     {/* <h2 className="text-center text-3xl">Customer reviews</h2> */}
     <div className="flex relative w-screen items-center  px-6">
      
@@ -49,7 +49,7 @@ const Reviews = () => {
         }}
       >
         {goods.map((item) => (
-          <SwiperSlide key={item.id} className="sm:w-[340px] sw:h-[100%] md:w-[768px] bg-mainBgColor mb-10">
+          <SwiperSlide key={item.id} className="sm:w-[340px] sw:h-[100%] md:w-[768px] bg-mainBgColor mb-10 ">
             <div className="flex">
                <div className="pt-7">
             <Image 
