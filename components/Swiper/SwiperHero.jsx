@@ -17,9 +17,11 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import axios from "axios";
 
 export default function SwiperHero() {
-  return (
+
+    return (
     <>
       <Swiper
         loop={true}
@@ -59,11 +61,7 @@ export default function SwiperHero() {
           <Image src={HeroDT2} alt="HeroDT2" />
         </SwiperSlide>
 
-        {/* <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
+      
       </Swiper>
     </>
   );

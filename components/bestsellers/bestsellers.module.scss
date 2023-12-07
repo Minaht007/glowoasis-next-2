@@ -26,7 +26,7 @@
 
 // ________________________________________________________________________________________________________________________
 // FOR TABLET
-@media screen and (min-width: 768px) and (max-width: 1399px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     // виключаємо мобільний свайпер
     .bsMobSwiper {
         display: none;
@@ -74,7 +74,7 @@
 
 // ________________________________________________________________________________________________________________________
 // FOR DESKTOP
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
     .bsMobSwiper {
         display: none;
     } 
@@ -108,7 +108,7 @@
 
     .bestsellerImg {
         height: 440px;
-        width: 250px;
+        width: 290px;
     }
     .bestsellerBtmContainer {
         display: flex;

@@ -44,4 +44,21 @@
     color :aqua;
     scale: 1.2;
   }   
+
+  .subNavLink { 
+    max-height: 0;
+    // visibility: hidden;
+    overflow: hidden;
+  }
+
+  .subNavLink:hover
+  .subNavLink:focus {
+    max-height: fit-content;
+    overflow: visible;
+  }
+  
+
+  // .subNavLinkItems {
+
+  // }
 }
