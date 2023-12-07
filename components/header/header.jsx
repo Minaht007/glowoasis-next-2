@@ -9,23 +9,25 @@ import burger from "../../public/icon/burger.svg";
 import Link from "next/link";
 import styles from "./header.module.scss";
 
+import allProdact from "../../app/products/page"
+
 
 
 export const Header = () => {    
 
-  const handleOnClick = (event) => {
-    event.preventDefault();
-    const clickedElement = event.currentTarget;
-    const nextElement = clickedElement.nextElementSibling;
+  // const handleOnClick = (event) => {
+  //   event.preventDefault();
+  //   const clickedElement = event.currentTarget;
+  //   const nextElement = clickedElement.nextElementSibling;
 
-    if (nextElement.style.maxHeight) {
-      nextElement.style.maxHeight = null;
-    } else {
-      const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
-      allSubMenus.forEach((el) => (el.style.maxHeight = null));
-      nextElement.style.maxHeight = nextElement.scrollHeight + "px";
-    }
-  };
+  //   if (nextElement.style.maxHeight) {
+  //     nextElement.style.maxHeight = null;
+  //   } else {
+  //     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
+  //     allSubMenus.forEach((el) => (el.style.maxHeight = null));
+  //     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
+  //   }
+  // };
 
   return (
     <section className="layout relative index-5">
@@ -86,32 +88,31 @@ export const Header = () => {
       <div className={styles.headerNav}>
       
                 <div className={styles.navLink}>
-                    <Link
-                        onClick={handleOnClick}
+                    <Link                 
                         className={`pr-4`}
-                        href=""                      
+                        href="products"                      
                     >
                         Всі товари
                     </Link>
-                    <ul
+                    {/* <ul
                         className={`${styles.subNavLink}`}                        
                     >
                         <li className={styles.subNavLinkItems}>Menu-1</li>
                         <li className={styles.subNavLinkItems}>Menu-2</li>
                         <li className={styles.subNavLinkItems}>Menu-3</li>
                         <li className={styles.subNavLinkItems}>Menu-4</li>
-                    </ul>
+                    </ul> */}
                 </div>
 
         <div className={styles.navLink}>
-          <Link onClick={handleOnClick} className={`pr-4`} href="" >
+          <Link className={`pr-4`} href="" >
             Бестселери
           </Link>
-          <ul className={styles.subNavLink}>
+          {/* <ul className={styles.subNavLink}>
             <li className={styles.subNavLinkItems}>Submenu-1</li>
             <li className={styles.subNavLinkItems}>Submenu-2</li>
             <li className={styles.subNavLinkItems}>Submenu-3</li>
-          </ul>
+          </ul> */}
         </div>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Категорії товаров
