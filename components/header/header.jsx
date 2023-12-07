@@ -9,8 +9,7 @@ import burger from "../../public/icon/burger.svg";
 import Link from "next/link";
 import styles from "./header.module.scss";
 
-import subMenu from "./subMenu";
-import { useState } from "react";
+
 
 export const Header = () => {    
 
@@ -29,7 +28,7 @@ export const Header = () => {
   };
 
   return (
-    <section className="layout">
+    <section className="layout relative index-5">
       <div className="bg-[#D0C3BB] h-8 w-full "></div>
       <div className="flex bg-[#fff] relative w-screen h-15">
         <div className="flex">
