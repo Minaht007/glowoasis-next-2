@@ -9,32 +9,26 @@ import burger from "../../public/icon/burger.svg";
 import Link from "next/link";
 import styles from "./header.module.scss";
 
-import subMenu from "./subMenu";
-import { useState } from "react";
 
-export const Header = () => {
-    const [subMenuOpen, setSubMenuOpen] = useState(false);
 
-    const handleSubMenuToggle = () => {
-        setSubMenuOpen(!subMenuOpen);
-      };
+export const Header = () => {    
 
-//   const handleOnClick = (event) => {
-//     event.preventDefault();
-//     const clickedElement = event.currentTarget;
-//     const nextElement = clickedElement.nextElementSibling;
+  const handleOnClick = (event) => {
+    event.preventDefault();
+    const clickedElement = event.currentTarget;
+    const nextElement = clickedElement.nextElementSibling;
 
-//     if (nextElement.style.maxHeight) {
-//       nextElement.style.maxHeight = null;
-//     } else {
-//       const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
-//       allSubMenus.forEach((el) => (el.style.maxHeight = null));
-//       nextElement.style.maxHeight = nextElement.scrollHeight + "px";
-//     }
-//   };
+    if (nextElement.style.maxHeight) {
+      nextElement.style.maxHeight = null;
+    } else {
+      const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
+      allSubMenus.forEach((el) => (el.style.maxHeight = null));
+      nextElement.style.maxHeight = nextElement.scrollHeight + "px";
+    }
+  };
 
   return (
-    <section className="layout">
+    <section className="layout relative index-5">
       <div className="bg-[#D0C3BB] h-8 w-full "></div>
       <div className="flex bg-[#fff] relative w-screen h-15">
         <div className="flex">
@@ -93,19 +87,14 @@ export const Header = () => {
       
                 <div className={styles.navLink}>
                     <Link
-                        onClick={handleSubMenuToggle}
+                        onClick={handleOnClick}
                         className={`pr-4`}
-                        href=""
-                        aria-expanded={subMenuOpen ? "true" : "false"}
-                        aria-controls="submenu"
+                        href=""                      
                     >
                         Всі товари
                     </Link>
                     <ul
-                        className={`${styles.subNavLink} ${
-                            subMenuOpen ? styles.subNavLinkOpen : ""
-                        }`}
-                        id="submenu"
+                        className={`${styles.subNavLink}`}                        
                     >
                         <li className={styles.subNavLinkItems}>Menu-1</li>
                         <li className={styles.subNavLinkItems}>Menu-2</li>
@@ -115,8 +104,7 @@ export const Header = () => {
                 </div>
 
         <div className={styles.navLink}>
-          <Link onClick={handleSubMenuToggle} className={`pr-4`} href="" aria-expanded={subMenuOpen ? "true" : "false"}
-            aria-controls="submenu">
+          <Link onClick={handleOnClick} className={`pr-4`} href="" >
             Бестселери
           </Link>
           <ul className={styles.subNavLink}>
