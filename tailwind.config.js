@@ -5,7 +5,13 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
+  css: {
+    loaderOptions: {
+      css: {
+        additionalData: `@import "../globals.css"`,
+      },
+    },
+  },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -27,8 +33,7 @@ module.exports = {
       bgBtnColor: "#45372E", 
       cardColor: "#D0C3BB"     
     },   
-  },
-  plugins: [],
-}
+  }
+
 
 
