@@ -5,11 +5,11 @@ import SwiperHero from "../Swiper/SwiperHero"
 const Hero = () => {
     return (
         <>
-        <SwiperHero />          
+        <div className="layout">
+            <SwiperHero /> 
+        </div>
+                 
         </>
-   
-
-
     )
 }
 export default Hero

@@ -21,6 +21,7 @@
     display: none;
   }
   .heroDT {
+    display: flex;
     width: 100vw;
     height: -moz-fit-content;
     height: fit-content;

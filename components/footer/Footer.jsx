@@ -13,9 +13,9 @@ import phoneInputStyle from "../phoneInput/phoneInput.module.scss";
 
 const Footer = () => {
   return (
-    <>
-      <div className="">
-        <ul className="w-[160px] sm:top-5 left-5 md:w-[320px] lg:w-[210px] lg:left-[60px]">
+
+      <div className="relative layout">
+        <ul className="w-[160px]  absolute sm:top-5 left-5 md:w-[320px] lg:w-[210px] lg:left-[60px]">
           <li className="text-start pb-3">
             <Link className={` ${fontstyle.istokWebTitle}`} href="/">
               ВСІ ТОВАРИ
