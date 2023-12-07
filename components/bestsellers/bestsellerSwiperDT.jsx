@@ -30,7 +30,7 @@ export default function bsSwiperDT() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        // navigation={true}
         modules={[Pagination, Navigation]}
         style= {{"--swiper-pagination-bullet-inactive-color": "#999999",}}
         className="mySwiper"

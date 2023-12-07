@@ -1,44 +1,51 @@
 [
     {
         "name": "milkdew",
-        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701814436/glowoasis/cleanse-mini0duo-3x_jgf5kb.jpg",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701814431/glowoasis/milkToner-with-lable-3x_mdjuya.jpg",
         "text": "Молочний тонер для збалансованого зволоження milkdew ph balancing moisture milk toner",
         "price": "$34",
-        "id": 1
+        "id": 1,
+        "bestseller": "true"
+
     },
     {
         "name": "cloudclean",
-        "img": "/img/bestsellers/clearCloud-3x.png",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701816016/glowoasis/cloudcleanse-with-lable-3x_hfvjef.png",
         "text": "Очищуюча пінка для обличчя cloudcleanse cloud-whipped foam cleanser",
         "price": "$34",
-        "id": 2
+        "id": 2,
+        "bestseller": "true"
     },
     {
         "name": "culmtonik",
-        "img": "/img/bestsellers/dryTonic-3x.png",  
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701814432/glowoasis/%D1%81almingTonerr-with-lable-3x_ljgncg.jpg",  
         "text": "Ультразаспокійливий тонік з пробіотиками та мурумуру probiotics + murumuru ultra calming toner",
         "price": "$34",
-        "id": 3
+        "id": 3,
+        "bestseller": "true"
     },
     {
         "name": "gydrocream",
-        "img": "/img/bestsellers/dryCream-3x.png", 
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701814446/glowoasis/hydra-surge-moisturizerr-with-lable-3x_gpfygh.jpg", 
         "text": "Зволожуючий крем з пробіотиками та мурумуру probiotics + murumuru hydra surge moisturizer",
         "price": "$34",
-        "id": 4
+        "id": 4,
+        "bestseller": "true"
     },
     {
         "name": "milkdew2",
-        "img": "/img/bestsellers/milkToner-3x-2.png",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701814434/glowoasis/calm-kit_ggmc4a.jpg",
         "text": "Молочний тонер для збалансованого зволоження milkdew ph balancing moisture milk toner",
         "price": "$34",
-        "id": 5
+        "id": 5,
+        "bestseller": "true"
     },
     {
         "name": "cloudclean2",
-        "img": "/img/bestsellers/clearCloud-3x-2.png",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701814437/glowoasis/cleanser-trio-3x_whvlaf.jpg",
         "text": "Очищуюча пінка для обличчя cloudcleanse cloud-whipped foam cleanser",
         "price": "$34",
-        "id": 6
+        "id": 6,
+        "bestseller": "true"
     }     
 ]
