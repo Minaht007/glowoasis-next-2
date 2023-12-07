@@ -13,7 +13,7 @@ import phoneInputStyle from "../phoneInput/phoneInput.module.scss";
 
 const Footer = () => {
   return (
-    <>
+
       <div className="relative layout">
         <ul className="w-[160px]  absolute sm:top-5 left-5 md:w-[320px] lg:w-[210px] lg:left-[60px]">
           <li className="text-start pb-3">
@@ -48,7 +48,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul className="absolute sm:top-5 right-2 md:w-[320px] md:top-[260px] md:left-5 lg:top-5 lg:left-[22%] lg:w-[280px] ">
+        <ul className="sm:top-5 right-2 md:w-[320px] md:top-[260px] md:left-5 lg:top-5 lg:left-[22%] lg:w-[280px] ">
           <li className="text-start">
             <Link className={` ${fontstyle.istokWebTitle}`} href="/">
               мій профіль
@@ -87,7 +87,7 @@ const Footer = () => {
         </ul>
 
         <span
-          className={`${fontstyle.istokWebTitleFooter} absolute top-[300px] left-5 md:w-[350px] md:top-5 md:left-[56%] lg:left-[50%] `}
+          className={`${fontstyle.istokWebTitleFooter} top-[300px] left-5 md:w-[350px] md:top-5 md:left-[56%] lg:left-[50%] `}
         >
           Давайте станемо друзями
         </span>
@@ -95,16 +95,16 @@ const Footer = () => {
         <Image
           src={FB}
           alt="fb"
-          className="w-3 h-5 absolute top-[326px] left-5 md:top-11 md:left-[56%] lg:left-[50%]"
+          className="w-3 h-5 top-[326px] left-5 md:top-11 md:left-[56%] lg:left-[50%]"
         />
 
         <Image
           src={Instagram}
           alt="Instagram"
-          className="w-5 h-5 ml-3 absolute top-[326px] left-[52px] md:top-11 md:left-[58%] lg:left-[52%]"
+          className="w-5 h-5 ml-3 top-[326px] left-[52px] md:top-11 md:left-[58%] lg:left-[52%]"
         />
 
-        <div className="px-5 text-start absolute top-[370px] md:top-[78px] md:left-[56%] md:px-0 md:pr-5  md:w-[350px] lg:top-5 lg:left-[70%] lg:w-[350px]">
+        <div className="px-5 text-start top-[370px] md:top-[78px] md:left-[56%] md:px-0 md:pr-5  md:w-[350px] lg:top-5 lg:left-[70%] lg:w-[350px]">
           <p className={` ${fontstyle.istokWebTitleFooter}`}>
             Здорова шкіра чекає
           </p>
@@ -115,12 +115,12 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className="absolute top-[480px] left-5 right-5  md:w-[350px] md:top-[190px] md:left-[56%] lg:top-[140px] lg:left-[70%]">
+        <div className="top-[480px] left-5 right-5  md:w-[350px] md:top-[190px] md:left-[56%] lg:top-[140px] lg:left-[70%]">
           <p className={`text-start pb-2 ${fontstyle.istokWebTitleFooter}`}>
             Приєднайтеся до нашого списку розсилки, щоб отримати всі новини
             першим
           </p>
-          <div className="text-start reletive">
+          <div className="text-start">
             <input
               className="w-[233px] py-3 border border-1 border-bgBtnColor text-start pl-3 "
               type="mail"
@@ -141,13 +141,13 @@ const Footer = () => {
         </div>
 
         <p
-          className={`absolute top-[590px] left-5 right-5 sm:w-[360px] sm:pr-5 text-start md:top-[310px] md:left-[56%] lg:top-[260px] lg:left-[70%] ${fontstyle.istokWebTitleFooter}`}
+          className={` top-[590px] left-5 right-5 sm:w-[360px] sm:pr-5 text-start md:top-[310px] md:left-[56%] lg:top-[260px] lg:left-[70%] ${fontstyle.istokWebTitleFooter}`}
         >
           Підпишіться на сповіщення та дізнавайтесь про всі новини на вашому
           смартфоні
         </p>
         {/* phon number area */}
-        <div className="flex w-[350px] pb-30 absolute top-[640px] left-5 md:top-[360px] md:left-[56%] md:pr-5 lg:top-[310px] lg:left-[70%]">
+        <div className="flex w-[350px] pb-30 top-[640px] left-5 md:top-[360px] md:left-[56%] md:pr-5 lg:top-[310px] lg:left-[70%]">
           <PhoneInput />
           <button
             className="border border-1 border-gray-900 rounded-sm px-3 bg-bgBtnColor text-addBgColor"
@@ -157,7 +157,7 @@ const Footer = () => {
           </button>
         </div>
         {/* Agree text with rules */}
-        <div className="text-start pt-4 absolute top-[680px] left-5 right-5 md:w-[350px] md:text-justify md:top-[400px] md:left-[56%] lg:top-[360px] lg:left-[70%]">
+        <div className="text-start pt-4 top-[680px] left-5 right-5 md:w-[350px] md:text-justify md:top-[400px] md:left-[56%] lg:top-[360px] lg:left-[70%]">
           <span>
             Надсилаючи цю форму та підписуючись на текстові повідомлення, ви
             погоджуєтеся на отримання оповіщень (наприклад, промо, нагадування

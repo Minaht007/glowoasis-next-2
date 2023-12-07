@@ -1,0 +1,258 @@
+[
+    {
+        "id": "1",
+        "img": "/img/allProducts/1.png",
+        "name": "balm",
+        "alt": "",
+        "text": "Очищаючий бальзам для макіяжу з маслом морінги та пробіотиками probiotics + moringa oil makeupmelt cleansing balm",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "чутлива"
+    },
+    {
+        "id": "2",
+        "img": "/img/allProducts/2.png",
+        "name": "foam",
+        "alt": "",
+        "text": "Очищуюча пінка для обличчя cloudcleanse cloud-whipped foam cleanser",
+        "btn": "у кошик $39",
+        "price": 36,
+        "skin": "суха"
+    },
+    {
+        "id": "3",
+        "img": "/img/allProducts/3.png",
+        "name": "powder",
+        "alt": "",
+        "text": "Ензимна пудра з ферментом папаї та пробіотиками probiotics + papaya enzyme exfoliating powder",
+        "btn": "у кошик $46",
+        "price": 36,
+        "skin": "чутлива"
+    },
+    {
+        "id": "4",
+        "img": "/img/allProducts/4.png",
+        "name": "toner",
+        "alt": "",
+        "text": "Молочний тонер для збалансованого зволоження milkdew ph balancing moisture milk toner",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "суха"
+    },
+    {
+        "id": "5",
+        "img": "/img/allProducts/5.png",
+        "name": "toner calming",
+        "alt": "",
+        "text": "Ультразаспокійливий тонік з пробіотиками та мурумуру probiotics + murumuru ultra toner",
+        "btn": "у кошик $36",
+        "price": 46,
+        "skin": "чутлива"
+    },
+    {
+        "id": "6",
+        "img": "/img/allProducts/6.png",
+        "name": "hydrating serum",
+        "alt": "",
+        "text": "Зволожуюча сироватка glowshot supercharged hydrating serum",
+        "btn": "у кошик $36",
+        "price": 16,
+        "skin": "суха"
+    },
+    {
+        "id": "7",
+        "img": "/img/allProducts/7.png",
+        "name": "hydrating gel",
+        "alt": "",
+        "text": "Зволожуючий гель з пробіотиками та гіалуроновим комплексом probiotics + hyaluronic complex hydrating gel moisturizer",
+        "btn": "у кошик $36",
+        "price": 26,
+        "skin": "чутлива"
+    },
+    {
+        "id": "8",
+        "img": "/img/allProducts/8.png",
+        "name": "hydra surge moisturizer",
+        "alt": "",
+        "text": "Зволожуючий крем з пробіотиками та мурумуру probiotics + murumuru hydra surge moisturizer",
+        "btn": "у кошик $36",
+        "price": 86,
+        "skin": "суха"
+    },
+    {
+        "id": "9",
+        "img": "/img/allProducts/9.png",
+        "name": "eye cream",
+        "alt": "",
+        "text": "Освіжаючий крем для очей з пробіотиками і потрійними пептидами probiotics + triple peptide refreshing eye cream",
+        "btn": "у кошик $36",
+        "price": 10,
+        "skin": "суха"
+    },
+    {
+        "id": "10",
+        "img": "/img/allProducts/10.png",
+        "name": "eye duo",
+        "alt": "",
+        "text": "Набір для догляду за ділянкою навколо очей refreshing eye duo",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "суха"
+    },
+    {
+        "id": "11",
+        "img": "/img/allProducts/11.png",
+        "name": "cloudcleanse duo",
+        "alt": "",
+        "text": "Набір cloudcleanse duo",
+        "btn": "у кошик $36",
+        "price": 56,
+        "skin": "чутлива"
+    },
+    {
+        "id": "12",
+        "img": "/img/allProducts/12.png",
+        "name": "tone duo",
+        "alt": "",
+        "text": "Набір set the tone duo",
+        "btn": "у кошик $36",
+        "price": 6,
+        "skin": "чутлива"
+    },
+    {
+        "id": "13",
+        "img": "/img/allProducts/13.png",
+        "name": "glowshot duo",
+        "alt": "",
+        "text": "Набір glowshot duo",
+        "btn": "у кошик $36",
+        "price": 15,
+        "skin": "комбінована"
+    },
+    {
+        "id": "14",
+        "img": "/img/allProducts/14.png",
+        "name": "cleanser trio",
+        "alt": "",
+        "text": "Набір cleanser trio",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "чутлива",
+        "category": "набори"
+    },
+    {
+        "id": "15",
+        "img": "/img/allProducts/15.png",
+        "name": "best sellers trio",
+        "alt": "",
+        "text": "Набір best sellers trio",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "чутлива",
+        "category": "набори"
+    },
+    {
+        "id": "16",
+        "img": "/img/allProducts/16.png",
+        "name": "daily glow trio",
+        "alt": "",
+        "text": "Набір daily glow trio",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "комбінована"
+    },
+    {
+        "id": "17",
+        "img": "/img/allProducts/17.png",
+        "name": " glow trio",
+        "alt": "",
+        "text": "Набір ready, set, glow trio",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "чутлива"
+    },
+    {
+        "id": "18",
+        "img": "/img/allProducts/18.png",
+        "name": "award-winning trio",
+        "alt": "",
+        "text": "Набір award-winning trio",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "комбінована",
+        "category": "набори"
+    },
+    {
+        "id": "19",
+        "img": "/img/allProducts/19.png",
+        "name": "ultimate oasis kit",
+        "alt": "",
+        "text": "Набір ultimate oasis kit",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "комбінована",
+        "category": "тонери"
+    },
+    {
+        "id": "20",
+        "img": "/img/allProducts/20.png",
+        "name": "calming essentials kit",
+        "alt": "",
+        "text": "Заспокійливий набір calming essentials kit",
+        "btn": "у кошик $36",
+        "price": 36
+ },
+    {
+        "id": "21",
+        "img": "/img/allProducts/21.png",
+        "name": "double cleanse kit",
+        "alt": "",
+        "text": "Набір double cleanse kit",
+        "btn": "у кошик $36",
+        "price": 26,
+        "skin": "жирна"
+    },
+    {
+        "id": "22",
+        "img": "/img/allProducts/22.png",
+        "name": "hydration kit",
+        "alt": "",
+        "text": "Набір hello hydration kit",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "жирна"
+    },
+    {
+        "id": "23",
+        "img": "/img/allProducts/23.png",
+        "name": "summer brightening + antioxidant kit",
+        "alt": "",
+        "text": "Набір summer brightening + antioxidant kit",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "чутлива",
+        "category": "тонери"
+    },
+    {
+        "id": "24",
+        "img": "/img/allProducts/24.png",
+        "name": "cleanse mini duo",
+        "alt": "",
+        "text": "Набір мініатюр cleanse mini duo",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "жирна",
+        "category": "ензимна пудра"
+    },
+    {
+        "id": "25",
+        "img": "/img/allProducts/25.png",
+        "name": "powderporefect minis",
+        "alt": "",
+        "text": "Набір мініатюр powderporefect minis",
+        "btn": "у кошик $36",
+        "price": 36,
+        "skin": "жирна",
+        "category": "зволожуючі креми"
+    }
+]
