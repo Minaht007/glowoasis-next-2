@@ -38,9 +38,10 @@
   .navLink {
     display: block;
     cursor: pointer;
-    position: relative;
+    position: static;
   }
   .navLink:hover {
+    padding: 0 7px;
     color :aqua;
     scale: 1.2;
   }   
@@ -55,10 +56,5 @@
   .subNavLink:focus {
     max-height: fit-content;
     overflow: visible;
-  }
-  
-
-  // .subNavLinkItems {
-
-  // }
+  }  
 }
