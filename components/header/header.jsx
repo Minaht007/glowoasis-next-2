@@ -90,17 +90,29 @@ export const Header = () => {
       {/* Навігація */}
 
       <div className={styles.headerNav}>
-        <div className={styles.navLink}>
-          <Link onClick={handleSubMenuToggle} className={`pr-4`} href="">
-            Всі товари
-          </Link>
-          <ul className={styles.subNavLink}>
-            <li className={styles.subNavLinkItems}>Menu-1</li>
-            <li className={styles.subNavLinkItems}>Menu-2</li>
-            <li className={styles.subNavLinkItems}>Menu-3</li>
-            <li className={styles.subNavLinkItems}>Menu-4</li>
-          </ul>
-        </div>
+      
+                <div className={styles.navLink}>
+                    <Link
+                        onClick={handleSubMenuToggle}
+                        className={`pr-4`}
+                        href=""
+                        aria-expanded={subMenuOpen ? "true" : "false"}
+                        aria-controls="submenu"
+                    >
+                        Всі товари
+                    </Link>
+                    <ul
+                        className={`${styles.subNavLink} ${
+                            subMenuOpen ? styles.subNavLinkOpen : ""
+                        }`}
+                        id="submenu"
+                    >
+                        <li className={styles.subNavLinkItems}>Menu-1</li>
+                        <li className={styles.subNavLinkItems}>Menu-2</li>
+                        <li className={styles.subNavLinkItems}>Menu-3</li>
+                        <li className={styles.subNavLinkItems}>Menu-4</li>
+                    </ul>
+                </div>
 
         <div className={styles.navLink}>
           <Link onClick={handleSubMenuToggle} className={`pr-4`} href="" aria-expanded={subMenuOpen ? "true" : "false"}
