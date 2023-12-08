@@ -20,9 +20,9 @@ const Reviews = () => {
   const [goods, setGoods] = useState(rewiesJson)
 
   return (
-    <div className="pt-5 mb-5 layout">
+    <div className="pt-5 mb-5 w-[1440px] layout">
     {/* <h2 className="text-center text-3xl">Customer reviews</h2> */}
-    <div className="flex relative w-screen items-center  px-6">
+    <div className="flex relative w-[1440px] items-center  px-6">
      
      
       <Swiper

@@ -116,7 +116,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className="top-[480px] left-5 right-5  md:w-[350px] md:top-[190px] md:left-[56%] lg:top-[140px] lg:left-[70%]">
+        <div className="absolute top-[480px] left-5 right-5  md:w-[350px] md:top-[190px] md:left-[56%] lg:top-[140px] lg:left-[70%]">
           <p className={`text-start pb-2 ${fontstyle.istokWebTitleFooter}`}>
             Приєднайтеся до нашого списку розсилки, щоб отримати всі новини
             першим

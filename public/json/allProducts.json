@@ -7,7 +7,8 @@
         "text": "Очищаючий бальзам для макіяжу з маслом морінги та пробіотиками probiotics + moringa oil makeupmelt cleansing balm",
         "btn": "у кошик $36",
         "price": 36,
-        "skin": "чутлива"
+        "skin": "чутлива",
+        "bestseller": "true"
     },
     {
         "id": "2",

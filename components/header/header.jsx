@@ -63,11 +63,14 @@ export const Header = () => {
           <div
             className={`${styles.headerLogo} sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]`}
           >
+            <Link href="MainPage">
             <Image
               className="w-[114px] h-5 lg:w-[249px] lg:h-[45px] "
               src={Logo}
               alt="Logo"
             />
+            </Link>
+           
           </div>
           {/* контейнер з іконками */}
           <div className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]">
