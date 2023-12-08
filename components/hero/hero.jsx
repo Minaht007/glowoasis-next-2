@@ -1,12 +1,14 @@
 
-import SwiperHero from "../Swiper/SwiperHero"
+// import SwiperHero from "../Swiper/SwiperHero"
+import SwiperHeroMob from "./swiperHeroMob"
 
 
 const Hero = () => {
     return (
         <>
         <div className="layout">
-            <SwiperHero /> 
+            {/* <SwiperHero />  */}
+            <SwiperHeroMob />
         </div>
                  
         </>
