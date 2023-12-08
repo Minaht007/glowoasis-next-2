@@ -108,7 +108,7 @@ export const Header = () => {
                 </div>
 
         <div className={styles.navLink}>
-          <Link className={`pr-4`} href="" >
+          <Link className={`pr-4`} href="bestsellers" >
             Бестселери
           </Link>
           {/* <ul className={styles.subNavLink}>
