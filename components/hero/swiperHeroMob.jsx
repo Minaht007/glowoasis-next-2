@@ -1,5 +1,5 @@
 "use client";
-import styles from "../Swiper/swiper.module.scss";
+import styles from "./hero.module.scss";
 import banerMob from "../../public/json/baners.json";
 import Image from "next/image";
 
@@ -30,7 +30,7 @@ export default function SwiperHero() {
   useEffect(() => {
     const filterImages = getImages(images);
     setBaner(filterImages);
-  }, );
+  });
 
   return (
     <>
@@ -44,7 +44,9 @@ export default function SwiperHero() {
       >
         {baner.map((image) => (
           <SwiperSlide key={image.id} >
-            <Image src={image.img} alt={image.name} width={150} height={150} />
+            <Image src={image.img} alt={image.name} width={150} height={150} 
+            className={styles.maineBaner}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

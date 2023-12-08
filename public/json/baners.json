@@ -2,13 +2,20 @@
     {
         "id": 1,
         "name": "heroBanerDT-1",
-        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853654/glowoasis/baners/DeskTop/heroDT-3x_c0p6lf.jpg",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702034112/glowoasis/baners/DeskTop/banerMainpageDT-2_fpltml.png",
         "category": "desktop"
     },
     {
         "id": 2,
         "name": "heroBanerDT-2",
-        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853654/glowoasis/baners/DeskTop/banerMainpageDT-2_aobfbu.jpg",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702035119/glowoasis/baners/DeskTop/banerMainpageDT-3_telof2.png",
+        "category": "desktop"
+        
+    },
+    {
+        "id": 5,
+        "name": "heroBanerDT-2",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702034110/glowoasis/baners/DeskTop/heroDT-3x_rilwg0.jpg",
         "category": "desktop"
         
     },
