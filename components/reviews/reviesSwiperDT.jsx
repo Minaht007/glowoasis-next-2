@@ -9,15 +9,15 @@ import "swiper/css/scrollbar";
 import {  Scrollbar } from "swiper/modules";
 
 import Image from "next/image"
-import rewiesJson from "../../public/json/rewies.json"
+import rewiesjson from "../../public/json/rewies.json"
 import styles from "./reviews.module.scss"
-import fontStyles from "../fonts/fonts.module.scss"
+
 
 
 
 const Reviews = () => {
 
-  const [goods, setGoods] = useState(rewiesJson)
+  const [goods, setGoods] = useState(rewiesjson)
 
   return (
     <div className="pt-5 mb-5 w-[1440px] layout">

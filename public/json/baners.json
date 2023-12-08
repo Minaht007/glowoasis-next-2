@@ -30,5 +30,23 @@
         "name": "heroBanerMob-2",
         "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853710/glowoasis/baners/Mobile/heroMob-3x_gafpyn.jpg",
         "category": "mobile"
+    },
+    {
+        "id": 6,
+        "name": "bestsellerMobBaner",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702045191/glowoasis/baners/bestsellersBaner/Mobile/banner-Mob_qpwzd9.png",
+        "category": "mobile"
+    },
+    {
+        "id": 7,
+        "name": "bestsellerTabBaner",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702045194/glowoasis/baners/bestsellersBaner/Mobile/banner-Tab_fdu0b3.png",
+        "category": "tabler"
+    },
+    {
+        "id": 8,
+        "name": "bestsellerDtBaner",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702045189/glowoasis/baners/bestsellersBaner/Mobile/banner-DT_lf04bo.png",
+        "category": "tabler"
     }
 ]

@@ -23,6 +23,7 @@
     background-color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
+    position: relative;
   }
   .headerSearch {
     position: relative;
@@ -34,8 +35,16 @@
     position: relative;
   }
   .navLink:hover {
-    color: aqua;
-    scale: 1.2;
+    padding: 0 7px;
+    color: #45372E;
+    transform: scale(1.2);
+    transition: 300ms linear;
+  }
+  .navLink:hover .subNavLink {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    overflow: visible;
+    transition: 400ms;
   }
   .subNavLink {
     max-height: 0;
