@@ -1,12 +1,22 @@
 [
     {
         "id": 1,
-        "name": "bestsellerBaner-1",
+        "name": "heroBanerDT-1",
         "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853654/glowoasis/baners/DeskTop/heroDT-3x_c0p6lf.jpg"
     },
     {
         "id": 2,
-        "name": "bestsellerBaner-2",
+        "name": "heroBanerDT-2",
         "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853654/glowoasis/baners/DeskTop/banerMainpageDT-2_aobfbu.jpg"
+    },
+    {
+        "id": 3,
+        "name": "heroBanerMob-1",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853709/glowoasis/baners/Mobile/heroMob-1x_fpbt39.jpg"
+    },
+    {
+        "id": 4,
+        "name": "heroBanerMob-2",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853710/glowoasis/baners/Mobile/heroMob-3x_gafpyn.jpg"
     }
 ]
