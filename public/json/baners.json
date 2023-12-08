@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "bestsellerBaner-1",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853654/glowoasis/baners/DeskTop/heroDT-3x_c0p6lf.jpg"
+    },
+    {
+        "id": 2,
+        "name": "bestsellerBaner-2",
+        "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853654/glowoasis/baners/DeskTop/banerMainpageDT-2_aobfbu.jpg"
+    }
+]
