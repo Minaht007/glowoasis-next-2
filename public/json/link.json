@@ -1,0 +1,30 @@
+[
+    {
+        "name": "всі продукти",
+        "link": "products"
+    },
+    {
+        "name": "бестселери",
+        "link": "bestsellers"
+    },
+    {
+        "name": "категорії товарів",
+        "link": "products"
+    },
+    {
+        "name": "тип шкіри",
+        "link": "products"
+    },
+    {
+        "name": "набори",
+        "link": "products"
+    },
+    {
+        "name": "чисті формули",
+        "link": "products"
+    },
+    {
+        "name": "історія бренду",
+        "link": "products"
+    }    
+]

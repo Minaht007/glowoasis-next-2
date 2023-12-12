@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import searchGlass from "../../public/icon/searchGlass.svg";
 import Logo from "../../public/img/logo.png";
@@ -9,25 +10,20 @@ import burger from "../../public/icon/burger.svg";
 import Link from "next/link";
 import styles from "./header.module.scss";
 
+import BurgerMenu from "../burgerMenu/burgerMenu";
+
 import allProdact from "../../app/products/page"
+import link from "../../public/json/link.json"
+import React from "react";
+import { useState } from "react";
 
 
 
 export const Header = () => {    
 
-  // const handleOnClick = (event) => {
-  //   event.preventDefault();
-  //   const clickedElement = event.currentTarget;
-  //   const nextElement = clickedElement.nextElementSibling;
-
-  //   if (nextElement.style.maxHeight) {
-  //     nextElement.style.maxHeight = null;
-  //   } else {
-  //     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
-  //     allSubMenus.forEach((el) => (el.style.maxHeight = null));
-  //     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
-  //   }
-  // };
+ const [links, setLinks] = useState(link)
+ 
+  
 
   return (
     <section className="layout relative index-5">
@@ -53,10 +49,11 @@ export const Header = () => {
           </div>
 
           {/* контейнер з бургер */}
-          <div>
-            <button className="visible  lg:hidden ml-5 pt-4 pb-4">
-              <Image src={burger} width={15} height={10} alt="burger" />
+          <div className={styles.headerBurgerMenu}>
+            <button  className="visible  lg:hidden ml-5 pt-4 pb-4">
+              <Image onClick={BurgerMenu.tonglMenu} src={burger} width={15} height={10} alt="burger" />
             </button>
+            <Link className={`pr-4 `} href="products">Всі товари</Link>
           </div>
 
           {/* контейнер з лого */}
@@ -88,9 +85,37 @@ export const Header = () => {
 
       {/* Навігація */}
 
-      <div className={styles.headerNav}>
+     <div className="flex flex-row align-center justify-center">
+     {links.map((item) => {
+        return (
+          <div key={item.name} >
+          <Link className={`px-4 ${styles.navLink}`} href={item.link}>{item.name}</Link>
+      </div>
+        )
+      })}
+     </div>
+                   
       
-                <div className={styles.navLink}>
+    </section>
+  );
+};
+
+ // const handleOnClick = (event) => {
+  //   event.preventDefault();
+  //   const clickedElement = event.currentTarget;
+  //   const nextElement = clickedElement.nextElementSibling;
+
+  //   if (nextElement.style.maxHeight) {
+  //     nextElement.style.maxHeight = null;
+  //   } else {
+  //     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
+  //     allSubMenus.forEach((el) => (el.style.maxHeight = null));
+  //     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
+  //   }
+  // };
+
+
+   {/* <div className={styles.navLink}>
                     <Link                 
                         className={`pr-4`}
                         href="products"                      
@@ -105,18 +130,18 @@ export const Header = () => {
                         <li className={styles.subNavLinkItems}>Menu-3</li>
                         <li className={styles.subNavLinkItems}>Menu-4</li>
                     </ul> */}
-                </div>
+                {/* </div> */}
 
-        <div className={styles.navLink}>
+        {/* <div className={styles.navLink}>
           <Link className={`pr-4`} href="bestsellers" >
             Бестселери
-          </Link>
+          </Link> */}
           {/* <ul className={styles.subNavLink}>
             <li className={styles.subNavLinkItems}>Submenu-1</li>
             <li className={styles.subNavLinkItems}>Submenu-2</li>
             <li className={styles.subNavLinkItems}>Submenu-3</li>
           </ul> */}
-        </div>
+        {/* </div>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Категорії товаров
         </Link>
@@ -131,8 +156,4 @@ export const Header = () => {
         </Link>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Історія бренду
-        </Link>
-      </div>
-    </section>
-  );
-};
+        </Link>  */}
