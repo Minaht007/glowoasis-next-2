@@ -12,18 +12,22 @@ import styles from "./header.module.scss";
 
 import BurgerMenu from "../burgerMenu/burgerMenu";
 
-import allProdact from "../../app/products/page"
-import link from "../../public/json/link.json"
+import allProdact from "../../app/products/page";
+import link from "../../public/json/link.json";
+import linksdurger from "../../public/json/link.json"
+
 import React from "react";
 import { useState } from "react";
 
+export const Header = () => {
+  const [links, setLinks] = useState(link);
+  const [linksBurger, setLinksBurger] = useState(linksdurger)
 
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
-export const Header = () => {    
-
- const [links, setLinks] = useState(link)
- 
-  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <section className="layout relative index-5">
@@ -49,11 +53,15 @@ export const Header = () => {
           </div>
 
           {/* контейнер з бургер */}
-          <div className={styles.headerBurgerMenu}>
-            <button  className="visible  lg:hidden ml-5 pt-4 pb-4">
-              <Image onClick={BurgerMenu.tonglMenu} src={burger} width={15} height={10} alt="burger" />
-            </button>
-            <Link className={`pr-4 `} href="products">Всі товари</Link>
+          <div>
+            <button type="button" className="visible lg:hidden ml-5 pt-4 pb-4" onClick={toggleMenu}>
+              <Image                
+                src={burger}
+                width={15}
+                height={10}
+                alt="burger"
+              />
+            </button>              
           </div>
 
           {/* контейнер з лого */}
@@ -61,13 +69,12 @@ export const Header = () => {
             className={`${styles.headerLogo} sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]`}
           >
             <Link href="MainPage">
-            <Image
-              className="w-[114px] h-5 lg:w-[249px] lg:h-[45px] "
-              src={Logo}
-              alt="Logo"
-            />
+              <Image
+                className="w-[114px] h-5 lg:w-[249px] lg:h-[45px] "
+                src={Logo}
+                alt="Logo"
+              />
             </Link>
-           
           </div>
           {/* контейнер з іконками */}
           <div className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]">
@@ -85,37 +92,57 @@ export const Header = () => {
 
       {/* Навігація */}
 
-     <div className="flex flex-row align-center justify-center">
-     {links.map((item) => {
-        return (
-          <div key={item.name} >
-          <Link className={`px-4 ${styles.navLink}`} href={item.link}>{item.name}</Link>
+      <div className="flex flex-row lg:align-center lg:justify-center hidden lg:block">
+        {links.map((item) => {
+          return (
+            <div key={item.name}>
+              <Link className={`px-4 ${styles.navLink}`} href={item.link}>
+                {item.name}
+              </Link>
+            </div>
+          );
+        })}
       </div>
-        )
-      })}
-     </div>
-                   
-      
+      <BurgerMenu isActive={isMenuOpen} setActive={setIsMenuOpen} links={linksBurger}/>
     </section>
   );
 };
 
- // const handleOnClick = (event) => {
-  //   event.preventDefault();
-  //   const clickedElement = event.currentTarget;
-  //   const nextElement = clickedElement.nextElementSibling;
-
-  //   if (nextElement.style.maxHeight) {
-  //     nextElement.style.maxHeight = null;
-  //   } else {
-  //     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
-  //     allSubMenus.forEach((el) => (el.style.maxHeight = null));
-  //     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
-  //   }
-  // };
 
 
-   {/* <div className={styles.navLink}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const handleOnClick = (event) => {
+//   event.preventDefault();
+//   const clickedElement = event.currentTarget;
+//   const nextElement = clickedElement.nextElementSibling;
+
+//   if (nextElement.style.maxHeight) {
+//     nextElement.style.maxHeight = null;
+//   } else {
+//     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
+//     allSubMenus.forEach((el) => (el.style.maxHeight = null));
+//     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
+//   }
+// };
+
+{
+  /* <div className={styles.navLink}>
                     <Link                 
                         className={`pr-4`}
                         href="products"                      
@@ -129,19 +156,27 @@ export const Header = () => {
                         <li className={styles.subNavLinkItems}>Menu-2</li>
                         <li className={styles.subNavLinkItems}>Menu-3</li>
                         <li className={styles.subNavLinkItems}>Menu-4</li>
-                    </ul> */}
-                {/* </div> */}
+                    </ul> */
+}
+{
+  /* </div> */
+}
 
-        {/* <div className={styles.navLink}>
+{
+  /* <div className={styles.navLink}>
           <Link className={`pr-4`} href="bestsellers" >
             Бестселери
-          </Link> */}
-          {/* <ul className={styles.subNavLink}>
+          </Link> */
+}
+{
+  /* <ul className={styles.subNavLink}>
             <li className={styles.subNavLinkItems}>Submenu-1</li>
             <li className={styles.subNavLinkItems}>Submenu-2</li>
             <li className={styles.subNavLinkItems}>Submenu-3</li>
-          </ul> */}
-        {/* </div>
+          </ul> */
+}
+{
+  /* </div>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Категорії товаров
         </Link>
@@ -156,4 +191,5 @@ export const Header = () => {
         </Link>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Історія бренду
-        </Link>  */}
+        </Link>  */
+}
