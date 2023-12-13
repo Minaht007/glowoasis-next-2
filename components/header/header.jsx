@@ -23,7 +23,7 @@ export const Header = () => {
   const [links, setLinks] = useState(link);
   const [linksBurger, setLinksBurger] = useState(linksdurger)
 
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
