@@ -54,7 +54,7 @@ export const Header = () => {
 
           {/* контейнер з бургер */}
           <div>
-            <button type="button" className="visible lg:hidden ml-5 pt-4 pb-4" onClick={toggleMenu}>
+            <button type="button" className="visible lg:hidden ml-5 pt-4 pb-4 " onClick={toggleMenu}>
               <Image                
                 src={burger}
                 width={15}
