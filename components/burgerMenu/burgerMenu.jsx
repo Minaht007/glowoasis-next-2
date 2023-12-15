@@ -9,13 +9,19 @@ import React, { useState } from "react";
 const BurgerMenu = ({ links, isActive }) => {
   const [showSignUp, setShowSignUp] = useState(false);
   const [previousLinks, setPreviousLinks] = useState(links);
+  const [buttonText, setButtonText] = useState("мій профіль");
+  const [showIcon, setShowIcon] = useState(true);
+
 
   const handleSignUpClick = () => {
     setShowSignUp(!showSignUp);
+    setShowIcon(!showIcon)
     if (showSignUp) {
       setPreviousLinks(links);
+      setButtonText("Мій профіль")
     } else {
       setPreviousLinks([]);
+      setButtonText("Back")
     }
   };
 
@@ -32,13 +38,19 @@ const BurgerMenu = ({ links, isActive }) => {
             </li>
           ))}
 
-        <li className="flex flex-row relative" onClick={handleSignUpClick}>
-          <button>
-            <Image src={signicon} alt="signicon" width={12} height={14} />
+<li className="flex flex-row relative" onClick={handleSignUpClick}>
+          {showSignUp ? (
             <p className="absolute top-[-14px] left-5 text-start">
-              мій <br /> профіль
+              <strong>{buttonText}</strong>
             </p>
-          </button>
+          ) : (
+            <button>
+              <Image src={signicon} alt="signicon" width={12} height={14} />
+              <p className="absolute top-[-14px] left-5 text-start">
+                {buttonText}
+              </p>
+            </button>
+          )}
         </li>
 
         {showSignUp && <SignUp />}
