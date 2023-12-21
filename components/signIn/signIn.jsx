@@ -28,13 +28,13 @@ const SignUp = () => {
         setPossibleVisibleRepite(!possibleVisibleRepite)
     }
 
-    const register = (email, password, auth) => {
-      // e.preventDefault()
+    const register = (e) => {
+      e.preventDefault()
       if (contrPassword !== password) {
           setError("Password didn't match")
           return
       }
-      createUserWithEmailAndPassword(email, password)
+      createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         setName("");
@@ -46,7 +46,9 @@ const SignUp = () => {
       .catch((error) => {
         setError(error.message);
       });
+      console.log(createUserWithEmailAndPassword)
     }
+    console.log(register)
 
   return (
     <>
@@ -58,8 +60,8 @@ const SignUp = () => {
           <p>Введіть свої дані</p>
         </div>
 
-        <ul className="flex flex-col align-center justify-center" onSubmit={register}>
-          <li className="flex flex-col align-center justify-center py-2">
+        <form className="flex flex-col align-center justify-center"  onSubmit={register}>
+          <div className="flex flex-col align-center justify-center py-2">
             <label className="text-start" htmlFor="">
               Прізвище
             </label>
@@ -70,8 +72,9 @@ const SignUp = () => {
               type="text"
               placeholder="Прізвище"
             />
-          </li>
-          <li className="flex flex-col ">
+          </div>
+
+          <div className="flex flex-col ">
             <label className="text-start" htmlFor="">
               Ім’я
             </label>
@@ -82,8 +85,9 @@ const SignUp = () => {
               type="text"
               placeholder="Ім’я"
             />
-          </li>
-          <li className="flex flex-col py-2">
+          </div>
+
+          <div className="flex flex-col py-2">
             <label className="text-start" htmlFor="">
               Електронна адреса
             </label>
@@ -94,8 +98,9 @@ const SignUp = () => {
               type="mail"
               placeholder="prostotext@gmail.com"
             />
-          </li>
-          <li className="flex flex-col ">
+          </div>
+
+          <div className="flex flex-col ">
             <label className="flex flex-col text-start relative" htmlFor="">
               Пароль
               <input
@@ -114,9 +119,9 @@ const SignUp = () => {
             onClick={handleVisible}
             />
             </label>     
-          </li>
+          </div>
 
-          <li className="flex flex-col pb-5 py-2">
+          <div className="flex flex-col pb-5 py-2">
             <label className="flex flex-col text-start relative" htmlFor="">
             Повторіть пароль
               <input
@@ -135,19 +140,19 @@ const SignUp = () => {
             onClick={handleVisibleRepite}
             />
             </label>     
-          </li>
+          </div>
 
-          <li>
+          <div>
             <button className="border border-2 border-gray-900 rounded-md w-[350px] py-3 bg-[#45372E] text-[#fff]" type="submit">
               зареєструватись
             </button>
-          </li>
+          </div>
 
           <li className="py-5">
             <p>Або зареєструйтесь за допомогою соцмереж</p>
           </li>
 
-          <li className="flex flex-row align-center justify-center">
+          <div className="flex flex-row align-center justify-center">
             <button className="flex flex-row border border-gray-900 rounded-md px-6 py-3 mr-[28px]">
                 <Image 
                 src={googleicon}
@@ -168,16 +173,18 @@ const SignUp = () => {
                 />
             Facebook
             </button>
-          </li>
-          <li className="pt-5">
+          </div>
+
+          <div className="pt-5">
             <p>
             Уже маєте акаунт?
             </p>
             <button className="underline" type="button" >Увійти</button>
-          </li>
-        </ul>
+          </div>
+
+        </form>
       </div>
-      <createUserWithEmailAndPassword email={email} name={name}/>
+      
     </>   
   );
 
