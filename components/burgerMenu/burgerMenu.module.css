@@ -4,8 +4,7 @@
   align-items: flex-start;
   position: fixed;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100vh;
   padding: 20px 10px;
   z-index: 10;
   transform: translateX(-100%);

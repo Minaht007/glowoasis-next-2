@@ -5,16 +5,47 @@ import googleicon from "../../public/icon/google.png"
 import fb from "../../public/icon/fb.png"
 import visible from "../../public/icon/visible.png"
 
+import {createUserWithEmailAndPassword } from "firebase/auth";
+import auth from "../../firebase"
+
 const SignUp = () => {
 
     const [possibleVisible, setPossibleVisible] = useState(false)
     const [possibleVisibleRepite, setPossibleVisibleRepite] = useState(false)
+    const [name, setName] = useState("")
+    const [sureName, setSureName]= useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [contrPassword, setContrPasswort] = useState("")
+
+    const [error, setError] = useState("")
+
 
     const handleVisible = () => {
         setPossibleVisible(!possibleVisible)
     }
     const handleVisibleRepite = () => {
         setPossibleVisibleRepite(!possibleVisibleRepite)
+    }
+
+    const register = (email, password, auth) => {
+      // e.preventDefault()
+      if (contrPassword !== password) {
+          setError("Password didn't match")
+          return
+      }
+      createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        setName("");
+        setSureName("");
+        setEmail("");
+        setPassword("");
+        setContrPasswort("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
     }
 
   return (
@@ -27,13 +58,15 @@ const SignUp = () => {
           <p>Введіть свої дані</p>
         </div>
 
-        <ul className="flex flex-col align-center justify-center">
+        <ul className="flex flex-col align-center justify-center" onSubmit={register}>
           <li className="flex flex-col align-center justify-center py-2">
             <label className="text-start" htmlFor="">
               Прізвище
             </label>
             <input
               className="border border-2 border-gray-900 rounded-md w-[350px] text-start pl-3 py-3"
+              value={sureName}
+              onChange={(e) => setSureName(e.target.value)}
               type="text"
               placeholder="Прізвище"
             />
@@ -44,6 +77,8 @@ const SignUp = () => {
             </label>
             <input
               className="border border-2 border-gray-900 rounded-md w-[350px] text-start pl-3 py-3"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder="Ім’я"
             />
@@ -54,6 +89,8 @@ const SignUp = () => {
             </label>
             <input
               className="border border-2 border-gray-900 rounded-md w-[350px] text-start pl-3 py-3"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               type="mail"
               placeholder="prostotext@gmail.com"
             />
@@ -63,6 +100,8 @@ const SignUp = () => {
               Пароль
               <input
               className="border border-2 border-gray-900 rounded-md w-[350px] text-start pl-3 py-3"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               type={possibleVisible ? "text" : "password"}
               placeholder="Пароль"        
             />
@@ -82,6 +121,8 @@ const SignUp = () => {
             Повторіть пароль
               <input
               className="border border-2 border-gray-900 rounded-md w-[350px] text-start pl-3 py-3"
+              value={contrPassword}
+              onChange={(e) => setContrPasswort(e.target.value)}
               type={possibleVisibleRepite ? "text" : "password"}
               placeholder="Повторіть пароль"        
             />
@@ -97,7 +138,7 @@ const SignUp = () => {
           </li>
 
           <li>
-            <button className="border border-2 border-gray-900 rounded-md w-[350px] py-3 bg-[#45372E] text-[#fff]">
+            <button className="border border-2 border-gray-900 rounded-md w-[350px] py-3 bg-[#45372E] text-[#fff]" type="submit">
               зареєструватись
             </button>
           </li>
@@ -136,8 +177,10 @@ const SignUp = () => {
           </li>
         </ul>
       </div>
-    </>
+      <createUserWithEmailAndPassword email={email} name={name}/>
+    </>   
   );
+
 };
 
 export default SignUp;
