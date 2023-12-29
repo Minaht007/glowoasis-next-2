@@ -14,16 +14,36 @@ import BurgerMenu from "../burgerMenu/burgerMenu";
 
 import allProdact from "../../app/products/page";
 import link from "../../public/json/link.json";
-import linksdurger from "../../public/json/link.json"
+import linksdurger from "../../public/json/link.json";
 
 import React from "react";
 import { useState } from "react";
 
+import SignUpDT from "../signUp/signUpDt";
+
 export const Header = () => {
   const [links, setLinks] = useState(link);
-  const [linksBurger, setLinksBurger] = useState(linksdurger)
+  const [linksBurger, setLinksBurger] = useState(linksdurger);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // reg State
+  const [showSignUp, setShowSignUp] = useState(false);
+  const [previousLinks, setPreviousLinks] = useState(links);
+  const [buttonText, setButtonText] = useState("мій профіль");
+  const [showIcon, setShowIcon] = useState(true);
+
+  const handleSignUpClick = () => {
+    setShowSignUp(!showSignUp);
+    setShowIcon(!showIcon);
+    if (showSignUp) {
+      setPreviousLinks(links);
+      setButtonText("Мій профіль");
+    } else {
+      setPreviousLinks([]);
+      setButtonText("Back");
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -54,14 +74,13 @@ export const Header = () => {
 
           {/* контейнер з бургер */}
           <div>
-            <button type="button" className="visible lg:hidden ml-5 pt-4 pb-4 " onClick={toggleMenu}>
-              <Image                
-                src={burger}
-                width={15}
-                height={10}
-                alt="burger"
-              />
-            </button>              
+            <button
+              type="button"
+              className="visible lg:hidden ml-5 pt-4 pb-4 "
+              onClick={toggleMenu}
+            >
+              <Image src={burger} width={15} height={10} alt="burger" />
+            </button>
           </div>
 
           {/* контейнер з лого */}
@@ -84,6 +103,7 @@ export const Header = () => {
               width={19}
               height={21}
               alt="regIcon"
+              onClick={handleSignUpClick}
             />
             <Image src={basket} width={19} height={24} alt="basket" />
           </div>
@@ -103,29 +123,15 @@ export const Header = () => {
           );
         })}
       </div>
-      <BurgerMenu isActive={isMenuOpen} setActive={setIsMenuOpen} links={linksBurger}/>
+      <BurgerMenu
+        isActive={isMenuOpen}
+        setActive={setIsMenuOpen}
+        links={linksBurger}
+      />
+      {showSignUp && <SignUpDT />}
     </section>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const handleOnClick = (event) => {
 //   event.preventDefault();

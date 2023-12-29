@@ -13,12 +13,10 @@
     color: #45372e;
     top: 70px;
   }
-
   .burgerMenu.active {
     transform: translateX(0);
   }
 }
-
 @media screen and (min-width: 1200px) {
   .burgerMenu {
     display: flex;
@@ -30,14 +28,11 @@
     height: 100vh;
     padding: 20px 10px;
     z-index: -10;
-    // transform: translateX(-100%);
     background-color: #fff;
     color: #45372e;
     top: 70px;
   }
-
   .burgerMenu.active {
-    // transform: translateX(0);
     transform: z-index(10);
   }
-}
+}/*# sourceMappingURL=burgerMenu.module.css.map */

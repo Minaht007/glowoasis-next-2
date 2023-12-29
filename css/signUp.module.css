@@ -1,0 +1,47 @@
+.signUpWindow {
+  display: flex;
+  flex-direction: column;
+  width: 820px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  gap: 40px;
+}
+
+.signUpTitle {
+  text-align: start;
+  padding-left: 40px;
+}
+
+.signUpTitleP {
+  padding: 12px 1px 40px 40px;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emailLable {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.emailArea {
+  width: 756px;
+  height: 56px;
+  padding-left: 12px;
+  padding-top: 12px;
+}
+
+.signUpBtnDt {
+  background-color: #45372e;
+  padding: 15px 303px;
+  border-radius: 8px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}/*# sourceMappingURL=signUp.module.css.map */

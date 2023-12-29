@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@media screen and (min-width: 390px) and (max-width: 767px) {
+  .bsDtSwiperInner {
+    display: none;
+  }
+  .advantageLineContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 20px 0;
+  }
+  .imgLine {
+    display: flex;
+    width: 350px;
+    align-items: center;
+    height: 1px;
+    color: #000;
+  }
+  .bsTabSwiper {
+    display: none;
+  }
+  .pagebestsellersbanerMob {
+    width: 100vw;
+    height: 158px;
+  }
+  .pagebestsellersbanerTab {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  виключаємо мобільний свайпер .bsMobSwiper {
+    display: none;
+  }
+  виключаємо десктоп свайпер .bsDtSwiper {
+    display: none;
+  }
+  .bsTabSwiper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bsDtSwiperInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+  }
+  .bestsellerImg {
+    height: 434px;
+    width: 306px;
+  }
+  .bestsellerTextContainer {
+    width: 289px;
+    height: 85px;
+  }
+  .bestsellerBtm {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px 92px;
+    background-color: #fff;
+  }
+  .pagebestsellersbanerMob {
+    display: none;
+  }
+  .pagebestsellersbanerTab {
+    width: 100vw;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bsMobSwiper {
+    display: none;
+  }
+  .bsTabSwiper {
+    display: none;
+  }
+  .bsDtSwiper {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .bsDtSwiperInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 30px;
+  }
+  .bestsellerTextContainer {
+    width: 250px;
+    height: 85px;
+  }
+  .bestsellerText {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .bestsellerImg {
+    height: 440px;
+    width: 290px;
+  }
+  .bestsellerBtmContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  .bestsellerBtm {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px 77px;
+  }
+  .swiper-button-prev {
+    color: black;
+  }
+  .advantageLineContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 42px 0;
+  }
+  .imgLine {
+    align-items: center;
+    width: 1200px;
+    height: 1px;
+    color: #000;
+  }
+}/*# sourceMappingURL=bestsellers.module.css.map */

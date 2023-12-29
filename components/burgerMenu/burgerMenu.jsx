@@ -3,7 +3,7 @@ import styles from "./burgerMenu.module.scss";
 import fontstyles from "../fonts/fonts.module.scss";
 import Image from "next/image";
 import signicon from "../../public/icon/person.svg";
-import SignUp from "../signIn/signIn";
+import SignUp from "../signUp/signUp";
 import React, { useState } from "react";
 
 const BurgerMenu = ({ links, isActive }) => {
@@ -12,16 +12,15 @@ const BurgerMenu = ({ links, isActive }) => {
   const [buttonText, setButtonText] = useState("мій профіль");
   const [showIcon, setShowIcon] = useState(true);
 
-
   const handleSignUpClick = () => {
     setShowSignUp(!showSignUp);
-    setShowIcon(!showIcon)
+    setShowIcon(!showIcon);
     if (showSignUp) {
       setPreviousLinks(links);
-      setButtonText("Мій профіль")
+      setButtonText("Мій профіль");
     } else {
       setPreviousLinks([]);
-      setButtonText("Back")
+      setButtonText("Back");
     }
   };
 
@@ -38,7 +37,7 @@ const BurgerMenu = ({ links, isActive }) => {
             </li>
           ))}
 
-<li className="flex flex-row relative" onClick={handleSignUpClick}>
+        <li className="flex flex-row relative" onClick={handleSignUpClick}>
           {showSignUp ? (
             <p className="absolute top-[-14px] left-5 text-start">
               <strong>{buttonText}</strong>

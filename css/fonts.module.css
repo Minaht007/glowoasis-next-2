@@ -14,7 +14,6 @@
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 1.6px;
-  // color: #fff;
 }
 
 .istokWebTitle {
@@ -27,6 +26,7 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
+
 .istokWebTitleFooter {
   color: #45372e;
   font-family: Istok Web;
@@ -36,6 +36,7 @@
   line-height: 16.8px;
   text-align: start;
 }
+
 .istokWebTextFoter {
   color: #45372e;
   font-family: Istok Web;
@@ -45,8 +46,6 @@
   line-height: 14px;
   text-align: start;
 }
-
-$textColor: #45372e;
 
 .sugnUpTitle {
   color: #45372e;
@@ -58,13 +57,13 @@ $textColor: #45372e;
 }
 
 .signUpBtnDt {
-    color:#FFF;
-text-align: center;
-font-family: Istok Web;
-font-size: 13px;
-font-style: normal;
-font-weight: 700;
-line-height: 19.95px;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-}
+  color: #FFF;
+  text-align: center;
+  font-family: Istok Web;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.95px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=fonts.module.css.map */
