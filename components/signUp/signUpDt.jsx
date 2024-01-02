@@ -19,11 +19,12 @@ const SingnUpDT = () => {
   const [name, setName] = useState("");
   const [sureName, setSureName] = useState("");
   const [showSignUp, setShowSignUp] = useState(false);
+  const [closeModal, setCloseModal] = useState(false);
 
   const modalRef = useRef(null);
 
   const handleCloseModal = () => {
-    setShowSignUp(false);
+    setShowSignUp(!showSignUp);
   };
 
   const handleVisible = () => {
@@ -41,7 +42,7 @@ const SingnUpDT = () => {
 
   const handleEsc = (event) => {
     if (event.keyCode === 27) {
-      setShowSignUp(false);
+      setShowSignUp(!showSignUp);
     }
   };
 
