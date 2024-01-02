@@ -57,7 +57,7 @@
 }
 
 .signUpBtnDt {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Istok Web;
   font-size: 13px;
@@ -66,4 +66,13 @@
   line-height: 19.95px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+}
+
+.SignUpGoogleBtnDT {
+  color: #767676;
+  font-family: Istok Web;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=fonts.module.css.map */

@@ -32,11 +32,13 @@ export const Header = () => {
   const [previousLinks, setPreviousLinks] = useState(links);
   const [buttonText, setButtonText] = useState("мій профіль");
   const [showIcon, setShowIcon] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSignUpClick = () => {
     setShowSignUp(!showSignUp);
     setShowIcon(!showIcon);
     if (showSignUp) {
+      setIsModalOpen(!isModalOpen);
       setPreviousLinks(links);
       setButtonText("Мій профіль");
     } else {
@@ -44,6 +46,7 @@ export const Header = () => {
       setButtonText("Back");
     }
   };
+  console.log(handleSignUpClick);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
