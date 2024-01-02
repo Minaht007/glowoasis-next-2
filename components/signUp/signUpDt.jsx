@@ -10,6 +10,9 @@ import fonts from "../fonts/fonts.module.scss";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import auth from "../../firebase";
+
 const SingnUpDT = () => {
   const [visible, setVisible] = useState(false);
   const [cntrVisible, setCntrVisible] = useState(false);
@@ -19,11 +22,31 @@ const SingnUpDT = () => {
   const [name, setName] = useState("");
   const [sureName, setSureName] = useState("");
   const [showSignUp, setShowSignUp] = useState(false);
-  const [closeModal, setCloseModal] = useState(false);
 
   const modalRef = useRef(null);
 
-  const handleCloseModal = () => {
+  const register = (e) => {
+    e.preventDefault();
+    if (contrPassword !== password) {
+      setError("Password didn't match");
+      return;
+    }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        setName("");
+        setSureName("");
+        setEmail("");
+        setPassword("");
+        setContrPasswort("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+  const handleCloseModal = (e) => {
+    e.stopPropagation(e);
     setShowSignUp(!showSignUp);
   };
 
@@ -35,6 +58,7 @@ const SingnUpDT = () => {
   };
 
   const handleClickOutside = (event) => {
+    event.stopPropagation();
     if (modalRef.current && !modalRef.current.contains(event.target)) {
       setShowSignUp(false);
     }
@@ -58,7 +82,10 @@ const SingnUpDT = () => {
   return (
     <>
       {!showSignUp && (
-        <div className={`${styles.overlay}`} onClick={handleCloseModal}>
+        <div
+          className={`${styles.overlay}`}
+          onClick={(e) => handleCloseModal(e)}
+        >
           <div className={styles.signUpWindow} ref={modalRef}>
             <Image
               src={logo}
@@ -75,7 +102,7 @@ const SingnUpDT = () => {
             >
               Введіть свої дані
             </p>
-            <form className={styles.signUpForm} action="">
+            <form className={styles.signUpForm} action="" onSubmit={register}>
               <label
                 className={`flex flex-col justify-around mx-auto  ${fonts.istokWebTitleFooter}`}
                 htmlFor="name"

@@ -16,8 +16,7 @@ import allProdact from "../../app/products/page";
 import link from "../../public/json/link.json";
 import linksdurger from "../../public/json/link.json";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import SignUpDT from "../signUp/signUpDt";
 
