@@ -45,10 +45,10 @@ const SingnUpDT = () => {
       });
   };
 
-  const handleCloseModal = (e) => {
-    e.stopPropagation(e);
-    setShowSignUp(!showSignUp);
-  };
+  //   const handleCloseModal = (e) => {
+  //     e.stopPropagation(e);
+  //     setShowSignUp(!showSignUp);
+  //   };
 
   const handleVisible = () => {
     setVisible(!visible);
@@ -60,7 +60,7 @@ const SingnUpDT = () => {
   const handleClickOutside = (event) => {
     event.stopPropagation();
     if (modalRef.current && !modalRef.current.contains(event.target)) {
-      setShowSignUp(false);
+      setShowSignUp(!showSignUp);
     }
   };
 
@@ -84,7 +84,7 @@ const SingnUpDT = () => {
       {!showSignUp && (
         <div
           className={`${styles.overlay}`}
-          onClick={(e) => handleCloseModal(e)}
+          onClick={(e) => handleClickOutside(e)}
         >
           <div className={styles.signUpWindow} ref={modalRef}>
             <Image
