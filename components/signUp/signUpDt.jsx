@@ -11,7 +11,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import auth from "../../firebase";
+import { auth } from "../../firebase";
+import { db } from "../../firebase";
+import { ref, set } from "firebase/database";
+import { collection, addDoc } from "firebase/firestore";
 
 const SingnUpDT = () => {
   const [visible, setVisible] = useState(false);
@@ -25,30 +28,26 @@ const SingnUpDT = () => {
 
   const modalRef = useRef(null);
 
-  const register = (e) => {
-    e.preventDefault();
-    if (contrPassword !== password) {
-      setError("Password didn't match");
-      return;
-    }
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        setName("");
-        setSureName("");
-        setEmail("");
-        setPassword("");
-        setContrPasswort("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  };
+  const registerUser = async (email, password, name, sureName) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const userId = userCredential.user.uid;
 
-  //   const handleCloseModal = (e) => {
-  //     e.stopPropagation(e);
-  //     setShowSignUp(!showSignUp);
-  //   };
+      const userDataCollection = collection(db, "users");
+      await addDoc(userDataCollection, {
+        userId: userId,
+        name: name,
+        sureName: sureName,
+      });
+      console.log("singUp success");
+    } catch (error) {
+      console.error("message:", error.message);
+    }
+  };
 
   const handleVisible = () => {
     setVisible(!visible);
@@ -78,7 +77,18 @@ const SingnUpDT = () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEsc);
     };
-  }, []);
+  });
+
+  const handlerBtnClick = async (name, sureName) => {
+    const docRef = doc(db, "tasks", "task1");
+    const docSnap = await getDoc(docRef);
+    await setDoc(doc(db, "tasks", "task1"), {
+      task1: {
+        name: { name },
+        time: "12:00",
+      },
+    });
+  };
   return (
     <>
       {!showSignUp && (
@@ -102,10 +112,18 @@ const SingnUpDT = () => {
             >
               Введіть свої дані
             </p>
-            <form className={styles.signUpForm} action="" onSubmit={register}>
+            <form
+              className={styles.signUpForm}
+              action=""
+              onSubmit={(e) => {
+                e.preventDefault();
+                registerUser(email, password, name, sureName);
+              }}
+              onClick={handlerBtnClick}
+            >
               <label
                 className={`flex flex-col justify-around mx-auto  ${fonts.istokWebTitleFooter}`}
-                htmlFor="name"
+                htmlFor=""
               >
                 Прізвище та Ім’я
                 <div className="flex flex-row gap-[20px] pt-[12px]">
@@ -120,7 +138,7 @@ const SingnUpDT = () => {
                     className={`w-[370px] h-[56px] border border-gray-900 rounded-md text-start p-[12px]`}
                     type="text"
                     placeholder="Прізвище"
-                    id="name"
+                    id="sureName"
                     onChange={(e) => setSureName(e.target.value)}
                   />
                 </div>
@@ -192,7 +210,10 @@ const SingnUpDT = () => {
                 </div>
               </label>
 
-              <button className={`${fonts.signUpBtnDt} ${styles.signUpBtnDt}`}>
+              <button
+                className={`${fonts.signUpBtnDt} ${styles.signUpBtnDt}`}
+                onClick={handlerBtnClick}
+              >
                 зареєструватись
               </button>
 

@@ -15,26 +15,21 @@
 // import allProdact from "../../app/products/page"
 // import link from "../../public/json/link.json"
 
+// export const Header = () => {
 
+// const handleOnClick = (event) => {
+//   event.preventDefault();
+//   const clickedElement = event.currentTarget;
+//   const nextElement = clickedElement.nextElementSibling;
 
-// export const Header = () => {    
-
-  // const handleOnClick = (event) => {
-  //   event.preventDefault();
-  //   const clickedElement = event.currentTarget;
-  //   const nextElement = clickedElement.nextElementSibling;
-
-  //   if (nextElement.style.maxHeight) {
-  //     nextElement.style.maxHeight = null;
-  //   } else {
-  //     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
-  //     allSubMenus.forEach((el) => (el.style.maxHeight = null));
-  //     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
-  //   }
-  // };
-
- 
-  
+//   if (nextElement.style.maxHeight) {
+//     nextElement.style.maxHeight = null;
+//   } else {
+//     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
+//     allSubMenus.forEach((el) => (el.style.maxHeight = null));
+//     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
+//   }
+// };
 
 //   return (
 //     <section className="layout relative index-5">
@@ -59,46 +54,55 @@
 //             </button>
 //           </div>
 
-          {/* контейнер з бургер */}
-        //   <div className={styles.headerBurgerMenu}>
-        //     <button  className="visible  lg:hidden ml-5 pt-4 pb-4">
-        //       <Image onClick={BurgerMenu.tonglMenu} src={burger} width={15} height={10} alt="burger" />
-        //     </button>
-        //     <Link className={`pr-4 `} href="products">Всі товари</Link>
-        //   </div>
+{
+  /* контейнер з бургер */
+}
+//   <div className={styles.headerBurgerMenu}>
+//     <button  className="visible  lg:hidden ml-5 pt-4 pb-4">
+//       <Image onClick={BurgerMenu.tonglMenu} src={burger} width={15} height={10} alt="burger" />
+//     </button>
+//     <Link className={`pr-4 `} href="products">Всі товари</Link>
+//   </div>
 
-          {/* контейнер з лого */}
-        //   <div
-        //     className={`${styles.headerLogo} sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]`}
-        //   >
-        //     <Link href="MainPage">
-        //     <Image
-        //       className="w-[114px] h-5 lg:w-[249px] lg:h-[45px] "
-        //       src={Logo}
-        //       alt="Logo"
-        //     />
-        //     </Link>
-           
-        //   </div>
-          {/* контейнер з іконками */}
-    //       <div className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]">
-    //         <Image
-    //           className=" hidden sm:hidden md:hidden lg:block lg:mr-3"
-    //           src={regIcon}
-    //           width={19}
-    //           height={21}
-    //           alt="regIcon"
-    //         />
-    //         <Image src={basket} width={19} height={24} alt="basket" />
-    //       </div>
-    //     </div>
-    //   </div>
+{
+  /* контейнер з лого */
+}
+//   <div
+//     className={`${styles.headerLogo} sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]`}
+//   >
+//     <Link href="MainPage">
+//     <Image
+//       className="w-[114px] h-5 lg:w-[249px] lg:h-[45px] "
+//       src={Logo}
+//       alt="Logo"
+//     />
+//     </Link>
 
-      {/* Навігація */}
+//   </div>
+{
+  /* контейнер з іконками */
+}
+//       <div className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]">
+//         <Image
+//           className=" hidden sm:hidden md:hidden lg:block lg:mr-3"
+//           src={regIcon}
+//           width={19}
+//           height={21}
+//           alt="regIcon"
+//         />
+//         <Image src={basket} width={19} height={24} alt="basket" />
+//       </div>
+//     </div>
+//   </div>
 
-    //   <div className={`${styles.headerNav} ${isMenuOpen ? styles.open : ""}`}>
-    
-                {/* <div className={styles.navLink}>
+{
+  /* Навігація */
+}
+
+//   <div className={`${styles.headerNav} ${isMenuOpen ? styles.open : ""}`}>
+
+{
+  /* <div className={styles.navLink}>
                     <Link                 
                         className={`pr-4`}
                         href="products"                      
@@ -112,19 +116,27 @@
                         <li className={styles.subNavLinkItems}>Menu-2</li>
                         <li className={styles.subNavLinkItems}>Menu-3</li>
                         <li className={styles.subNavLinkItems}>Menu-4</li>
-                    </ul> */}
-                {/* </div> */}
+                    </ul> */
+}
+{
+  /* </div> */
+}
 
-        {/* <div className={styles.navLink}>
+{
+  /* <div className={styles.navLink}>
           <Link className={`pr-4`} href="bestsellers" >
             Бестселери
-          </Link> */}
-          {/* <ul className={styles.subNavLink}>
+          </Link> */
+}
+{
+  /* <ul className={styles.subNavLink}>
             <li className={styles.subNavLinkItems}>Submenu-1</li>
             <li className={styles.subNavLinkItems}>Submenu-2</li>
             <li className={styles.subNavLinkItems}>Submenu-3</li>
-          </ul> */}
-        {/* </div>
+          </ul> */
+}
+{
+  /* </div>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Категорії товаров
         </Link>
@@ -139,8 +151,39 @@
         </Link>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Історія бренду
-        </Link>  */}
+        </Link>  */
+}
 //       </div>
 //     </section>
 //   );
 // };
+
+// Для реєстрації
+// export const authSignUpUser =
+//   ({ login, email, password, avatar }) =>
+//   async (dispatch) => {
+//     try {
+//       await createUserWithEmailAndPassword(auth, email, password);
+
+//       const avatarUri = await uploadImage(avatar, "avatar/");
+
+//       const userCurrent = auth.currentUser;
+//       await updateProfile(userCurrent, {
+//         displayName: login,
+//         photoURL: avatarUri,
+//       });
+
+//       const updateUserSuccess = auth.currentUser;
+
+//       dispatch(
+//         updateUserProfile({
+//           id: updateUserSuccess.uid,
+//           login: updateUserSuccess.displayName,
+//           avatar: updateUserSuccess.photoURL,
+//           email: updateUserSuccess.email,
+//         })
+//       );
+//     } catch (error) {
+//       console.log(error.message);
+//     }
+//   };

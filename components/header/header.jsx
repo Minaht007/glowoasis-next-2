@@ -98,14 +98,16 @@ export const Header = () => {
             </Link>
           </div>
           {/* контейнер з іконками */}
-          <div className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]">
+          <div
+            className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]"
+            onClick={handleSignUpClick}
+          >
             <Image
               className=" hidden sm:hidden md:hidden lg:block lg:mr-3"
               src={regIcon}
               width={19}
               height={21}
               alt="regIcon"
-              onClick={handleSignUpClick}
             />
             <Image src={basket} width={19} height={24} alt="basket" />
           </div>
