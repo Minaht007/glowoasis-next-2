@@ -29,24 +29,24 @@ export default function RecGoodsSwiper() {
   return (
     <>
       <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
+        slidesPerView={4}
+        // spaceBetween={30}
         loop={true}
         pagination={{
           clickable: true,
         }}
         // navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper w-[1250px] h-[741px]"
       >
         {goods.map((item) => (
-        <SwiperSlide key={item.id} className={style.recKitsContainer} >
+        <SwiperSlide key={item.id} className="w-[290px] h-[620px]" >
           <Image 
           src={item.img}
           alt="item.name"
-          width={327}
-          height={434}
-          />
+          // width={327}
+          // height={434}
+          className="w-full"/>
           <h2 className={`pt-5 pb-3 ${fontStile.istokWebTitle}`}> {item.title}</h2>
           <p className="text-center pb-3 w-[327px]">{item.slogan}</p>
           <button className="py-[16px] px-[124px] border border-1 border-gray-900 rounded-sm">{item.button}</button>            

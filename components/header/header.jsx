@@ -18,19 +18,19 @@ export const  Header =() => {
 
     return (
         <section>
-            <div className="bg-[#D0C3BB] h-8 w-full "></div>
-             <div className="flex bg-[#fff] relative w-screen h-15">
-                <div className="flex">
-                    <div className={` ${styles.headerSearch} relative lg:pt-[14px] ml-[96px]`}>
-                        <input type="serch" placeholder="пошук" className="pl-10 w-[219px] h-[37px] border border-gray-900 text-start" />
-                        <button className="absolute top-6 left-3">
+            <div className="bg-[#D0C3BB] h-8 w-full"></div>
+             <div className="layout flex bg-[#fff] h-15 justify-between">
+               
+                    <div className="relative inline-flex">
+                        <input type="serch" placeholder="пошук" className="w-[219px] h-[37px] border border-gray-900 text-start pl-9"/>
+                        <button className="absolute top-2 left-3">
                             <Image                            
                             src={searchGlass}
                             width={20}
                             height={20}
                             alt="searchGlass"
                             />
-                        </button>                       
+                        </button>                      
                     </div>
 
                     {/* контейнер з бургер */}
@@ -46,15 +46,15 @@ export const  Header =() => {
                     </div>
 
                     {/* контейнер з лого */}
-                    <div className={ `${styles.headerLogo} sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]` }>
+                    <div className="flex ml-auto mr-auto">
                         <Image
-                        className="w-[114px] h-5 lg:w-[249px] lg:h-[45px] "
+                        className="w-[114px] h-5 lg:w-[249px] lg:h-[45px]"
                         src={Logo}                       
                         alt="Logo"
                         />
                     </div>
                      {/* контейнер з іконками */}
-                     <div className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]">
+                     <div className="flex">
                         <Image
                         className=" hidden sm:hidden md:hidden lg:block lg:mr-3"
                         src={regIcon}
@@ -70,12 +70,12 @@ export const  Header =() => {
                          />
                      </div>
                 </div>
-            </div>
+
 
          {/* Навігація */}
 
                 <div className={styles.headerNav}>
-                        <Link className={`pr-4 ${styles.navLink}`} href="">Всі товари</Link>
+                        <Link className={`pr-4 ${styles.navLink}`} href="/products">Всі товари</Link>
 
                         <div className="navLink pr-4">
                             <a href="#">Бестселери</a>

@@ -14,8 +14,9 @@ import phoneInputStyle from "../phoneInput/phoneInput.module.scss";
 const Footer = () => {
   return (
     <>
-      <div className="">
-        <ul className="w-[160px] sm:top-5 left-5 md:w-[320px] lg:w-[210px] lg:left-[60px]">
+      <div className="layout w-[1271px] h-[640px] justify-center grid grid-cols-4 gap-12 pt-[67px]">
+        <div>
+        <ul className="">
           <li className="text-start pb-3">
             <Link className={` ${fontstyle.istokWebTitle}`} href="/">
               ВСІ ТОВАРИ
@@ -47,7 +48,9 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
+        </div>
 
+        <div>
         <ul className="sm:top-5 right-2 md:w-[320px] md:top-[260px] md:left-5 lg:top-5 lg:left-[22%] lg:w-[280px] ">
           <li className="text-start">
             <Link className={` ${fontstyle.istokWebTitle}`} href="/">
@@ -85,13 +88,15 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
+        </div>
 
+        <div className="text-start ">
         <span
           className={`${fontstyle.istokWebTitleFooter} top-[300px] left-5 md:w-[350px] md:top-5 md:left-[56%] lg:left-[50%] `}
         >
           Давайте станемо друзями
         </span>
-
+        <div className="flex mt-[10px]">
         <Image
           src={FB}
           alt="fb"
@@ -103,8 +108,11 @@ const Footer = () => {
           alt="Instagram"
           className="w-5 h-5 ml-3 top-[326px] left-[52px] md:top-11 md:left-[58%] lg:left-[52%]"
         />
+        </div>
+        </div>
 
-        <div className="px-5 text-start top-[370px] md:top-[78px] md:left-[56%] md:px-0 md:pr-5  md:w-[350px] lg:top-5 lg:left-[70%] lg:w-[350px]">
+         <div className="w-[500px]">
+        <div className="text-start">
           <p className={` ${fontstyle.istokWebTitleFooter}`}>
             Здорова шкіра чекає
           </p>
@@ -115,7 +123,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className="top-[480px] left-5 right-5  md:w-[350px] md:top-[190px] md:left-[56%] lg:top-[140px] lg:left-[70%]">
+        <div className="">
           <p className={`text-start pb-2 ${fontstyle.istokWebTitleFooter}`}>
             Приєднайтеся до нашого списку розсилки, щоб отримати всі новини
             першим
@@ -147,7 +155,7 @@ const Footer = () => {
           смартфоні
         </p>
         {/* phon number area */}
-        <div className="flex w-[350px] pb-30 top-[640px] left-5 md:top-[360px] md:left-[56%] md:pr-5 lg:top-[310px] lg:left-[70%]">
+        <div className="flex pb-30">
           <PhoneInput />
           <button
             className="border border-1 border-gray-900 rounded-sm px-3 bg-bgBtnColor text-addBgColor"
@@ -157,7 +165,7 @@ const Footer = () => {
           </button>
         </div>
         {/* Agree text with rules */}
-        <div className="text-start pt-4 top-[680px] left-5 right-5 md:w-[350px] md:text-justify md:top-[400px] md:left-[56%] lg:top-[360px] lg:left-[70%]">
+        <div className="text-start pt-4 md:text-justify">
           <span>
             Надсилаючи цю форму та підписуючись на текстові повідомлення, ви
             погоджуєтеся на отримання оповіщень (наприклад, промо, нагадування
@@ -168,6 +176,7 @@ const Footer = () => {
             підписки (якщо є). Політика та умови конфіденційності.
           </span>
         </div>
+         </div>
       </div>
     </>
   );

@@ -5,7 +5,7 @@ import HeroMob2 from "../../public/img/hero/heroMob-1x.png"
 import HeroDT1 from "../../public/img/hero/heroDT-3x.jpg"
 import HeroDT2 from "../../public/img/hero/heroDT-3x-2.jpg"
 
-import styles from "./swiper.module.scss"
+// import "/swiper.module.scss";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -27,42 +27,11 @@ export default function SwiperHero() {
           dynamicBullets: true,
         }}
         modules={[Pagination]}
-        className="mySwiper pb-[16px]"
+        className="mySwiper w-[390px] h-[520px] md:w-[768px] md:h-[1024px] lg:w-screen lg:h-[526px]"
       >
-       
-        {/* slider containers */}
-        {/* for mobile */}
-        <SwiperSlide className={styles.heroMob} >
-        {/* className="sm:visible md:hidden lg:!hidden w-screen h-[521px]" */}
-        <Image 
-            src={HeroMob2}
-            alt="HeroMob"
-            layout="responsive"
-            className="min-h-[525px]"
-            />
+        <SwiperSlide className="w-full bg-cover bg-center bg-no-repeat bg-hero-mob-1 lg:bg-hero-dt">     
         </SwiperSlide>
-
-        <SwiperSlide className={styles.heroMob} >        
-        <Image 
-            src={HeroMob}
-            alt="HeroMob"
-            layout="responsive"
-            className="min-h-[525px]"
-            />
-        </SwiperSlide>
-
-        {/* For DeskTop */}
-        <SwiperSlide className={styles.heroDT} >        
-        <Image 
-            src={HeroDT1}
-            alt="HeroDT1"
-            />
-        </SwiperSlide>
-        <SwiperSlide className={styles.heroDT} >        
-        <Image 
-            src={HeroDT2}
-            alt="HeroDT2"
-            />
+        <SwiperSlide className="w-full bg-cover bg-center bg-no-repeat bg-hero-mob lg:bg-hero-dt-1" >      
         </SwiperSlide>
         
         {/* <SwiperSlide>Slide 5</SwiperSlide>

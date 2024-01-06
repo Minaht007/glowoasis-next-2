@@ -32,7 +32,20 @@ export default function advSwiperDT() {
         // }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        
+        breakpoints={{
+          320: {
+            slidesPerView: 3
+          },
+          768: {
+            slidesPerView: 3
+          },
+          1200: {
+            slidesPerView: 5
+          },
+          1440: {
+            slidesPerView: 5
+          },
+        }}
         className="mySwiper"
       >
         <SwiperSlide>
