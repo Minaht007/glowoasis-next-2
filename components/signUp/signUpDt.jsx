@@ -1,24 +1,21 @@
-"use client";
-import Image from "next/image";
-import logo from "../../public/img/logo.png";
-import hide from "../../public/icon/visible.png";
-import googleIcon from "../../public/icon/google.png";
-import fbIcon from "../../public/icon/fb.png";
-
-import styles from "./signUp.module.scss";
-import fonts from "../fonts/fonts.module.scss";
+"use client"
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
-
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { db } from "../../firebase";
-import { ref, set } from "firebase/database";
 import { collection, addDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/database";
+import SignIn from "../signIn/signIn";
+import hide from "../../public/icon/visible.png";
+import logo from "../../public/img/logo.png";
+import googleIcon from "../../public/icon/google.png";
+import fbIcon from "../../public/icon/fb.png";
+import styles from "./signUp.module.scss";
+import fonts from "../fonts/fonts.module.scss";
 
-import SignIn from "../signIn/signIn"
-
-const SingnUpDT = () => {
+const SignUp = () => {
   const [visible, setVisible] = useState(false);
   const [cntrVisible, setCntrVisible] = useState(false);
   const [password, setPassword] = useState("");
@@ -27,16 +24,13 @@ const SingnUpDT = () => {
   const [name, setName] = useState("");
   const [sureName, setSureName] = useState("");
   const [showSignUp, setShowSignUp] = useState(false);
-
   const [isSignIn, setIsSignIn] = useState(false);
-
   const modalRef = useRef(null);
 
   const handleSwitchComponent = () => {
     setIsSignIn(!isSignIn);
+    setShowSignUp(!showSignUp);
   };
-
-
 
   const registerUser = async (email, password, name, sureName) => {
     try {
@@ -62,6 +56,7 @@ const SingnUpDT = () => {
   const handleVisible = () => {
     setVisible(!visible);
   };
+
   const cntrHandleVisible = () => {
     setCntrVisible(!cntrVisible);
   };
@@ -87,7 +82,7 @@ const SingnUpDT = () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEsc);
     };
-  });
+  }, []);
 
   const handlerBtnClick = async (name, sureName) => {
     const docRef = doc(db, "tasks", "task1");
@@ -99,6 +94,8 @@ const SingnUpDT = () => {
       },
     });
   };
+  
+
   return (
     <>
       {!showSignUp && (
@@ -256,24 +253,28 @@ const SingnUpDT = () => {
                   <span className="flex align-center">Facebook</span>
                 </button>
               </div>
-              <p className={`pb-[6px] ${fonts.SignUpGoogleBtnDT}`} >
+              <p className={`pb-[6px] ${fonts.SignUpGoogleBtnDT}`}>
                 Уже маєте акаунт?
               </p>
-
 
               <Link
                 href=""
                 className={`pb-[108px] ${fonts.SignUpGoogleBtnDT} `}
               >
-                <span className={`${styles.singUpLink} text-`} onClick={handleSwitchComponent}>{isSignIn ? "Зареєструватись" : "Увійти"}</span>
+                <span
+                  className={`${styles.singUpLink} text-`}
+                  onClick={handleSwitchComponent}
+                >
+                  {isSignIn ? "Зареєструватись" : "Увійти"}
+                </span>
               </Link>
               {isSignIn ? <SignIn /> : null}
             </form>
           </div>
         </div>
       )}
-
     </>
   );
 };
-export default SingnUpDT;
+
+export default SignUp;

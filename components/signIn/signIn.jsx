@@ -37,6 +37,10 @@ const signIn = () => {
                     className="absolute top-[50%] right-[15px]"
                     />
                 </label>
+
+                <p className={`${fonts.SignUpGoogleBtnDT} mt-3 text-start`}>Забули пароль?</p>
+
+                <button className={`${fonts.signUpBtnDt} px-[350px} py-[12px] bg-[#45372E] w-[756px] rounded-md mt-7` }>увійти</button>
             </form>
         </section>
     )
