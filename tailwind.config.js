@@ -32,7 +32,11 @@ const config = {
       "second-backround": "#F1E8E3",
       "btn-bg-primery-color": "#FFFFFF",
       "btn-second-color": "#45372E",
-      "text-accent-color": "#FFFFFF"
+      "text-accent-color": "#FFFFFF",
+      "bg-modal-basket": "#656565"
+    },
+    opacity: {
+      "50": "0.5",
     },
     screens: {
       sm: "390px",

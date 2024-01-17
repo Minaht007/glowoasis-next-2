@@ -1,6 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import { ModalContext } from "../modalBasket/ModalContext";
+import { Modal } from "../modalBasket/Modal";
 import Image from "next/image";
 import Link from "next/link";
 import dataProducts from "../../public/json/allProducts";
@@ -16,6 +20,14 @@ export const AllProductsCard = () => {
   const [bannerText, setBannerText] = useState(null);
   const [filterType, setFilterType] = useState(null);
 
+  const router = useRouter();
+  const { openModal, setModalContent } = useContext(ModalContext);
+
+  // useEffect(() => {
+  //   setOriginalProducts(dataProducts);
+  // }, [dataProducts]);
+
+
   useEffect(() => {
     if (!banner) {
       setBanner(defaultImage?.src);
@@ -23,7 +35,6 @@ export const AllProductsCard = () => {
       setBannerText("Досліджуйте веганську доглядову косметику з пробіотиками, розроблену для вашого мікробіому.");
     }
   }, [banner]);
-
 
   const sortByAlphabet = () => {
     const sortedProducts = [...originalProducts].sort((a, b) => a.text.localeCompare(b.text));
@@ -43,6 +54,7 @@ export const AllProductsCard = () => {
     const sortedProducts = [...originalProducts].filter((product) => product.skin === skin);
     setProducts(sortedProducts);
     setFilterType("skin");
+    router.push(`/products?skin=${skin}`, undefined, { shallow: true });
     const bannerSkin = sortedProducts[0]?.bannerSkin; 
     setBanner(bannerSkin); 
     const bannerTitleSkin = sortedProducts[0]?.bannerTitleSkin; 
@@ -85,13 +97,13 @@ export const AllProductsCard = () => {
       <Filter 
       onSortByAlphabet={sortByAlphabet} 
       onSortByPrice={sortByPrice} 
-      onSortBySkinType={sortBySkinType} 
+      onSortBySkinType={sortBySkinType}
       onSortBysortByCategory={sortByCategory}
       onSortByBestsellers={sortByBestsellers}  />
       <div className=""> 
         <div className="flex">
           <ul className="flex flex-wrap ">       
-            {products.map(({ id, img, alt, text, btn }) => (
+            {products.map(({ id, img, alt, text, btn, price }) => (
               <li key={id} className="w-[160px] mr-[10px] lg:w-[322px] lg:mr-[16px] ml-0 mb-[28px] place-items-center">
                 <Link href={`/products/${id}`}>
                 <Image
@@ -106,7 +118,9 @@ export const AllProductsCard = () => {
                   <p className="">{text}</p>
                 </div>
                 <div className="justify-center">
-                  <button type="button" className="w-full h-[50px] ml-0 mr-0 text-center border bg-btn-bg-primery-color">{btn}</button>
+                  <button type="button" onClick={() => {openModal(); setModalContent({img, text, price});}} className="w-full h-[50px] ml-0 mr-0 text-center border bg-btn-bg-primery-color"
+                  >{btn}</button>
+                   <Modal />
                 </div>
               </li>
             ))}
@@ -118,6 +132,8 @@ export const AllProductsCard = () => {
     </>
   );
 };
+
+
 
 
 

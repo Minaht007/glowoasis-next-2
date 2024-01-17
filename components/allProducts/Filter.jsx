@@ -9,6 +9,7 @@ export const Filter = ({ onSortByAlphabet, onSortByPrice, onSortBySkinType, onSo
     const [isHoveredSkin, setIsHoveredSkin] = useState(false);
     const [isHoveredCategories, setIsHoveredCategories] = useState(false);
   
+  
     return (
         <div className="w-[350px] md:w-[152px] lg:w-[250px] mb-[35px] md:mb-0 lg:mb-0 md:mr-[19px] lg:mr-[60px]">
       <div className="border-t lg:w-[250px] text-start pb-[15px] pt-[15px]"
@@ -48,11 +49,11 @@ export const Filter = ({ onSortByAlphabet, onSortByPrice, onSortBySkinType, onSo
         </div>
         {isHoveredSkin && (
            <>
-           <button className="text-lg" onClick={() => onSortBySkinType("комбінована")}>комбінована</button>
-      <button className="block text-lg" onClick={() => onSortBySkinType("суха")}>суха</button>
-      <button className="block text-lg" onClick={() => onSortBySkinType("нормальна")}>нормальна</button>
-      <button className="block text-lg" onClick={() => onSortBySkinType("жирна")}>жирна</button>
-      <button className="block text-lg" onClick={() => onSortBySkinType("чутлива")}>чутлива</button>
+      <button className="text-lg" onClick={() => onSortBySkinType("combination")}>комбінована</button>
+      <button className="block text-lg" onClick={() => onSortBySkinType("dry")}>суха</button>
+      <button className="block text-lg" onClick={() => onSortBySkinType("normal")}>нормальна</button>
+      <button className="block text-lg" onClick={() => onSortBySkinType("oily")}>жирна</button>
+      <button className="block text-lg" onClick={() => onSortBySkinType("sensitive")}>чутлива</button>
          </>
         )}
       </div>

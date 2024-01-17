@@ -70,7 +70,7 @@ export default function BestsellersSwiperDT() {
             },
           },
         }}
-        className="mySwiper flex justify-between"
+        className="mySwiper flex justify-between container"
       >
         {goods.map((item) => (
             <SwiperSlide key={item.id} className="">

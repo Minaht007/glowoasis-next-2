@@ -13,7 +13,7 @@ export const generateStaticParams = async () => {
  const productData = data.find((item) => item.id === id);
    return (
       <>
-        <ProductDetails id={productData ? productData.id: ""}/>
+        <ProductDetails id={productData ? productData.id : ""}/>
       </>
     );
   };
