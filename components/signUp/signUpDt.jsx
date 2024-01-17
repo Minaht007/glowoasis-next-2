@@ -16,6 +16,8 @@ import { db } from "../../firebase";
 import { ref, set } from "firebase/database";
 import { collection, addDoc } from "firebase/firestore";
 
+import SignIn from "../signIn/signIn"
+
 const SingnUpDT = () => {
   const [visible, setVisible] = useState(false);
   const [cntrVisible, setCntrVisible] = useState(false);
@@ -26,7 +28,15 @@ const SingnUpDT = () => {
   const [sureName, setSureName] = useState("");
   const [showSignUp, setShowSignUp] = useState(false);
 
+  const [isSignIn, setIsSignIn] = useState(false);
+
   const modalRef = useRef(null);
+
+  const handleSwitchComponent = () => {
+    setIsSignIn(!isSignIn);
+  };
+
+
 
   const registerUser = async (email, password, name, sureName) => {
     try {
@@ -246,20 +256,23 @@ const SingnUpDT = () => {
                   <span className="flex align-center">Facebook</span>
                 </button>
               </div>
-              <p className={`pb-[6px] ${fonts.SignUpGoogleBtnDT}`}>
+              <p className={`pb-[6px] ${fonts.SignUpGoogleBtnDT}`} >
                 Уже маєте акаунт?
               </p>
+
 
               <Link
                 href=""
                 className={`pb-[108px] ${fonts.SignUpGoogleBtnDT} `}
               >
-                <span className={`${styles.singUpLink} text-`}>Увійти</span>
+                <span className={`${styles.singUpLink} text-`} onClick={handleSwitchComponent}>{isSignIn ? "Зареєструватись" : "Увійти"}</span>
               </Link>
+              {isSignIn ? <SignIn /> : null}
             </form>
           </div>
         </div>
       )}
+
     </>
   );
 };
