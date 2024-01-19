@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from 'next/navigation'
 import Image from "next/image";
 import Link from "next/link";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -15,6 +16,7 @@ import fbIcon from "../../public/icon/fb.png";
 import styles from "./signUp.module.scss";
 import fonts from "../fonts/fonts.module.scss";
 
+
 const SignUp = () => {
   const [visible, setVisible] = useState(false);
   const [cntrVisible, setCntrVisible] = useState(false);
@@ -25,12 +27,19 @@ const SignUp = () => {
   const [sureName, setSureName] = useState("");
   const [showSignUp, setShowSignUp] = useState(false);
   const [isSignIn, setIsSignIn] = useState(false);
+
   const modalRef = useRef(null);
+
+ const router = useRouter()
 
   const handleSwitchComponent = () => {
     setIsSignIn(!isSignIn);
-    setShowSignUp(!showSignUp);
+    setShowSignUp(!showSignUp); 
+    router.push("../signIn/signIn" )
+   
   };
+
+
 
   const registerUser = async (email, password, name, sureName) => {
     try {
@@ -94,6 +103,7 @@ const SignUp = () => {
       },
     });
   };
+  
   
 
   return (
@@ -260,17 +270,22 @@ const SignUp = () => {
               <Link
                 href=""
                 className={`pb-[108px] ${fonts.SignUpGoogleBtnDT} `}
+                onClick={(handleSwitchComponent) => router.push('../signIn/signIn')}
               >
                 <span
                   className={`${styles.singUpLink} text-`}
-                  onClick={handleSwitchComponent}
+                  // onClick={handleSwitchComponent}
+                  
                 >
                   {isSignIn ? "Зареєструватись" : "Увійти"}
                 </span>
               </Link>
               {isSignIn ? <SignIn /> : null}
+      
+              
             </form>
           </div>
+          
         </div>
       )}
     </>
