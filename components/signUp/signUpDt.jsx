@@ -32,12 +32,7 @@ const SignUp = () => {
 
  const router = useRouter()
 
-  const handleSwitchComponent = () => {
-    setIsSignIn(!isSignIn);
-    setShowSignUp(!showSignUp); 
-    router.push("../signIn/signIn" )
-   
-  };
+
 
 
 
@@ -64,6 +59,19 @@ const SignUp = () => {
 
   const handleVisible = () => {
     setVisible(!visible);
+  };
+
+  const handleSwitchComponent = () => {
+    setIsSignIn(!isSignIn);
+    setShowSignUp(!showSignUp); 
+    if (!isSignIn) {
+      router.push("../signIn/signIn")
+      console.log("1111111")
+      return
+    }   
+    router.push("/" )
+
+    console.log("222222")
   };
 
   const cntrHandleVisible = () => {
@@ -270,7 +278,7 @@ const SignUp = () => {
               <Link
                 href=""
                 className={`pb-[108px] ${fonts.SignUpGoogleBtnDT} `}
-                onClick={(handleSwitchComponent) => router.push('../signIn/signIn')}
+                onClick={(handleSwitchComponent)}
               >
                 <span
                   className={`${styles.singUpLink} text-`}
@@ -279,11 +287,12 @@ const SignUp = () => {
                 >
                   {isSignIn ? "Зареєструватись" : "Увійти"}
                 </span>
+               
               </Link>
-              {isSignIn ? <SignIn /> : null}
-      
-              
+                 
+              {/* <SignIn />  */}
             </form>
+            
           </div>
           
         </div>
