@@ -8,7 +8,7 @@ import Rewies from "../../components/reviews/rewies"
 
 const MainPage = () => {
     return (
-        <>
+        <div>
         <Hero />
         <AdvantagesMain />
         <Bestsellers />
@@ -16,7 +16,7 @@ const MainPage = () => {
         <RecomendKits />
         <Comertional />
         <Rewies />
-        </>
+        </div>
         
     )
 }

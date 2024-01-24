@@ -1,7 +1,12 @@
-import { AllProductsComponent } from "@/components/allProducts/AllProductsComponent";
+import { AllProductsCard } from "@/components/allProducts/AllProductsCard";
+import { ModalProvider } from "@/components/modalBasket/ModalContext";
 
 const AllProductPage = () => {
-    return <AllProductsComponent/>
+    return (
+        <ModalProvider>
+        <AllProductsCard />
+        </ModalProvider>
+    ) 
 }
 
 export default AllProductPage;

@@ -1,39 +1,26 @@
 import Image from "next/image"
 import Line from "../../public/img/advantages/line.png"
-import styles from "./advantages.module.scss"
-
-import MobSwiper from "../advantages/advantageSwiperMob"
 import DTSwiper from "../advantages/advantageSwiperDT"
 
 const AdvantagesMain = () => {
 
     return (
         <>
-        <div className="bg-[#F1E8E3] pb-[60px] layout">
-            <p className="text-center pt-10">НАС ПУБЛІКУЮТЬ</p>  
-        {/* Line */}
-            <div className={styles.advantageLineContainer}>
+        <div className="w-screen h-[344px] bg-[#F1E8E3] items-center pr-[60px] pl-[60px] pt-[72px]">
+            <div className="layout">
+            <p className="text-center text-lg font-bold">НАС ПУБЛІКУЮТЬ</p>  
         <Image
-        className={styles.imgLine}
+         className="w-full pt-[42px]"
         src={Line}
         alt="Line"
         />
-            </div> 
-        {/* MobileSwiper */}
-            <div className="pb-10 visible  lg:hidden layout">
-        <MobSwiper />
-            </div>
-        {/* Desk Top Swiper */}
-        <div className="pt-10 hidden sm:hidden lg:block layout">
+        <div className="flex pt-[58px] items-center">
         <DTSwiper />
         </div >
-            
         </div>
-              
-
+        </div>    
         </>
     )
-
 }
 
 export default AdvantagesMain

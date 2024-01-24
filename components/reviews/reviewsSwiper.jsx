@@ -9,10 +9,7 @@ import "swiper/css/scrollbar";
 import {  Scrollbar } from "swiper/modules";
 
 import Image from "next/image"
-import rewiesjson from "../../public/json/rewies.json"
-import styles from "./reviews.module.scss"
-
-
+import rewiesJson from "../../public/json/rewies.json"
 
 
 const Reviews = () => {
@@ -20,14 +17,14 @@ const Reviews = () => {
   const [goods, setGoods] = useState(rewiesjson)
 
   return (
-    <div className="pt-5 mb-5">
+    <div className="w-screen ml-[96px] cursor-pointer">
     {/* <h2 className="text-center text-3xl">Customer reviews</h2> */}
-    <div className="flex relative w-screen items-center  px-6">
+    <div className="">
      
      
       <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
+        slidesPerView={3.5}
+        spaceBetween={10}
         loop={true}
         pagination={{
           clickable: true
@@ -35,7 +32,7 @@ const Reviews = () => {
         scrollbar={true}
         modules={[ Scrollbar]}
         snapOnRelease={true}
-        className="mySwiper relative py-7"
+        className="mySwiper"
         style={{
           "--swiper-scrollbar-border-radius": "10px",
           "--swiper-scrollbar-top": "auto",
@@ -47,20 +44,35 @@ const Reviews = () => {
           "--swiper-scrollbar-drag-bg-color": "rgba(69, 55, 46, 1)",
           "--swiper-scrollbar-size": "3px",
         }}
+        breakpoints={{
+          390: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1.3,
+          },
+          1200: {
+            slidesPerView: 3.5,
+          },
+          1440: {
+            slidesPerView: 3.5,
+          },
+        }}
       >
         {goods.map((item) => (
-          <SwiperSlide key={item.id} className="sm:w-[340px] sw:h-[100%] md:w-[768px] bg-mainBgColor mb-10">
-            <div className="flex">
-               <div className="pt-7">
+          <SwiperSlide key={item.id} className="mb-10 p-8 w-[404px] bg-[#F1E2DD]">
+            <div className="w-[404px] h-[611px]">
+              <div className="flex">
+               <div className="">
             <Image 
           src={item.img}
           alt={item.name}
           width={100}
           height={100}
-          className="w-25 sh-25 md:w-[153px] md-h[153px]"
+          className="md:w-[153px] md-h[153px]"
           />
             </div>        
-          <ul className="pt-7 pl-5">
+          <ul className="">
           <li>
                 <p className="text-start"><strong>{item.name}</strong></p>
             </li>
@@ -71,26 +83,21 @@ const Reviews = () => {
             </li>
             
             <li>
-                <p className="text-start">{item.ageTitle}<strong className={styles.skinParams}>{item.age}</strong></p>
+                <p className="text-start">{item.ageTitle}<strong className="">{item.age}</strong></p>
             </li>
             <li >
                 <p className="text-start pr-2">{item.productTitle}<strong>{item.product}</strong></p> 
             </li>
-          </ul>     
-
-            </div>
-            
-
+          </ul>  
+          </div>   
             <div className="pt-10 pb-[100px] text-start px-3">
               <span > 
                 {item.text}
               </span>
             </div>
-        
+            </div>
         </SwiperSlide>
-        ))}
-        
-       
+        ))}     
       </Swiper>
     </div>
     </div>

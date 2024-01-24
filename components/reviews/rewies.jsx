@@ -1,23 +1,16 @@
-import RewiesSwiper from "../reviews/reviewsSwiper";
-import RewiesSwiperDT from "./reviesSwiperDT";
-import styles from "./reviews.module.scss";
+import RewiesSwiper from "../reviews/reviewsSwiper"
 
-const Rewies = () => {
-  return (
-    <>
-      <div className="bg-cardColor sm:w-screen sm:h-[720px] layout">
-        <h1 className={`pt-5 text-start pl-6  ${styles.rewiesTitle}`}>
-          РЕАЛЬНИЙ ДОСВІД
-        </h1>
-        <div className="visible lg:hidden layout">
-          <RewiesSwiper />
+const Rewies =() => {
+    return (
+        <>
+        <div className="flex items-center w-screen h-[900px] bg-[#D0C3BB]">
+        <div className="">
+        <h1 className="text-start ml-[96px] mb-[30px] text-lg font-bold">РЕАЛЬНИЙ ДОСВІД</h1>
+            <RewiesSwiper />
         </div>
-        <div className="hidden lg:block layout w-[1440px]">
-          <RewiesSwiperDT />
-        </div>
-      </div>
-    </>
-  );
-};
+        </div>         
+        </>
+    )
+}
 
-export default Rewies;
+export default Rewies
