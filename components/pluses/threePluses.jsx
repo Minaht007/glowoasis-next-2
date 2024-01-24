@@ -1,4 +1,5 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 import plusImg1 from "../../public/img/pluses/threePlusesPix-3x-1.png"
 import plusImg2 from "../../public/img/pluses/threePlusesPix-3x-2.png"
 import plusImg3 from "../../public/img/pluses/threePlusesPix-3x-3.png"
@@ -50,7 +51,9 @@ const PlusesMob = () => {
          {/* Pluses button */}
 
             <div className="top-[430px] lg:top-[530px] ">
+            <Link href="/ingredients">
             <button className="py-3 px-5 bg-btn-second-color border-2 border-gray-900 rounded-md text-text-accent-color lg:px-10 lg:py-4">ЧИТАТИ БІЛЬШЕ</button>
+            </Link>
         </div>
         </div>    
         </>

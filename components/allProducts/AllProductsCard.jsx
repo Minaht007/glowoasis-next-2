@@ -12,6 +12,7 @@ import { Filter } from "./Filter";
 import { Banner } from "./Banner";
 import defaultImage from "../../public/img/allProducts/banner.png";
 
+
 export const AllProductsCard = () => {
   const [originalProducts] = useState(dataProducts);
   const [products, setProducts] = useState(originalProducts);
@@ -21,7 +22,16 @@ export const AllProductsCard = () => {
   const [filterType, setFilterType] = useState(null);
 
   const router = useRouter();
-  const { openModal, setModalContent } = useContext(ModalContext);
+    const { addContent, openModal } = useContext(ModalContext);
+    const [selectedProducts, setSelectedProducts] = useState([]);
+    const handleButtonClick = (product) => {
+        setSelectedProducts(prevProducts => {
+            const newProducts = [...prevProducts, product];
+            addContent(newProducts);
+            return newProducts;
+        });
+        openModal();
+    };
 
   // useEffect(() => {
   //   setOriginalProducts(dataProducts);
@@ -118,9 +128,10 @@ export const AllProductsCard = () => {
                   <p className="">{text}</p>
                 </div>
                 <div className="justify-center">
-                  <button type="button" onClick={() => {openModal(); setModalContent({img, text, price});}} className="w-full h-[50px] ml-0 mr-0 text-center border bg-btn-bg-primery-color"
-                  >{btn}</button>
-                   <Modal />
+                <button type="button" onClick={() => handleButtonClick({img, text, price, id})} className="w-full h-[50px] ml-0 mr-0 text-center border bg-btn-bg-primery-color">
+                        {btn}
+                      </button>
+                      <Modal selectedProducts={selectedProducts} /> 
                 </div>
               </li>
             ))}

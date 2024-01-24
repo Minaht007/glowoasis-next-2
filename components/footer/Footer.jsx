@@ -58,7 +58,7 @@ const Footer = () => {
             </Link>
           </li>
           <li className="text-start pb-3">
-            <Link className={` ${fontstyle.istokWebTitle}`} href="/">
+            <Link className={` ${fontstyle.istokWebTitle}`} href="/contact-us">
               контакти
             </Link>
           </li>

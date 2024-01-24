@@ -33,7 +33,7 @@ const config = {
       "btn-bg-primery-color": "#FFFFFF",
       "btn-second-color": "#45372E",
       "text-accent-color": "#FFFFFF",
-      "bg-modal-basket": "#656565"
+      "bg-modal-basket": "rgba(101, 101, 101, 1)"
     },
     opacity: {
       "50": "0.5",

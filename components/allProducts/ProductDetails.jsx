@@ -5,6 +5,7 @@ import section from "../../public/img/allProducts/section.png";
 import { ProductImg } from "./ProductImg";
 import { DropdownList } from "../utils/DropdownList";
 import  BestsellersSwiperDT  from "../bestsellers/bestsellerSwiperDT";
+import { AllProductIcons } from "../utils/AllProductsIconsComponent";
 
 export const ProductDetails = async ({id}) => {
   const products = await getOneProduct(id);
@@ -17,9 +18,9 @@ export const ProductDetails = async ({id}) => {
   return (
     <>
     <div className="w-screen bg-main-background">
-      <div className="layout w-[1100px] mt-[32px] mb-[92px]">
+      <div className="layout w-[1100px] mt-[32px] mb-24">
         <div className="flex items-center">
-          <div key={oneProduct.id} className="flex w-[1100px] h-[734px]">
+          <div key={oneProduct.id} className="flex w-[1100px] h-[734px] mb-24">
             <ProductImg oneProduct={oneProduct}/>
             <div className="w-[448px] ml-[23px] pt-[45px]">
               <h2 className="text-5xl font-bold text-start mb-[20px]">{oneProduct.title}</h2>
@@ -28,14 +29,9 @@ export const ProductDetails = async ({id}) => {
             </div>
           </div>
         </div>
-        <div className="w-[1100px] mt-[35px] items-center ml-auto mr-auto mb-[68px]">
-          <Image
-            src={section}
-            alt=""
-            width={489}
-            height={734}
-            className="w-screen items-center"
-          />
+        <div className="flex flex-col items-center w-[1100px] mt-[35px] ml-auto mr-auto mb-[68px]">
+          <h3 className="text-2xl font-bold mb-8">ВСІ НАШІ ТОВАРИ</h3>
+          <AllProductIcons />
         </div>
       </div>
       <div className="border-b relative flex w-[1271px] ml-auto mr-auto">
@@ -47,7 +43,7 @@ export const ProductDetails = async ({id}) => {
             className="mb-[168px]"
           />
         <div>
-          <h2 className="absolute text-6xl font-bold text-start w-[500px] ml-[-100px]">{oneProduct.ingredients.title}</h2>
+          <h2 className="absolute text-6xl font-bold text-start w-[500px] ml-[23px]">{oneProduct.ingredients.title}</h2>
      
           <div className="w-[615px] mt-[315px] ml-[31px]" >
       <DropdownList 

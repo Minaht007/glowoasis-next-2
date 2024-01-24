@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from 'react';
-import { Counter } from '../utils/Counter';
-import { ProductTotalPrice } from './ProductTotalPrice';
+import { useState } from "react";
+import { Counter } from "../utils/Counter";
+import { ProductTotalPrice } from "./ProductTotalPrice";
 
 export const ProductBtnTotalPrice = ({ price }) => {
     const [count, setCount] = useState(1);
@@ -16,7 +16,7 @@ export const ProductBtnTotalPrice = ({ price }) => {
                 <div> 
                 <button className="border h-[54px] w-[290px] pr-[10px] mb-[16px] ml-[38px] bg-btn-second-color">
                     <div className="flex flex-row justify-center"><p className="text-text-accent-color">у кошик $</p> 
-                    <ProductTotalPrice count={count} price={price} />
+                    <ProductTotalPrice count={count} price={price} className="text-text-accent-color"/>
                     </div>
                 </button>
             </div>
