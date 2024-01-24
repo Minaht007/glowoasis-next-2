@@ -45,7 +45,7 @@ export const Header = () => {
       setButtonText("Back");
     }
   };
-  console.log(handleSignUpClick);
+  // console.log(handleSignUpClick);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
