@@ -64,8 +64,6 @@ const SignUp = () => {
   const handleSwitchComponent = () => {
     // setIsSignIn(!isSignIn);
     setShowSignUp(!showSignUp); 
-
-
   };
 
   const cntrHandleVisible = () => {
