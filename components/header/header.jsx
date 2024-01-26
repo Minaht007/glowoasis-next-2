@@ -14,7 +14,7 @@ import BurgerMenu from "../burgerMenu/burgerMenu";
 
 import allProdact from "../../app/products/page";
 import link from "../../public/json/link.json";
-import linksdurger from "../../public/json/link.json";
+import linksburger from "../../public/json/link.json";
 
 import React, { useState } from "react";
 
@@ -22,7 +22,7 @@ import SignUpDT from "../signUp/signUpDt";
 
 export const Header = () => {
   const [links, setLinks] = useState(link);
-  const [linksBurger, setLinksBurger] = useState(linksdurger);
+  const [linksBurger, setLinksBurger] = useState(linksburger);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -151,58 +151,59 @@ export const Header = () => {
 //   }
 // };
 
-{
-  /* <div className={styles.navLink}>
-                    <Link                 
-                        className={`pr-4`}
-                        href="products"                      
-                    >
-                        Всі товари
-                    </Link>
-                    {/* <ul
-                        className={`${styles.subNavLink}`}                        
-                    >
-                        <li className={styles.subNavLinkItems}>Menu-1</li>
-                        <li className={styles.subNavLinkItems}>Menu-2</li>
-                        <li className={styles.subNavLinkItems}>Menu-3</li>
-                        <li className={styles.subNavLinkItems}>Menu-4</li>
-                    </ul> */
-}
-{
-  /* </div> */
-}
+// {
+//   // /* <div className={styles.navLink}>
+//   //                   <Link                 
+//   //                       className={`pr-4`}
+//   //                       href="products"                      
+//   //                   >
+//   //                       Всі товари
+//   //                   </Link>
+//   //                   {/* <ul
+//   //                       className={`${styles.subNavLink}`}                        
+//   //                   >
+//   //                       <li className={styles.subNavLinkItems}>Menu-1</li>
+//   //                       <li className={styles.subNavLinkItems}>Menu-2</li>
+//   //                       <li className={styles.subNavLinkItems}>Menu-3</li>
+//   //                       <li className={styles.subNavLinkItems}>Menu-4</li>
+//   //                   </ul> */
+// }
+// {
+//    
+// }
 
-{
-  /* <div className={styles.navLink}>
-          <Link className={`pr-4`} href="bestsellers" >
-            Бестселери
-          </Link> */
-}
-{
-  /* <ul className={styles.subNavLink}>
-            <li className={styles.subNavLinkItems}>Submenu-1</li>
-            <li className={styles.subNavLinkItems}>Submenu-2</li>
-            <li className={styles.subNavLinkItems}>Submenu-3</li>
-          </ul> */
-}
-{
-  /* </div>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Категорії товаров
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Типи шкіри
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Набори
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Чисті формули
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Історія бренду
-        </Link>  */
-}
+// {
+//    <div className={styles.navLink}>
+//    <Link className={`pr-4`} href="bestsellers" >
+//       Бестселери
+//      </Link>
+//      </div> 
+// }
+// {
+//   /* <ul className={styles.subNavLink}>
+//             <li className={styles.subNavLinkItems}>Submenu-1</li>
+//             <li className={styles.subNavLinkItems}>Submenu-2</li>
+//             <li className={styles.subNavLinkItems}>Submenu-3</li>
+//           </ul> */
+// }
+// {
+//   /* </div>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Категорії товаров
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Типи шкіри
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Набори
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Чисті формули
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Історія бренду
+//         </Link>  */
+// }
 
 
 // const handleOnClick = (event) => {
@@ -219,57 +220,57 @@ export const Header = () => {
 //   }
 // };
 
-{
-  /* <div className={styles.navLink}>
-                    <Link                 
-                        className={`pr-4`}
-                        href="products"                      
-                    >
-                        Всі товари
-                    </Link>
-                    {/* <ul
-                        className={`${styles.subNavLink}`}                        
-                    >
-                        <li className={styles.subNavLinkItems}>Menu-1</li>
-                        <li className={styles.subNavLinkItems}>Menu-2</li>
-                        <li className={styles.subNavLinkItems}>Menu-3</li>
-                        <li className={styles.subNavLinkItems}>Menu-4</li>
-                    </ul> */
-}
-{
-  /* </div> */
-}
+// {
+//   /* <div className={styles.navLink}>
+//                     <Link                 
+//                         className={`pr-4`}
+//                         href="products"                      
+//                     >
+//                         Всі товари
+//                     </Link>
+//                     {/* <ul
+//                         className={`${styles.subNavLink}`}                        
+//                     >
+//                         <li className={styles.subNavLinkItems}>Menu-1</li>
+//                         <li className={styles.subNavLinkItems}>Menu-2</li>
+//                         <li className={styles.subNavLinkItems}>Menu-3</li>
+//                         <li className={styles.subNavLinkItems}>Menu-4</li>
+//                     </ul> */
+// }
+// {
+//   /* </div> */
+// }
 
-{
-  /* <div className={styles.navLink}>
-          <Link className={`pr-4`} href="bestsellers" >
-            Бестселери
-          </Link> */
-}
-{
-  /* <ul className={styles.subNavLink}>
-            <li className={styles.subNavLinkItems}>Submenu-1</li>
-            <li className={styles.subNavLinkItems}>Submenu-2</li>
-            <li className={styles.subNavLinkItems}>Submenu-3</li>
-          </ul> */
-}
-{
-  /* </div>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Категорії товаров
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Типи шкіри
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Набори
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Чисті формули
-        </Link>
-        <Link className={`pr-4 ${styles.navLink}`} href="">
-          Історія бренду
-        </Link>  */
-}
-    )   
-}
+// {
+//   /* <div className={styles.navLink}>
+//           <Link className={`pr-4`} href="bestsellers" >
+//             Бестселери
+//           </Link> */
+// }
+// {
+//   /* <ul className={styles.subNavLink}>
+//             <li className={styles.subNavLinkItems}>Submenu-1</li>
+//             <li className={styles.subNavLinkItems}>Submenu-2</li>
+//             <li className={styles.subNavLinkItems}>Submenu-3</li>
+//           </ul> */
+// }
+// {
+//   /* </div>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Категорії товаров
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Типи шкіри
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Набори
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="">
+//           Чисті формули
+//         </Link>
+//         <Link className={`pr-4 ${styles.navLink}`} href="#">
+//           Історія бренду
+//         </Link>  */
+// }
+       
+

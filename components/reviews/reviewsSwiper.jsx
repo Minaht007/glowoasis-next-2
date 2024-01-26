@@ -9,12 +9,12 @@ import "swiper/css/scrollbar";
 import {  Scrollbar } from "swiper/modules";
 
 import Image from "next/image"
-import rewiesJson from "../../public/json/rewies.json"
+import reviewsJson from "../../public/json/rewies.json"
 
 
 const Reviews = () => {
 
-  const [goods, setGoods] = useState(rewiesjson)
+  const [goods, setGoods] = useState(reviewsJson)
 
   return (
     <div className="w-screen ml-[96px] cursor-pointer">
