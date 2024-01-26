@@ -1,0 +1,3 @@
+[submodule "./glowoasis-next"] 
+  path = ./glowoasis-next 
+  url = git://url-of-source/
