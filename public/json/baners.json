@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "heroBanerDT-1",
-    "img": "/img/hero/heroDT-3x.jpg",
+    "img": "/img/baners/banerDTFirst.png",
     "category": "desktop"
   },
   {
     "id": 2,
     "name": "heroBanerDT-2",
-    "img": "/img/hero/heroDT-3x-2.jpg",
+    "img": "/img/baners/banerDTSecond.png",
     "category": "desktop"
   },
   {
     "id": 5,
     "name": "heroBanerDT-2",
-    "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702034110/glowoasis/baners/DeskTop/heroDT-3x_rilwg0.jpg",
+    "img": "/img/baners/banerDTSecond.png",
     "category": "desktop"
   },
   {

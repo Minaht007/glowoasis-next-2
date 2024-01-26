@@ -35,10 +35,14 @@
   }
   .headerSearch {
     position: relative;
-    margin-left: 96px;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
   }
   .navLink {
-    display: block;
+    display: flex;
+    flex-direction: row;
     cursor: pointer;
     position: relative;
   }

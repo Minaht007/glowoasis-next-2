@@ -52,12 +52,12 @@ export const Header = () => {
   };
 
   return (
-    <section className="layout relative index-5">
+    <section className=" relative index-5">
       <div className="bg-[#D0C3BB] h-8 w-full "></div>
-      <div className="flex bg-[#fff] relative w-screen h-15">
-        <div className="flex">
+      <div className="flex bg-[#fff] relative w-screen h-15 layout">
+        <div className="flex w-screen flex-row justify-between ">
           <div
-            className={` ${styles.headerSearch} relative lg:pt-[14px] ml-[96px]`}
+            className={` ${styles.headerSearch} relative lg:pt-[14px] `}
           >
             <input
               type="serch"
@@ -87,7 +87,8 @@ export const Header = () => {
 
           {/* контейнер з лого */}
           <div
-            className={`${styles.headerLogo} sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]`}
+            className={`flex ml-auto mr-auto  `}
+          //   sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]
           >
             <Link href="MainPage">
               <Image
@@ -99,11 +100,11 @@ export const Header = () => {
           </div>
           {/* контейнер з іконками */}
           <div
-            className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]"
+            className="flex ml-[148px] "
             onClick={handleSignUpClick}
           >
             <Image
-              className=" hidden sm:hidden md:hidden lg:block lg:mr-3"
+              className=" hidden lg:block lg:mr-3 xl:visible"
               src={regIcon}
               width={19}
               height={21}
@@ -116,10 +117,10 @@ export const Header = () => {
 
       {/* Навігація */}
 
-      <div className="flex flex-row lg:align-center lg:justify-center hidden lg:block">
+      <div className="flex flex-row lg:items-center lg:justify-center hidden lg:flex layout">
         {links.map((item) => {
           return (
-            <div key={item.name}>
+            <div key={item.name} className="flex flex-row">
               <Link className={`px-4 ${styles.navLink}`} href={item.link}>
                 {item.name}
               </Link>
