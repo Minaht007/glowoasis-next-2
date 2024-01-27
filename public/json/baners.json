@@ -3,18 +3,21 @@
     "id": 1,
     "name": "heroBanerDT-1",
     "img": "/img/baners/banerDTFirst.png",
+    "width": 1400,
     "category": "desktop"
   },
   {
     "id": 2,
     "name": "heroBanerDT-2",
     "img": "/img/baners/banerDTSecond.png",
+    "width": 1400,
     "category": "desktop"
   },
   {
     "id": 5,
     "name": "heroBanerDT-2",
     "img": "/img/baners/banerDTSecond.png",
+    "width": 1400,
     "category": "desktop"
   },
   {
@@ -27,24 +30,28 @@
     "id": 4,
     "name": "heroBanerMob-2",
     "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1701853710/glowoasis/baners/Mobile/heroMob-3x_gafpyn.jpg",
-    "category": "mobile"
+    "category": "mobile",
+    "width": "100%"
   },
   {
     "id": 6,
     "name": "bestsellerMobBaner",
     "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702045191/glowoasis/baners/bestsellersBaner/Mobile/banner-Mob_qpwzd9.png",
-    "category": "mobile"
+    "category": "mobile",
+    "width": "100%"
   },
   {
     "id": 7,
     "name": "bestsellerTabBaner",
     "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702045194/glowoasis/baners/bestsellersBaner/Mobile/banner-Tab_fdu0b3.png",
-    "category": "tabler"
+    "category": "tabler",
+    "width": "100%"
   },
   {
     "id": 8,
     "name": "bestsellerDtBaner",
     "img": "https://res.cloudinary.com/dwokvxm4l/image/upload/v1702045189/glowoasis/baners/bestsellersBaner/Mobile/banner-DT_lf04bo.png",
-    "category": "tabler"
+    "category": "tabler",
+    "width": "100%"
   }
 ]

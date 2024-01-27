@@ -30,7 +30,7 @@ const SignUp = () => {
 
   const modalRef = useRef(null);
 
- const router = useRouter()
+//  const router = useRouter()
 
 
 

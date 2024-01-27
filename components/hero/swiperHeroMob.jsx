@@ -43,8 +43,8 @@ export default function SwiperHero() {
         className="mySwiper pb-[16px]"
       >
         {baner.map((image) => (
-          <SwiperSlide key={image.id} >
-            <Image src={image.img} alt={image.name} width={150} height={150} 
+          <SwiperSlide key={image.id} className="w-[100%]" >
+            <Image src={image.img} alt={image.name} width={image.width} height={150} 
             className={styles.maineBaner}
             />
           </SwiperSlide>

@@ -16,4 +16,9 @@
   .burgerMenu.active {
     transform: translateX(0);
   }
+}
+@media screen and (min-width: 1200px) {
+  .burgerMenu {
+    display: none;
+  }
 }/*# sourceMappingURL=burgerMenu.module.css.map */

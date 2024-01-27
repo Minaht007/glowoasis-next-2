@@ -75,10 +75,9 @@ export const Header = () => {
           </div>
 
           {/* контейнер з бургер */}
-          <div>
+          <div className="visible lg:hidden ml-5 pt-4 pb-4 ">
             <button
-              type="button"
-              className="visible lg:hidden ml-5 pt-4 pb-4 "
+              type="button"              
               onClick={toggleMenu}
             >
               <Image src={burger} width={15} height={10} alt="burger" />
