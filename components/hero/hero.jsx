@@ -6,7 +6,7 @@ import SwiperHeroMob from "./swiperHeroMob"
 const Hero = () => {
     return (
         <>
-        <div className="layout">
+        <div className=" w-[100%] layout bg-[#F1E8E3]">
             {/* <SwiperHero />  */}
             <SwiperHeroMob />
         </div>
