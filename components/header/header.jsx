@@ -100,16 +100,21 @@ export const Header = () => {
           {/* контейнер з іконками */}
           <div
             className="flex ml-[148px] "
-            onClick={handleSignUpClick}
+            
           >
-            <Image
+            <div onClick={handleSignUpClick}>
+               <Image
               className=" hidden lg:block lg:mr-3 xl:visible"
               src={regIcon}
               width={19}
               height={21}
               alt="regIcon"
             />
+            </div>
+           <div>
             <Image src={basket} width={19} height={24} alt="basket" />
+           </div>
+            
           </div>
         </div>
       </div>

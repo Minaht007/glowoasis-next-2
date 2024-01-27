@@ -3,21 +3,21 @@
     "id": 1,
     "name": "heroBanerDT-1",
     "img": "/img/baners/banerDTFirst.png",
-    "width": 1400,
+    "width": 1440,
     "category": "desktop"
   },
   {
     "id": 2,
     "name": "heroBanerDT-2",
     "img": "/img/baners/banerDTSecond.png",
-    "width": 1400,
+    "width": 1440,
     "category": "desktop"
   },
   {
     "id": 5,
     "name": "heroBanerDT-2",
     "img": "/img/baners/banerDTSecond.png",
-    "width": 1400,
+    "width": 1440,
     "category": "desktop"
   },
   {

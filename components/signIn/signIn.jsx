@@ -28,14 +28,14 @@ const [isShowSignIn, setIsShowSignIn] = useState(false)
             />
         </div> */}
 
-				<div>
+				<div className={styles.signInContainer}>
 					<h1 className={`${fonts.sugnUpTitle} text-start mt-10 mb-3`}>Вхід</h1>
 					<p className={`${fonts.SignUpGoogleBtnDT} text-start`}>
 						Введіть свою електронну адресу та пароль
 					</p>
 				</div>
 
-				<form action="">
+				<form action="" className="mx-auto">
 					<label className="flex flex-col text-start " htmlFor="mail">
 						Електронна адреса
 						<input
@@ -45,10 +45,10 @@ const [isShowSignIn, setIsShowSignIn] = useState(false)
 						/>
 					</label>
 
-					<label className="flex flex-col text-start relative mt-3" htmlFor="">
+					<label className={styles.emailInput} htmlFor="">
 						Пароль
 						<input
-							className=" w-[756px] border border-1 border-gray-900 rounded-md py-4 pl-3 text-start"
+							className=" w-[756px] border border-1 border-gray-900 rounded-md py-4 pl-3 text-start" 
 							type="password"
 							placeholder="********************"
 						/>
@@ -57,7 +57,7 @@ const [isShowSignIn, setIsShowSignIn] = useState(false)
 							alt="hide"
 							width={24}
 							height={24}
-							className="absolute top-[50%] right-[15px]"
+							className="absolute top-[50%] right-[90px]"
 						/>
 					</label>
 
