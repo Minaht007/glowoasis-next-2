@@ -10,7 +10,7 @@ import Kit3 from "../../public/img/allGoods/kit-3-3x.png";
 const RecomendKits = () => {
     return (
         <>
-        <div className=" w-screen align-center text-center pb-[60px] pt-[60px] bg-main-background">
+        <div className=" w-screen align-center text-center pb-[60px] pt-[60px] bg-main-background layout">
             <h1 className="text-istokWeb text-lg font-bold mb-[68px]" >РЕКОМЕНДОВАНІ НАБОРИ</h1>
         <div className="layout flex align-center justify-center">
 

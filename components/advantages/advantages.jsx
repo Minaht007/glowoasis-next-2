@@ -6,7 +6,7 @@ const AdvantagesMain = () => {
 
     return (
         <>
-        <div className="w-screen h-[344px] bg-[#F1E8E3] items-center pr-[60px] pl-[60px] pt-[72px]">
+        <div className="w-screen h-[344px] bg-[#F1E8E3] items-center pr-[60px] pl-[60px] pt-[72px] layout">
             <div className="layout">
             <p className="text-center text-lg font-bold">НАС ПУБЛІКУЮТЬ</p>  
         <Image

@@ -19,7 +19,7 @@ const Reviews = () => {
   return (
     <div className="w-screen ml-[96px] cursor-pointer">
     {/* <h2 className="text-center text-3xl">Customer reviews</h2> */}
-    <div className="">
+    <div className="layout">
      
      
       <Swiper
@@ -55,7 +55,7 @@ const Reviews = () => {
             slidesPerView: 3.5,
           },
           1440: {
-            slidesPerView: 3.5,
+            slidesPerView: 3,
           },
         }}
       >

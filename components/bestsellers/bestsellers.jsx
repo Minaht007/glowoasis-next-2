@@ -5,7 +5,7 @@ import BestsellersSwiperDT from "./bestsellerSwiperDT"
 
 const BestSellers = () => {
     return (
-        <div className="w-screen h-full bg-second-backround text-center">
+        <div className="w-screen h-full bg-second-backround text-center layout">
             <div className="layout">
                 <p className="text-lg font-bold">РЕКОМЕНДОВАНІ ТОВАРИ</p>
             </div>

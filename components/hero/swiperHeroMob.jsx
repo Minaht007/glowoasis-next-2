@@ -30,7 +30,7 @@ export default function SwiperHero() {
   useEffect(() => {
     const filterImages = getImages(images);
     setBaner(filterImages);
-  }, [images]);
+  },[] );
 
   return (
     <>

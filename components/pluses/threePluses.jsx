@@ -9,7 +9,7 @@ const PlusesMob = () => {
 
     return (
         <>
-        <div className="w-screen h-[691px] pt-[80px] md:h-[682px] lg:h-[1110px] lg:pt-[75px] bg-cover bg-center bg-no-repeat bg-pluses-bg">
+        <div className="w-screen h-[691px] pt-[80px] md:h-[682px] lg:h-[1110px] lg:pt-[75px] bg-cover bg-center bg-no-repeat bg-pluses-bg layout">
             <div className="flex justify-center gap-5 md:mb-[32px] lg:pt-8 mb-[40px]">
          <Image 
             src={plusImg1}

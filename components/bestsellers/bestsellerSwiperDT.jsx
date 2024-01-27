@@ -21,10 +21,10 @@ export default function BestsellersSwiperDT() {
 
   return (
     <>
-    <div className="flex justify-between w-[350px] md:w-[710px] lg:w-[1190px] xl:w-[1300px] ml-auto mr-auto">
+    <div className="flex justify-between w-[350px] md:w-[710px] lg:w-[1190px] xl:w-[1300px] layout">
       <Swiper
-        slidesPerView={4}
-        spaceBetween={15}
+        slidesPerView={3}
+        spaceBetween={1}
         loop={true}
         pagination={{
           clickable: true,
@@ -70,10 +70,10 @@ export default function BestsellersSwiperDT() {
             },
           },
         }}
-        className="mySwiper flex justify-between container"
+        className="mySwiper flex justify-between container layout"
       >
         {goods.map((item) => (
-            <SwiperSlide key={item.id} className="">
+            <SwiperSlide key={item.id} className="layout">
               <div className="w-[165px] h-[397px] mb-[30px] md:w-[320px] md:h-[573px] md:mb-[45px] lg:w-[290px] lg:h-[601px]">
                 <div className=" mb-[21px]">
                 <Image

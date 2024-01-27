@@ -14,7 +14,7 @@ const Comartional = () => {
 
     return (
         <>
-        <div className="flex flex-col h-[985px] justify-center md:h-[1224px] lg:h-[807px] lg:flex-row w-screen lg:items-center lg:relative bg-cover bg-center bg-no-repeat bg-comertional-bg">
+        <div className="flex flex-col h-[985px] justify-center md:h-[1224px] lg:h-[807px] lg:flex-row w-screen lg:items-center lg:relative bg-cover bg-center bg-no-repeat bg-comertional-bg layout">
                 <div className="layout flex flex-col items-start w-[209px] mb-[60px] md:w-[568px] lg:w-[615px] lg:ml-[250px] lg:absolute lg:mr-[1100px] lg:mb-[250px]">
                     <h3 className="text-3xl font-bold text-start md:text-5xl lg:text-6xl">експертно розроблений догляд для кожного типу шкіри</h3>
                 </div>
