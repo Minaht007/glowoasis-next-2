@@ -14,7 +14,7 @@ import rewiesJson from "../../public/json/rewies.json"
 
 const Reviews = () => {
 
-  const [goods, setGoods] = useState(rewiesjson)
+  const [goods, setGoods] = useState(rewiesJson)
 
   return (
     <div className="w-screen ml-[96px] cursor-pointer">

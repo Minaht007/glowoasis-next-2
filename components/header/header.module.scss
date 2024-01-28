@@ -1,4 +1,3 @@
-
 @media screen and (min-width: 390px) and (max-width: 1199px) {
   .headerNav {
     display: none;
@@ -38,12 +37,18 @@
 
    .headerSearch {
     position: relative;
-    margin-left: 96px;
+    // margin-left: 96px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
   }
 
   
   .navLink {
-    display: block;
+    display: flex;
+    flex-direction: row;
     cursor: pointer;
     position: relative;
   }

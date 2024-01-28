@@ -1,9 +1,4 @@
 "use client"
-import Image from "next/image"
-import HeroMob from "../../public/img/hero/heroMob-3x.png"
-import HeroMob2 from "../../public/img/hero/heroMob-1x.png"
-import HeroDT1 from "../../public/img/hero/heroDT-3x.jpg"
-import HeroDT2 from "../../public/img/hero/heroDT-3x-2.jpg"
 
 // import "/swiper.module.scss";
 

@@ -14,7 +14,7 @@ import BurgerMenu from "../burgerMenu/burgerMenu";
 
 import allProdact from "../../app/products/page";
 import link from "../../public/json/link.json";
-import linksdurger from "../../public/json/link.json";
+import linksburger from "../../public/json/link.json";
 
 import React, { useState } from "react";
 
@@ -22,7 +22,7 @@ import SignUpDT from "../signUp/signUpDt";
 
 export const Header = () => {
   const [links, setLinks] = useState(link);
-  const [linksBurger, setLinksBurger] = useState(linksdurger);
+  const [linksBurger, setLinksBurger] = useState(linksburger);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -52,12 +52,12 @@ export const Header = () => {
   };
 
   return (
-    <section className="layout relative index-5">
+    <section className=" relative index-5">
       <div className="bg-[#D0C3BB] h-8 w-full "></div>
-      <div className="flex bg-[#fff] relative w-screen h-15">
-        <div className="flex">
+      <div className="flex bg-[#fff] relative w-screen h-15 layout">
+        <div className="flex w-screen flex-row justify-between ">
           <div
-            className={` ${styles.headerSearch} relative lg:pt-[14px] ml-[96px]`}
+            className={` ${styles.headerSearch} relative lg:pt-[14px] `}
           >
             <input
               type="serch"
@@ -75,10 +75,9 @@ export const Header = () => {
           </div>
 
           {/* контейнер з бургер */}
-          <div>
+          <div className="visible lg:hidden ml-5 pt-4 pb-4 ">
             <button
-              type="button"
-              className="visible lg:hidden ml-5 pt-4 pb-4 "
+              type="button"              
               onClick={toggleMenu}
             >
               <Image src={burger} width={15} height={10} alt="burger" />
@@ -87,7 +86,8 @@ export const Header = () => {
 
           {/* контейнер з лого */}
           <div
-            className={`${styles.headerLogo} sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]`}
+            className={`flex ml-auto mr-auto  `}
+          //   sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]
           >
             <Link href="MainPage">
               <Image
@@ -99,27 +99,32 @@ export const Header = () => {
           </div>
           {/* контейнер з іконками */}
           <div
-            className="flex ml-[148px] lg:ml-[500px] absolute top-[25%] right-[5%]"
-            onClick={handleSignUpClick}
+            className="flex ml-[148px] "
+            
           >
-            <Image
-              className=" hidden sm:hidden md:hidden lg:block lg:mr-3"
+            <div onClick={handleSignUpClick}>
+               <Image
+              className=" hidden lg:block lg:mr-3 xl:visible"
               src={regIcon}
               width={19}
               height={21}
               alt="regIcon"
             />
+            </div>
+           <div>
             <Image src={basket} width={19} height={24} alt="basket" />
+           </div>
+            
           </div>
         </div>
       </div>
 
       {/* Навігація */}
 
-      <div className="flex flex-row lg:align-center lg:justify-center hidden lg:block">
+      <div className="flex flex-row lg:items-center lg:justify-center hidden lg:flex layout">
         {links.map((item) => {
           return (
-            <div key={item.name}>
+            <div key={item.name} className="flex flex-row">
               <Link className={`px-4 ${styles.navLink}`} href={item.link}>
                 {item.name}
               </Link>
@@ -253,7 +258,7 @@ export const Header = () => {
             <li className={styles.subNavLinkItems}>Submenu-3</li>
           </ul> */
 }
-{
+// {
   /* </div>
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Категорії товаров
@@ -270,6 +275,6 @@ export const Header = () => {
         <Link className={`pr-4 ${styles.navLink}`} href="">
           Історія бренду
         </Link>  */
-}
-    )   
-}
+// }
+//     )   
+// }
