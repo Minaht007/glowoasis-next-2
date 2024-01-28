@@ -28,12 +28,6 @@ export default function SwiperHero() {
         </SwiperSlide>
         <SwiperSlide className="w-full bg-cover bg-center bg-no-repeat bg-hero-mob lg:bg-hero-dt-1" >      
         </SwiperSlide>
-        
-        {/* <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
       </Swiper>
     </>
   );
