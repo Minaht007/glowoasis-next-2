@@ -1,32 +1,10 @@
-// .signInWindow {
-//     display: flex;
-//     flex-direction: column;
-//     width: 820px;
-//     border-radius: 20px;
-//     background: #fff;
-//     box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.25);
-//     //   gap: 40px;
-//     position: absolute;
-//     z-index: 11;
-//     left: 25%;
-//     right: 25%;
-//   }
-
-//   .overlay {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.5);
-//     z-index: 10;
-//   }
 
 .signInContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 40px;  
   }
 
   .emailInput {
@@ -35,4 +13,18 @@
     position: relative;
     margin-top: 12px;
     text-align: start;
+    margin-left: 40px;
+  }
+
+  .btmContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+
+  .fogetPassword {
+    
   }

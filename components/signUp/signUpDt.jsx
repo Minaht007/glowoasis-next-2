@@ -32,10 +32,6 @@ const SignUp = () => {
 
 //  const router = useRouter()
 
-
-
-
-
   const registerUser = async (email, password, name, sureName) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(
@@ -44,7 +40,6 @@ const SignUp = () => {
         password
       );
       const userId = userCredential.user.uid;
-
       const userDataCollection = collection(db, "users");
       await addDoc(userDataCollection, {
         userId: userId,
@@ -61,10 +56,10 @@ const SignUp = () => {
     setVisible(!visible);
   };
 
-  const handleSwitchComponent = () => {
-    // setIsSignIn(!isSignIn);
-    setShowSignUp(!showSignUp); 
-  };
+//   const handleSwitchComponent = () => {
+//     // setIsSignIn(!isSignIn);
+//     setShowSignUp(!showSignUp); 
+//   };
 
   const cntrHandleVisible = () => {
     setCntrVisible(!cntrVisible);
