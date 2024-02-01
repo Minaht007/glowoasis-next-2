@@ -1,9 +1,13 @@
+
 import { Inter, Philosopher, Istok_Web } from 'next/font/google'
 import './globals.css'
 import {Header} from "../components/header/header"
 import Footer from "../components/footer/Footer"
 import  { ModalProvider }  from "@/components/modalBasket/ModalContext";
 import { Modal }  from "../components/modalBasket/Modal";
+
+
+import { UserProvider } from '../components/context/contextWrapper';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,11 +35,13 @@ export default function RootLayout({ children  }) {
     <html lang="en"> 
     <head></head>        
       <body className={inter.className}>
+      <UserProvider> 
         <ModalProvider>
       <Header />
         {children}   
       <Footer /> 
       </ModalProvider>
+      </UserProvider>
       </body>    
     </html>
   )

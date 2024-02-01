@@ -10,22 +10,26 @@ import fonts from "../fonts/fonts.module.scss";
 import styles from "./signIn.module.scss";
 
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import auth from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+
+import { useUser } from '../context/contextWrapper';
+
 
 const SignIn = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in
-	  console.log(userCredential)
+  const { updateUser } = useContext(useUser);
+
+ signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {      
       const user = userCredential.user;
-      // ...
+	  updateUser({ displayName: user.displayName });
+      return updateUser;
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -34,20 +38,6 @@ const SignIn = () => {
 
   return (
     <>
-      {/* {!isShowSignIn &&
-        <section className={`${styles.overlay}`} >
-
-        <div className={`${styles.signInWindow}`}> */}
-      {/* <div className="flex flex-row item-center justify-center">
-            <Image
-                src={logo}
-                alt="logo"
-                width={177}
-                height={32}
-                className="text-center"
-            />
-        </div> */}
-
       <div className={styles.signInContainer}>
         <h1 className={`${fonts.sugnUpTitle} text-start mt-10 mb-3`}>Вхід</h1>
         <p className={`${fonts.SignUpGoogleBtnDT} text-start`}>
@@ -111,9 +101,7 @@ const SignIn = () => {
           </button>
         </div>
       </form>
-      {/* </div>
-    </section>
-        } */}
+    
     </>
   );
 };

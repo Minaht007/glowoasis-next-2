@@ -16,15 +16,16 @@ import allProdact from "../../app/products/page";
 import link from "../../public/json/link.json";
 import linksburger from "../../public/json/link.json";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import SignUpDT from "../signUp/signUpDt";
+import { useUser } from '../context/contextWrapper';
 
 export const Header = () => {
   const [links, setLinks] = useState(link);
   const [linksBurger, setLinksBurger] = useState(linksburger);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // reg State
   const [showSignUp, setShowSignUp] = useState(false);
@@ -32,6 +33,8 @@ export const Header = () => {
   const [buttonText, setButtonText] = useState("мій профіль");
   const [showIcon, setShowIcon] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const  {user} = useContext(useUser)
 
   const handleSignUpClick = () => {
     setShowSignUp(!showSignUp);
@@ -98,25 +101,25 @@ export const Header = () => {
             </Link>
           </div>
           {/* контейнер з іконками */}
-          <div
-            className="flex ml-[148px] "
-            
-          >
-            <div onClick={handleSignUpClick}>
-               <Image
-              className=" hidden lg:block lg:mr-3 xl:visible"
-              src={regIcon}
-              width={19}
-              height={21}
-              alt="regIcon"
-            />
-            </div>
-           <div>
-            <Image src={basket} width={19} height={24} alt="basket" />
-           </div>
-            
-          </div>
+          <div className="flex ml-[148px]">
+      {user ? (
+        <p>{user.displayName}</p>
+      ) : (
+        <div onClick={handleSignUpClick}>
+          <Image
+            className="hidden lg:block lg:mr-3 xl:visible"
+            src={regIcon}
+            width={19}
+            height={21}
+            alt="regIcon"
+          />
         </div>
+      )}
+      <div>
+        <Image src={basket} width={19} height={24} alt="basket" />
+      </div>
+    </div>
+      </div>
       </div>
 
       {/* Навігація */}
@@ -138,144 +141,11 @@ export const Header = () => {
         links={linksBurger}
       />
       {showSignUp && <SignUpDT />}
+     
     </section>
   );
 };
 
-// const handleOnClick = (event) => {
-//   event.preventDefault();
-//   const clickedElement = event.currentTarget;
-//   const nextElement = clickedElement.nextElementSibling;
 
-//   if (nextElement.style.maxHeight) {
-//     nextElement.style.maxHeight = null;
-//   } else {
-//     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
-//     allSubMenus.forEach((el) => (el.style.maxHeight = null));
-//     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
-//   }
-// };
-
-// {
-//   // /* <div className={styles.navLink}>
-//   //                   <Link                 
-//   //                       className={`pr-4`}
-//   //                       href="products"                      
-//   //                   >
-//   //                       Всі товари
-//   //                   </Link>
-//   //                   {/* <ul
-//   //                       className={`${styles.subNavLink}`}                        
-//   //                   >
-//   //                       <li className={styles.subNavLinkItems}>Menu-1</li>
-//   //                       <li className={styles.subNavLinkItems}>Menu-2</li>
-//   //                       <li className={styles.subNavLinkItems}>Menu-3</li>
-//   //                       <li className={styles.subNavLinkItems}>Menu-4</li>
-//   //                   </ul> */
-// }
-// {
-//    
-// }
-
-// {
-//    <div className={styles.navLink}>
-//    <Link className={`pr-4`} href="bestsellers" >
-//       Бестселери
-//      </Link>
-//      </div> 
-// }
-// {
-//   /* <ul className={styles.subNavLink}>
-//             <li className={styles.subNavLinkItems}>Submenu-1</li>
-//             <li className={styles.subNavLinkItems}>Submenu-2</li>
-//             <li className={styles.subNavLinkItems}>Submenu-3</li>
-//           </ul> */
-// }
-// {
-//   /* </div>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Категорії товаров
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Типи шкіри
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Набори
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Чисті формули
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Історія бренду
-//         </Link>  */
-// }
-
-
-// const handleOnClick = (event) => {
-//   event.preventDefault();
-//   const clickedElement = event.currentTarget;
-//   const nextElement = clickedElement.nextElementSibling;
-
-//   if (nextElement.style.maxHeight) {
-//     nextElement.style.maxHeight = null;
-//   } else {
-//     const allSubMenus = document.querySelectorAll(`.${styles.subNavLink}`);
-//     allSubMenus.forEach((el) => (el.style.maxHeight = null));
-//     nextElement.style.maxHeight = nextElement.scrollHeight + "px";
-//   }
-// };
-
-// {
-//   /* <div className={styles.navLink}>
-//                     <Link                 
-//                         className={`pr-4`}
-//                         href="products"                      
-//                     >
-//                         Всі товари
-//                     </Link>
-//                     {/* <ul
-//                         className={`${styles.subNavLink}`}                        
-//                     >
-//                         <li className={styles.subNavLinkItems}>Menu-1</li>
-//                         <li className={styles.subNavLinkItems}>Menu-2</li>
-//                         <li className={styles.subNavLinkItems}>Menu-3</li>
-//                         <li className={styles.subNavLinkItems}>Menu-4</li>
-//                     </ul> */
-// }
-// {
-//   /* </div> */
-// }
-
-// {
-//   /* <div className={styles.navLink}>
-//           <Link className={`pr-4`} href="bestsellers" >
-//             Бестселери
-//           </Link> */
-// }
-// {
-//   /* <ul className={styles.subNavLink}>
-//             <li className={styles.subNavLinkItems}>Submenu-1</li>
-//             <li className={styles.subNavLinkItems}>Submenu-2</li>
-//             <li className={styles.subNavLinkItems}>Submenu-3</li>
-//           </ul> */
-// }
-// {
-//   /* </div>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Категорії товаров
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Типи шкіри
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Набори
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="">
-//           Чисті формули
-//         </Link>
-//         <Link className={`pr-4 ${styles.navLink}`} href="#">
-//           Історія бренду
-//         </Link>  */
-// }
        
 

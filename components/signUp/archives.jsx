@@ -7,7 +7,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/database";
 import SignIn from "../signIn/signIn";
 import hide from "../../public/icon/visible.png";
 import logo from "../../public/img/logo.png";
@@ -38,16 +38,15 @@ const SignUp = () => {
         auth,
         email,
         password
-      ); 	  
+      );
       const userId = userCredential.user.uid;
       const userDataCollection = collection(db, "users");
       await addDoc(userDataCollection, {
         userId: userId,
-        displayName: name,
+        name: name,
         sureName: sureName,
       });
       console.log("singUp success");
-	  console.log(userDataCollection)
     } catch (error) {
       console.error("message:", error.message);
     }
@@ -56,6 +55,11 @@ const SignUp = () => {
   const handleVisible = () => {
     setVisible(!visible);
   };
+
+//   const handleSwitchComponent = () => {
+//     // setIsSignIn(!isSignIn);
+//     setShowSignUp(!showSignUp); 
+//   };
 
   const cntrHandleVisible = () => {
     setCntrVisible(!cntrVisible);
