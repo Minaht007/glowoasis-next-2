@@ -12,29 +12,35 @@ import styles from "./signIn.module.scss";
 import React from "react";
 import { useState, useContext } from "react";
 
-import auth from "../../firebase";
+import {auth} from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-import { useUser } from '../context/contextWrapper';
+import Header from "../header/header"
+import { UserContext } from "../context/contextWrapper";
+
 
 
 const SignIn = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+   
+  const {user} = useContext(UserContext)
 
-  const { updateUser } = useContext(useUser);
-
- signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {      
-      const user = userCredential.user;
-	  updateUser({ displayName: user.displayName });
-      return updateUser;
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
+  const logIn = () => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        updateUser({ displayName: user.displayName });
+        console.log("User logged in:", user.uid);
+		
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error("Log in failed:", errorCode, errorMessage);
+      });
+  };
 
   return (
     <>
@@ -92,8 +98,8 @@ const SignIn = () => {
         <p>Або увійдіть за допомогою соцмереж</p>
 
         <div className={`${styles.btmContainer}`}>
-          <button className="flex flex-row border-[1px] border-[#45372E] mr-[20px]">
-            <Image src={google} alt="google" width={24} height={24} /> Google
+          <button className="flex flex-row h-[44px] border-[1px] border-[#45372E] mr-[20px] px-[20px] pt-[8px]">
+            <Image src={google} alt="google" width={24} height={24} /><span className="flex align-center">Google</span> 
           </button>
           <button className="flex flex-row border-[1px] border-[#45372E]">
             <Image src={fb} alt="fb" width={14} height={24} />
@@ -101,7 +107,7 @@ const SignIn = () => {
           </button>
         </div>
       </form>
-    
+    <Header login={logIn} />
     </>
   );
 };

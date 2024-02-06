@@ -5,7 +5,7 @@ import {Header} from "../components/header/header"
 import Footer from "../components/footer/Footer"
 import  { ModalProvider }  from "@/components/modalBasket/ModalContext";
 import { Modal }  from "../components/modalBasket/Modal";
-
+import { useContext } from "react";
 
 import { UserProvider } from '../components/context/contextWrapper';
 

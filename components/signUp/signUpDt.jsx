@@ -32,26 +32,28 @@ const SignUp = () => {
 
 //  const router = useRouter()
 
-  const registerUser = async (email, password, name, sureName) => {
+const registerUser = async (email, password, name, sureName) => {
     try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      ); 	  
-      const userId = userCredential.user.uid;
-      const userDataCollection = collection(db, "users");
-      await addDoc(userDataCollection, {
-        userId: userId,
-        displayName: name,
-        sureName: sureName,
-      });
-      console.log("singUp success");
-	  console.log(userDataCollection)
+     
+        const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );       
+        const userId = userCredential.user.uid;        
+        const userDataCollection = collection(db, "users");     
+        await addDoc(userDataCollection, {
+            userId: userId,
+            displayName: name,
+            sureName: sureName,
+        });
+        
+        console.log("Registration successful");
+        console.log(userDataCollection); 
     } catch (error) {
-      console.error("message:", error.message);
+        console.error("Error:", error.message);
     }
-  };
+};
 
   const handleVisible = () => {
     setVisible(!visible);
@@ -243,23 +245,7 @@ const SignUp = () => {
 											/>
 											<span className="flex align-center">Facebook</span>
 										</button>
-									</div>
-									{/* <p className={`pb-[6px] ${fonts.SignUpGoogleBtnDT}`}>Уже маєте акаунт?</p> */}
-
-									{/* <Link
-								href=""
-								className={`pb-[108px] ${fonts.SignUpGoogleBtnDT} `}
-								onClick={handleSwitchComponent}
-							>
-								<span
-									className={`${styles.singUpLink} text-`}
-									// onClick={handleSwitchComponent}
-								>
-									{isSignIn ? "Зареєструватись" : "Увійти"}
-								</span>
-							</Link> */}
-
-									{/* <SignIn />  */}
+									</div>						
 								</form>
 							</div>
 						)}

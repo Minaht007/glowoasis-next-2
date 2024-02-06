@@ -19,13 +19,18 @@ import linksburger from "../../public/json/link.json";
 import React, { useState, useContext } from "react";
 
 import SignUpDT from "../signUp/signUpDt";
-import { useUser } from '../context/contextWrapper';
+
+import {UserContext} from "../context/contextWrapper"
+
+
 
 export const Header = () => {
   const [links, setLinks] = useState(link);
   const [linksBurger, setLinksBurger] = useState(linksburger);
 
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const {displayName, user} = useContext(UserContext)
 
   // reg State
   const [showSignUp, setShowSignUp] = useState(false);
@@ -33,8 +38,6 @@ export const Header = () => {
   const [buttonText, setButtonText] = useState("мій профіль");
   const [showIcon, setShowIcon] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const  {user} = useContext(useUser)
 
   const handleSignUpClick = () => {
     setShowSignUp(!showSignUp);
@@ -47,8 +50,10 @@ export const Header = () => {
       setPreviousLinks([]);
       setButtonText("Back");
     }
+    if (user) {
+      login(displayName);
+    }
   };
-  // console.log(handleSignUpClick);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -59,9 +64,7 @@ export const Header = () => {
       <div className="bg-[#D0C3BB] h-8 w-full "></div>
       <div className="flex bg-[#fff] relative w-screen h-15 layout">
         <div className="flex w-screen flex-row justify-between ">
-          <div
-            className={` ${styles.headerSearch} relative lg:pt-[14px] `}
-          >
+          <div className={` ${styles.headerSearch} relative lg:pt-[14px] `}>
             <input
               type="serch"
               placeholder="пошук"
@@ -79,10 +82,7 @@ export const Header = () => {
 
           {/* контейнер з бургер */}
           <div className="visible lg:hidden ml-5 pt-4 pb-4 ">
-            <button
-              type="button"              
-              onClick={toggleMenu}
-            >
+            <button type="button" onClick={toggleMenu}>
               <Image src={burger} width={15} height={10} alt="burger" />
             </button>
           </div>
@@ -90,7 +90,7 @@ export const Header = () => {
           {/* контейнер з лого */}
           <div
             className={`flex ml-auto mr-auto  `}
-          //   sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]
+            //   sm:ml-16 sm:pt-[10px] sm:pb-[10px] lg:ml-[270px]
           >
             <Link href="MainPage">
               <Image
@@ -102,24 +102,24 @@ export const Header = () => {
           </div>
           {/* контейнер з іконками */}
           <div className="flex ml-[148px]">
-      {user ? (
-        <p>{user.displayName}</p>
-      ) : (
-        <div onClick={handleSignUpClick}>
-          <Image
-            className="hidden lg:block lg:mr-3 xl:visible"
-            src={regIcon}
-            width={19}
-            height={21}
-            alt="regIcon"
-          />
+            {user && user.displayName ? (
+              <p>{user.displayName}</p>
+            ) : (
+              <div onClick={handleSignUpClick}>
+                <Image
+                  className="hidden lg:block lg:mr-3 xl:visible"
+                  src={regIcon}
+                  width={19}
+                  height={21}
+                  alt="regIcon"
+                />
+              </div>
+            )}
+            <div>
+              <Image src={basket} width={19} height={24} alt="basket" />
+            </div>
+          </div>
         </div>
-      )}
-      <div>
-        <Image src={basket} width={19} height={24} alt="basket" />
-      </div>
-    </div>
-      </div>
       </div>
 
       {/* Навігація */}
@@ -141,11 +141,6 @@ export const Header = () => {
         links={linksBurger}
       />
       {showSignUp && <SignUpDT />}
-     
     </section>
   );
 };
-
-
-       
-

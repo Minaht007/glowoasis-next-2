@@ -13,4 +13,13 @@
   margin-top: 12px;
   text-align: start;
   margin-left: 40px;
+}
+
+.btmContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 40px;
 }/*# sourceMappingURL=signIn.module.css.map */
