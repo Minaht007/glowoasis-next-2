@@ -44,10 +44,9 @@ const registerUser = async (email, password, name, sureName) => {
         const userDataCollection = collection(db, "users");     
         await addDoc(userDataCollection, {
             userId: userId,
-            displayName: name,
-            sureName: sureName,
-        });
-        
+            displayName: name,      
+			sureName: sureName,      
+        });        
         console.log("Registration successful");
         console.log(userDataCollection); 
     } catch (error) {

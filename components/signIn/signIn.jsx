@@ -15,7 +15,8 @@ import { useState, useContext } from "react";
 import {auth} from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-import Header from "../header/header"
+
+
 import { UserContext } from "../context/contextWrapper";
 
 
@@ -25,7 +26,7 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
    
-  const {user} = useContext(UserContext)
+  const {updateUser} = useContext(UserContext)
 
   const logIn = () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -106,8 +107,7 @@ const SignIn = () => {
             Facebook
           </button>
         </div>
-      </form>
-    <Header login={logIn} />
+      </form>   
     </>
   );
 };
